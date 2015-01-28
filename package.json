@@ -1,0 +1,33 @@
+{
+  "name": "ks-framework",
+  "version": "0.0.0",
+  "description": "KS Ultimate Front End Framework",
+  "main": "index.html",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@bitbucket.org:khalid-s/ks-admin-panel.git"
+  },
+  "keywords": [
+    "KS",
+    "Ultimate",
+    "Front",
+    "End",
+    "Framework",
+    "full",
+    "css",
+    "grid",
+    "responsive",
+    "sass",
+    "compass",
+    "jquery"
+  ],
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "load-grunt-tasks": "^0.6.0"
+  },
+  "author": "Khalid Sookia <khalidsookia@gmail.com>",
+  "license": "ISC"
+}
