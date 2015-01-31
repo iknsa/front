@@ -31,5 +31,11 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "jquery-1.11.2": "http://code.jquery.com/jquery-1.11.2.js"
+  },
+  "devDependencies": {
+    "normalize.css": "~3.0.2"
+  }
 }
