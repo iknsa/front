@@ -23,12 +23,18 @@
     line-height: $btn-font-size * (20 / 14);
 }
 
-@mixin btn-hover-focus($btn-bg-color)
+@mixin btn-hover($btn-bg-color)
 {
-    background-color: darken($btn-bg-color, 5)
+    background-color: darken($btn-bg-color, 5);
 }
 
 @mixin btn-active($btn-bg-color)
 {
     background-color: darken($btn-bg-color, 10)
+}
+
+@mixin btn-focus($btn-bg-color)
+{
+    outline: 0; // Remove chrome default outline on focus
+    box-shadow: 0 0 0 2px darken($btn-bg-color, 15);
 }
