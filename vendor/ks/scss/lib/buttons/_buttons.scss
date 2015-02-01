@@ -11,11 +11,14 @@
 {
     @include btn-color($btn-default-bg-color, $btn-default-color, $border-darken-amt);
     &:hover, &.hover {
-        @include btn-hover-focus($btn-default-bg-color);
+        @include btn-hover($btn-default-bg-color);
     }
     &:active, &.active
     {
         @include btn-active($btn-default-bg-color);
+    }
+    &:focus, &.focus {
+        @include btn-focus($btn-default-bg-color)
     }
 }
 
@@ -23,11 +26,14 @@
 {
     @include btn-color($btn-primary-bg-color, $btn-primary-color, $border-darken-amt);
     &:hover, &.hover {
-        @include btn-hover-focus($btn-primary-bg-color);
+        @include btn-hover($btn-primary-bg-color);
     }
     &:active, &.active
     {
         @include btn-active($btn-primary-bg-color);
+    }
+    &:focus, &.focus {
+        @include btn-focus($btn-primary-bg-color)
     }
 }
 
@@ -35,12 +41,14 @@
 {
     @include btn-color($btn-success-bg-color, $btn-success-color, $border-darken-amt);
     &:hover, &.hover {
-        @include btn-hover-focus($btn-success-bg-color);
+        @include btn-hover($btn-success-bg-color);
     }
     &:active, &.active
     {
         @include btn-active($btn-success-bg-color);
-
+    }
+    &:focus, &.focus {
+        @include btn-focus($btn-success-bg-color)
     }
 }
 
@@ -48,12 +56,14 @@
 {
     @include btn-color($btn-danger-bg-color, $btn-danger-color, $border-darken-amt);
     &:hover, &.hover {
-        @include btn-hover-focus($btn-danger-bg-color);
+        @include btn-hover($btn-danger-bg-color);
     }
     &:active, &.active
     {
         @include btn-active($btn-danger-bg-color);
-
+    }
+    &:focus, &.focus {
+        @include btn-focus($btn-danger-bg-color)
     }
 }
 
@@ -61,12 +71,14 @@
 {
     @include btn-color($btn-warning-bg-color, $btn-warning-color, $border-darken-amt);
     &:hover, &.hover {
-        @include btn-hover-focus($btn-warning-bg-color);
+        @include btn-hover($btn-warning-bg-color);
     }
     &:active, &.active
     {
         @include btn-active($btn-warning-bg-color);
-
+    }
+    &:focus, &.focus {
+        @include btn-focus($btn-warning-bg-color)
     }
 }
 
