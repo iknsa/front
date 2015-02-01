@@ -1,0 +1,27 @@
+@import "../variables";
+
+// button typographie
+$btn-font-weight      : normal !default;
+$border-darken-amt    : 5;
+$btn-font-size-default: $font-size-default;
+
+// button colors
+$btn-default-bg-color : $light-color !default;
+$btn-default-color    : $dark-color !default;
+
+$btn-primary-bg-color : $primary-color !default;
+$btn-primary-color    : $light-color !default;
+
+$btn-success-bg-color : $success-color !default;
+$btn-success-color    : $light-color !default;
+
+$btn-danger-bg-color  : $danger-color !default;
+$btn-danger-color     : $light-color !default;
+
+$btn-warning-bg-color : $warning-color !default;
+$btn-warning-color    : $light-color !default;
+
+// button size
+$padding-vertical     : 7px !default;
+$padding-horizontal   : 14px !default;
+$border-radius        : 5px !default;

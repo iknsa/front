@@ -1,0 +1,4 @@
+/* line 1, ../../../scss/lib/tables/tables.scss */
+table, thead, tbody, tr, td {
+  border: 1px solid black;
+}
