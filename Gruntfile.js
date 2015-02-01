@@ -61,6 +61,12 @@ module.exports = function(grunt) {
                     import: 2
                 },
                 src: ['<%= concat_css.dev.dest %>']
+            },
+            watch: {
+                options: {
+                    import: 2
+                },
+                src: ['vendor/ks/css/imports.css']
             }
         },
 
@@ -119,7 +125,8 @@ module.exports = function(grunt) {
     // watch for scss files while in dev
     grunt.registerTask('devWatch', [
         'clean:prodCss',
-        'compass:dev', 'concat:dev'
+        'compass:dev', 'concat:dev',
+        'csslint:watch'
     ]);
 
     // Dev task
