@@ -1,0 +1,81 @@
+@import 'variables';
+@import 'mixins';
+
+.btn 
+{
+    @include btn-base;
+    @include btn-size($padding-vertical, $padding-horizontal, $border-radius, $btn-font-size-default)
+}
+
+.btn-default
+{
+    @include btn-color($btn-default-bg-color, $btn-default-color, $border-darken-amt);
+    &:hover, &.hover {
+        @include btn-hover-focus($btn-default-bg-color);
+    }
+    &:active, &.active
+    {
+        @include btn-active($btn-default-bg-color);
+    }
+}
+
+.btn-primary
+{
+    @include btn-color($btn-primary-bg-color, $btn-primary-color, $border-darken-amt);
+    &:hover, &.hover {
+        @include btn-hover-focus($btn-primary-bg-color);
+    }
+    &:active, &.active
+    {
+        @include btn-active($btn-primary-bg-color);
+    }
+}
+
+.btn-success
+{
+    @include btn-color($btn-success-bg-color, $btn-success-color, $border-darken-amt);
+    &:hover, &.hover {
+        @include btn-hover-focus($btn-success-bg-color);
+    }
+    &:active, &.active
+    {
+        @include btn-active($btn-success-bg-color);
+
+    }
+}
+
+.btn-danger
+{
+    @include btn-color($btn-danger-bg-color, $btn-danger-color, $border-darken-amt);
+    &:hover, &.hover {
+        @include btn-hover-focus($btn-danger-bg-color);
+    }
+    &:active, &.active
+    {
+        @include btn-active($btn-danger-bg-color);
+
+    }
+}
+
+.btn-warning
+{
+    @include btn-color($btn-warning-bg-color, $btn-warning-color, $border-darken-amt);
+    &:hover, &.hover {
+        @include btn-hover-focus($btn-warning-bg-color);
+    }
+    &:active, &.active
+    {
+        @include btn-active($btn-warning-bg-color);
+
+    }
+}
+
+.btn-lg
+{
+    @include btn-size($padding-vertical * 1.25, $padding-horizontal * 1.25, $border-radius, $btn-font-size-default * 1.25)
+}
+
+.btn-sm
+{
+    @include btn-size($padding-vertical * 0.85, $padding-horizontal * 0.85, $border-radius, $btn-font-size-default * 0.85)
+}

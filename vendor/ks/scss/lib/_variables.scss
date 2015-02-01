@@ -1,0 +1,15 @@
+// Default colors
+$light-color: #f5f5f5;
+$dark-color: #535353;
+$primary-color: #2a85ba;
+$success-color: #48967b;
+$danger-color: #bd4141;
+$warning-color: #e8ae32;
+
+// Typography
+$font-family: Helvetica, Arial, sans-serif !default;
+
+$font-size-default: 14px !default;
+
+$font-size-large: ceil($font-size-default * 1.25) !default;
+$font-size-small: ceil($font-size-default * 0.85) !default;
