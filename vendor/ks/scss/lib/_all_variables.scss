@@ -3,6 +3,7 @@
 
 
 
+
 // Typography
 $font-family: Helvetica, Arial, sans-serif !default;
 
@@ -19,6 +20,8 @@ $primary-color: #2a85ba;
 $success-color: #48967b;
 $danger-color: #bd4141;
 $warning-color: #e8ae32;
+$breadcrumb-default-color : $primary-color;
+$breadcrumb-seperator: " >";
 // button typographie
 $btn-font-weight      : normal !default;
 $border-darken-amt    : 5;

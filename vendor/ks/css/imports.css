@@ -329,3 +329,34 @@ thead, tbody, tfoot, tr, th, td, caption {
   text-decoration: none;
   color: #535353;
 }
+
+/* line 5, ../scss/lib/breadcrumbs/_breadcrumbs.scss */
+.breadcrumb {
+  display: block;
+  color: #2a85ba;
+}
+/* line 10, ../scss/lib/breadcrumbs/_breadcrumbs.scss */
+.breadcrumb a {
+  color: #2a85ba;
+}
+/* line 13, ../scss/lib/breadcrumbs/_breadcrumbs.scss */
+.breadcrumb ul {
+  display: inline-block;
+}
+/* line 16, ../scss/lib/breadcrumbs/_breadcrumbs.scss */
+.breadcrumb ul li {
+  display: inline-block;
+}
+/* line 19, ../scss/lib/breadcrumbs/_breadcrumbs.scss */
+.breadcrumb ul li:after {
+  content: " >";
+}
+/* line 24, ../scss/lib/breadcrumbs/_breadcrumbs.scss */
+.breadcrumb ul li:last-child:after {
+  content: none;
+}
+/* line 28, ../scss/lib/breadcrumbs/_breadcrumbs.scss */
+.breadcrumb ul li:last-child a {
+  color: #535353;
+  text-decoration: none;
+}
