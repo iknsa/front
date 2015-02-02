@@ -49,10 +49,25 @@ module.exports = function(grunt) {
                 // assetBaseUrl: 'static/assets',
                 // baseDir: 'src/(styles|assets)'
             },
+            sass_var: {
+                src: ['vendor/ks/scss/lib/components/_variables.scss', 'vendor/ks/scss/lib/**/_variables.scss'],
+                dest: 'vendor/ks/scss/lib/_all_variables.scss'
+            },
             dev: {
                 src: ['vendor/ks/css/*.css'],
                 dest: 'vendor/ks/concat/concat.css'
             }
+        },
+
+        replace: {
+            remove_scss_useless_imports: {
+                src: ['<%= concat_css.sass_var.dest %>'],             // source files array (supports minimatch) 
+                dest: '<%= concat_css.sass_var.dest %>',             // destination directory or file 
+                replacements: [{
+                  from: '@import "../all_variables";',                   // string replacement 
+                  to: ''
+            }]
+          }
         },
 
         csslint: {
@@ -125,14 +140,14 @@ module.exports = function(grunt) {
     // watch for scss files while in dev
     grunt.registerTask('devWatch', [
         'clean:prodCss',
-        'compass:dev', 'concat:dev',
+        'concat_css:sass_var', 'replace:remove_scss_useless_imports', 'compass:dev', 'concat:dev',
         'csslint:watch'
     ]);
 
     // Dev task
     grunt.registerTask('dev', [
         'clean:dev',
-        'compass:dev', 'concat:dev', 'concat_css:dev', 'csslint:dev', 'cssmin:dev',
+        'concat_css:sass_var', 'compass:dev', 'concat:dev', 'concat_css:dev', 'csslint:dev', 'cssmin:dev',
         'jshint:dev', 'uglify:devJquery', 'uglify:devJs'
     ]);
 };

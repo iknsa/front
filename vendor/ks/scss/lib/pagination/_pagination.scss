@@ -3,18 +3,9 @@
 
 .pagination
 {
-    *{
+    input, a, div, span, li, button {
         display: inline-block;
         text-decoration: none;
         color: $pagination-color;
-        // background:red;
-    }
-}
-
-.pagination .condensed
-{
-    *{
-        margin: 0;
-        padding: 0;
     }
 }

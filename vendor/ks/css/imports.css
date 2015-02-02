@@ -173,12 +173,13 @@ thead, tbody, tfoot, tr, th, td, caption {
   box-shadow: 0 0 0 2px #cfcfcf;
 }
 /* line 32, ../scss/lib/buttons/_mixins.scss */
-.btn-default.disabled, .btn-default[disabled] {
+.btn-default.btn-disabled, .btn-default[disabled] {
   background-color: white;
+  border: 0;
   cursor: not-allowed;
 }
 /* line 35, ../scss/lib/buttons/_mixins.scss */
-.btn-default.disabled.focus, .btn-default.disabled:focus, .btn-default[disabled].focus, .btn-default[disabled]:focus {
+.btn-default.btn-disabled.focus, .btn-default.btn-disabled:focus, .btn-default[disabled].focus, .btn-default[disabled]:focus {
   box-shadow: none;
 }
 
@@ -203,12 +204,13 @@ thead, tbody, tfoot, tr, th, td, caption {
   box-shadow: 0 0 0 2px #1c587c;
 }
 /* line 32, ../scss/lib/buttons/_mixins.scss */
-.btn-primary.disabled, .btn-primary[disabled] {
+.btn-primary.btn-disabled, .btn-primary[disabled] {
   background-color: #6cb4de;
+  border: 0;
   cursor: not-allowed;
 }
 /* line 35, ../scss/lib/buttons/_mixins.scss */
-.btn-primary.disabled.focus, .btn-primary.disabled:focus, .btn-primary[disabled].focus, .btn-primary[disabled]:focus {
+.btn-primary.btn-disabled.focus, .btn-primary.btn-disabled:focus, .btn-primary[disabled].focus, .btn-primary[disabled]:focus {
   box-shadow: none;
 }
 
@@ -233,12 +235,13 @@ thead, tbody, tfoot, tr, th, td, caption {
   box-shadow: 0 0 0 2px #2f6251;
 }
 /* line 32, ../scss/lib/buttons/_mixins.scss */
-.btn-success.disabled, .btn-success[disabled] {
+.btn-success.btn-disabled, .btn-success[disabled] {
   background-color: #81c3ac;
+  border: 0;
   cursor: not-allowed;
 }
 /* line 35, ../scss/lib/buttons/_mixins.scss */
-.btn-success.disabled.focus, .btn-success.disabled:focus, .btn-success[disabled].focus, .btn-success[disabled]:focus {
+.btn-success.btn-disabled.focus, .btn-success.btn-disabled:focus, .btn-success[disabled].focus, .btn-success[disabled]:focus {
   box-shadow: none;
 }
 
@@ -263,12 +266,13 @@ thead, tbody, tfoot, tr, th, td, caption {
   box-shadow: 0 0 0 2px #842d2d;
 }
 /* line 32, ../scss/lib/buttons/_mixins.scss */
-.btn-danger.disabled, .btn-danger[disabled] {
+.btn-danger.btn-disabled, .btn-danger[disabled] {
   background-color: #d88c8c;
+  border: 0;
   cursor: not-allowed;
 }
 /* line 35, ../scss/lib/buttons/_mixins.scss */
-.btn-danger.disabled.focus, .btn-danger.disabled:focus, .btn-danger[disabled].focus, .btn-danger[disabled]:focus {
+.btn-danger.btn-disabled.focus, .btn-danger.btn-disabled:focus, .btn-danger[disabled].focus, .btn-danger[disabled]:focus {
   box-shadow: none;
 }
 
@@ -293,12 +297,13 @@ thead, tbody, tfoot, tr, th, td, caption {
   box-shadow: 0 0 0 2px #b98415;
 }
 /* line 32, ../scss/lib/buttons/_mixins.scss */
-.btn-warning.disabled, .btn-warning[disabled] {
+.btn-warning.btn-disabled, .btn-warning[disabled] {
   background-color: #f2d28e;
+  border: 0;
   cursor: not-allowed;
 }
 /* line 35, ../scss/lib/buttons/_mixins.scss */
-.btn-warning.disabled.focus, .btn-warning.disabled:focus, .btn-warning[disabled].focus, .btn-warning[disabled]:focus {
+.btn-warning.btn-disabled.focus, .btn-warning.btn-disabled:focus, .btn-warning[disabled].focus, .btn-warning[disabled]:focus {
   box-shadow: none;
 }
 
@@ -319,14 +324,8 @@ thead, tbody, tfoot, tr, th, td, caption {
 }
 
 /* line 6, ../scss/lib/pagination/_pagination.scss */
-.pagination * {
+.pagination input, .pagination a, .pagination div, .pagination span, .pagination li, .pagination button {
   display: inline-block;
   text-decoration: none;
   color: #535353;
-}
-
-/* line 16, ../scss/lib/pagination/_pagination.scss */
-.pagination .condensed * {
-  margin: 0;
-  padding: 0;
 }
