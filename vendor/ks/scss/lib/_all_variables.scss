@@ -4,6 +4,8 @@
 
 
 
+
+
 // Typography
 $font-family: Helvetica, Arial, sans-serif !default;
 
@@ -20,6 +22,7 @@ $primary-color: #2a85ba;
 $success-color: #48967b;
 $danger-color: #bd4141;
 $warning-color: #e8ae32;
+
 $breadcrumb-default-color : $primary-color;
 $breadcrumb-seperator: " >";
 // button typographie
@@ -47,6 +50,7 @@ $btn-warning-color    : $light-color !default;
 $padding-vertical     : 7px !default;
 $padding-horizontal   : 14px !default;
 $border-radius        : 5px !default;
+
 $pagination-color: $dark-color;
 $pagination-bg-color: $light-color;
 // Tables variables

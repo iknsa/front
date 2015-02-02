@@ -53,6 +53,10 @@ module.exports = function(grunt) {
                 src: ['vendor/ks/scss/lib/components/_variables.scss', 'vendor/ks/scss/lib/**/_variables.scss'],
                 dest: 'vendor/ks/scss/lib/_all_variables.scss'
             },
+            sass_mixins: {
+                src: ['vendor/ks/scss/lib/**/_mixins.scss'],
+                dest: 'vendor/ks/scss/lib/_all_mixins.scss'
+            },
             dev: {
                 src: ['vendor/ks/css/*.css'],
                 dest: 'vendor/ks/concat/concat.css'
@@ -60,14 +64,22 @@ module.exports = function(grunt) {
         },
 
         replace: {
-            remove_scss_useless_imports: {
+            remove_variables_imports: {
                 src: ['<%= concat_css.sass_var.dest %>'],             // source files array (supports minimatch) 
                 dest: '<%= concat_css.sass_var.dest %>',             // destination directory or file 
                 replacements: [{
                   from: '@import "../all_variables";',                   // string replacement 
                   to: ''
-            }]
-          }
+                }]
+            },
+            remove_mixins_imports: {
+                src: ['<%= concat_css.sass_mixins.dest %>'],             // source files array (supports minimatch) 
+                dest: '<%= concat_css.sass_mixins.dest %>',             // destination directory or file 
+                replacements: [{
+                  from: "@import '../all_mixins';",                   // string replacement 
+                  to: ''
+                }]
+            }
         },
 
         csslint: {
@@ -131,6 +143,24 @@ module.exports = function(grunt) {
             }
         },
 
+        copy: {
+            form: {
+                files: [
+
+                    // makes all src relative to cwd
+                    {
+                        expand: true,
+                        cwd: 'vendor/ks/scss/lib/base/',
+                        src: ['**'],
+                        dest: 'vendor/ks/scss/lib/form/',
+                        rename: function(dest, src) {
+                            return dest + src.replace(/base/g, "form");
+                        }
+                    }
+                ],
+          },
+        },
+
 
     });
 
@@ -140,7 +170,8 @@ module.exports = function(grunt) {
     // watch for scss files while in dev
     grunt.registerTask('devWatch', [
         'clean:prodCss',
-        'concat_css:sass_var', 'replace:remove_scss_useless_imports', 'compass:dev', 'concat:dev',
+        'concat_css:sass_var', 'replace:remove_variables_imports', 'concat_css:sass_mixins', 'replace:remove_mixins_imports', 
+        'compass:dev', 'concat:dev',
         'csslint:watch'
     ]);
 

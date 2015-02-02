@@ -1,4 +1,11 @@
-@import '../all_mixins';
+
+
+
+
+
+
+
+
 
 @mixin btn-base
 {
@@ -67,4 +74,11 @@
 {
     background-color: lighten($btn-bg-color, 20);
     border: 0;
+}
+
+
+
+@mixin tbl-border()
+{
+    border: 1px solid $dark-color;
 }
