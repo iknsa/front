@@ -1,0 +1,20 @@
+@import "variables";
+@import "mixins";
+
+.pagination
+{
+    *{
+        display: inline-block;
+        text-decoration: none;
+        color: $pagination-color;
+        // background:red;
+    }
+}
+
+.pagination .condensed
+{
+    *{
+        margin: 0;
+        padding: 0;
+    }
+}

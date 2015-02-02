@@ -39,7 +39,7 @@ module.exports = function(grunt) {
 
         watch: {
             dev: {
-                files: ['vendor/ks/scss/**/*.scss'],
+                files: ['vendor/ks/scss/**/*.scss', 'vendor/ks/scss/**/*js'],
                 tasks: ['devWatch'],
             }
         },
@@ -85,7 +85,7 @@ module.exports = function(grunt) {
                 src: 'Gruntfile.js'
             },
             dev: {
-                src: ['vendor/ks/js/**/*.js']
+                src: ['vendor/ks/js/**/*.js', '<%= concat.dev.dest %>']
             }
         },
 
@@ -93,11 +93,11 @@ module.exports = function(grunt) {
         concat: {
             options: {
                 banner: '<%= banner %>',
-                separator: ';',
+                separator: '\n',
                 stripBanners: true
             },
             dev: {
-                    src: ['vendor/ks/js/*'],
+                    src: ['vendor/ks/scss/lib/onload_start.js', 'vendor/ks/**/_*.js', 'vendor/ks/scss/lib/onload_end.js'],
                     dest: 'vendor/ks/concat/dev.js',
             }
         },

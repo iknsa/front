@@ -172,15 +172,6 @@ thead, tbody, tfoot, tr, th, td, caption {
   outline: 0;
   box-shadow: 0 0 0 2px #cfcfcf;
 }
-/* line 32, ../scss/lib/buttons/_mixins.scss */
-.btn-default.disabled, .btn-default[disabled] {
-  background-color: white;
-  cursor: not-allowed;
-}
-/* line 35, ../scss/lib/buttons/_mixins.scss */
-.btn-default.disabled.focus, .btn-default.disabled:focus, .btn-default[disabled].focus, .btn-default[disabled]:focus {
-  box-shadow: none;
-}
 
 /* line 15, ../scss/lib/buttons/_buttons.scss */
 .btn-primary {
@@ -201,15 +192,6 @@ thead, tbody, tfoot, tr, th, td, caption {
 .btn-primary:focus, .btn-primary.focus {
   outline: 0;
   box-shadow: 0 0 0 2px #1c587c;
-}
-/* line 32, ../scss/lib/buttons/_mixins.scss */
-.btn-primary.disabled, .btn-primary[disabled] {
-  background-color: #6cb4de;
-  cursor: not-allowed;
-}
-/* line 35, ../scss/lib/buttons/_mixins.scss */
-.btn-primary.disabled.focus, .btn-primary.disabled:focus, .btn-primary[disabled].focus, .btn-primary[disabled]:focus {
-  box-shadow: none;
 }
 
 /* line 19, ../scss/lib/buttons/_buttons.scss */
@@ -232,15 +214,6 @@ thead, tbody, tfoot, tr, th, td, caption {
   outline: 0;
   box-shadow: 0 0 0 2px #2f6251;
 }
-/* line 32, ../scss/lib/buttons/_mixins.scss */
-.btn-success.disabled, .btn-success[disabled] {
-  background-color: #81c3ac;
-  cursor: not-allowed;
-}
-/* line 35, ../scss/lib/buttons/_mixins.scss */
-.btn-success.disabled.focus, .btn-success.disabled:focus, .btn-success[disabled].focus, .btn-success[disabled]:focus {
-  box-shadow: none;
-}
 
 /* line 23, ../scss/lib/buttons/_buttons.scss */
 .btn-danger {
@@ -261,15 +234,6 @@ thead, tbody, tfoot, tr, th, td, caption {
 .btn-danger:focus, .btn-danger.focus {
   outline: 0;
   box-shadow: 0 0 0 2px #842d2d;
-}
-/* line 32, ../scss/lib/buttons/_mixins.scss */
-.btn-danger.disabled, .btn-danger[disabled] {
-  background-color: #d88c8c;
-  cursor: not-allowed;
-}
-/* line 35, ../scss/lib/buttons/_mixins.scss */
-.btn-danger.disabled.focus, .btn-danger.disabled:focus, .btn-danger[disabled].focus, .btn-danger[disabled]:focus {
-  box-shadow: none;
 }
 
 /* line 27, ../scss/lib/buttons/_buttons.scss */
@@ -292,17 +256,8 @@ thead, tbody, tfoot, tr, th, td, caption {
   outline: 0;
   box-shadow: 0 0 0 2px #b98415;
 }
-/* line 32, ../scss/lib/buttons/_mixins.scss */
-.btn-warning.disabled, .btn-warning[disabled] {
-  background-color: #f2d28e;
-  cursor: not-allowed;
-}
-/* line 35, ../scss/lib/buttons/_mixins.scss */
-.btn-warning.disabled.focus, .btn-warning.disabled:focus, .btn-warning[disabled].focus, .btn-warning[disabled]:focus {
-  box-shadow: none;
-}
 
-/* line 34, ../scss/lib/buttons/_buttons.scss */
+/* line 32, ../scss/lib/buttons/_buttons.scss */
 .btn-lg {
   padding: 8.75px 17.5px;
   border-radius: 5px;
@@ -310,7 +265,7 @@ thead, tbody, tfoot, tr, th, td, caption {
   line-height: 25px;
 }
 
-/* line 38, ../scss/lib/buttons/_buttons.scss */
+/* line 36, ../scss/lib/buttons/_buttons.scss */
 .btn-sm {
   padding: 5.95px 11.9px;
   border-radius: 5px;

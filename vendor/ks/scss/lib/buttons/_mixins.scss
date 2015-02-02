@@ -16,6 +16,28 @@
     text-decoration: none;
 }
 
+@mixin btn-color-variant($btn-bg-color, $btn-color, $border-darken-amt)
+{
+    @include btn-color($btn-bg-color, $btn-color, $border-darken-amt);
+    &:hover, &.hover {
+        @include btn-hover($btn-bg-color);
+    }
+    &:active, &.active
+    {
+        @include btn-active($btn-bg-color);
+    }
+    &:focus, &.focus {
+        @include btn-focus($btn-bg-color)
+    }
+    &.disabled, &[disabled] {
+        @include btn-disable($btn-bg-color);
+        cursor: not-allowed;
+        &.focus, &:focus {
+            box-shadow: none;
+        }
+    }
+}
+
 @mixin btn-size($padding-vertical, $padding-horizontal, $border-radius, $btn-font-size) {
     padding: $padding-vertical $padding-horizontal;
     border-radius: $border-radius;
@@ -37,4 +59,9 @@
 {
     outline: 0; // Remove chrome default outline on focus
     box-shadow: 0 0 0 2px darken($btn-bg-color, 15);
+}
+
+@mixin btn-disable($btn-bg-color)
+{
+    background-color: lighten($btn-bg-color, 20);
 }

@@ -1,8 +1,58 @@
-table, thead, tbody, tr, td {
-    border: 1px solid black;
-}
-td
+@import 'variables';
+@import 'mixins';
+
+// Define a base to work with
+table
 {
-    padding: 10px;
-    text-align: center;
+    width: 100%;
+    background:$tbl-bg-color;
+    color: $tbl-color;
+
+    a {
+        color: $tbl-color;
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+th
+{
+    text-align: left;
+}
+
+thead, tfoot
+{
+    background-color: darken($tbl-bg-color, 7);
+}
+
+thead, tbody, tfoot, tr, th, td, caption
+{
+    padding: $tbl-padding-vertical $tbl-padding-horizontal;
+}
+// End of base for tables
+
+// Table with all borders
+.tbl-bordered
+{
+    thead, caption, tr, th, td {
+        @include tbl-border;
+    }
+    caption {
+        border-bottom: none;
+    }
+}
+
+.tbl-zebra
+{
+    tbody tr:nth-child(even) {
+        background-color: darken($tbl-bg-zebra, 2);
+    }
+}
+
+.tbl-hover
+{
+    tbody tr:hover {
+        background-color: darken($tbl-bg-zebra, 3);
+    }
 }
