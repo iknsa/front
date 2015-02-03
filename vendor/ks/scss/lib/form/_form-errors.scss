@@ -1,0 +1,30 @@
+.error
+{
+    div.error {
+        input[type=search], input[type=url], input[type=text], input[type=password], input[type=email], select, input[type=checkbox], input[type=radio], textarea {
+            border: 2px solid $danger-color;
+            color: $danger-color;
+        }
+        input[type=checkbox], input[type=radio] {
+            outline: 2px solid $danger-color;
+        }
+        input[type=file]
+        {
+            border: 2px solid $danger-color;
+        }
+    }
+    .error-message {
+        span {
+            display: block;
+            outline: 3px solid $danger-color;
+            padding: 5px 10px;
+            margin: 10px 0 30px;
+            color: $danger-color;
+        }
+    }
+    .form-error {
+        @extend .error-message;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+}

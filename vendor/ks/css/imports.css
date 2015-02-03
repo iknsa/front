@@ -440,19 +440,50 @@ legend {
 /* line 23, ../scss/lib/form/_pro_theme.scss */
 div.label {
   float: left;
-  display: inline-block;
   min-width: 150px;
   max-width: 300px;
   margin-right: 50px;
   text-align: right;
 }
-/* line 32, ../scss/lib/form/_pro_theme.scss */
+/* line 31, ../scss/lib/form/_pro_theme.scss */
 div.label:after {
-  float: unset;
+  float: none;
   clear: both;
 }
 
-/* line 38, ../scss/lib/form/_pro_theme.scss */
+/* line 37, ../scss/lib/form/_pro_theme.scss */
 input[type=file] {
   margin-bottom: 20px;
+}
+
+/* line 42, ../scss/lib/form/_pro_theme.scss */
+input[type=radio], input[type=checkbox] {
+  margin: 0 20px 0 10px;
+}
+
+/* line 4, ../scss/lib/form/_form-errors.scss */
+.error div.error input[type=search], .error div.error input[type=url], .error div.error input[type=text], .error div.error input[type=password], .error div.error input[type=email], .error div.error select, .error div.error input[type=checkbox], .error div.error input[type=radio], .error div.error textarea, .error div.error input[type=search], .error div.error input[type=url], .error div.error input[type=text], .error div.error input[type=password], .error div.error input[type=email] {
+  border: 2px solid #bd4141;
+  color: #bd4141;
+}
+/* line 8, ../scss/lib/form/_form-errors.scss */
+.error div.error input[type=checkbox], .error div.error input[type=radio] {
+  outline: 2px solid #bd4141;
+}
+/* line 11, ../scss/lib/form/_form-errors.scss */
+.error div.error input[type=file] {
+  border: 2px solid #bd4141;
+}
+/* line 17, ../scss/lib/form/_form-errors.scss */
+.error .error-message span, .error .form-error span {
+  display: block;
+  outline: 3px solid #bd4141;
+  padding: 5px 10px;
+  margin: 10px 0 30px;
+  color: #bd4141;
+}
+/* line 25, ../scss/lib/form/_form-errors.scss */
+.error .form-error {
+  text-align: center;
+  margin-bottom: 40px;
 }
