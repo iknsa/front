@@ -159,9 +159,8 @@ module.exports = function(grunt) {
                     },
                     {
                         expand: true,
-                        cwd: 'templates/base.html',
-                        src: ['*'],
-                        dest: 'templates/form.html',
+                        src: ['templates/base.html'],
+                        dest: '',
                         rename: function(dest, src) {
                             return dest + src.replace(/base/g, "form");
                         }
