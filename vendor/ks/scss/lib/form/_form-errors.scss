@@ -1,12 +1,12 @@
-.error
+form.error
 {
     div.error {
+        label {
+            color: $danger-color;
+        }
         input[type=search], input[type=url], input[type=text], input[type=password], input[type=email], select, input[type=checkbox], input[type=radio], textarea {
             border: 2px solid $danger-color;
             color: $danger-color;
-        }
-        input[type=checkbox], input[type=radio] {
-            outline: 2px solid $danger-color;
         }
         input[type=file]
         {
