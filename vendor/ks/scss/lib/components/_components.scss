@@ -1,6 +1,10 @@
 @import 'variables';
 @import 'mixins';
 
+*
+{
+    box-sizing: border-box;
+}
 body
 {
     font-size: $font-size-default;

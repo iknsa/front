@@ -1,6 +1,11 @@
 /* line 4, ../scss/lib/components/_components.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 8, ../scss/lib/components/_components.scss */
 body {
-  font-size: 14px;
+  font-size: 15px;
   font-family: Helvetica, Arial, sans-serif;
   color: #535353;
   font-weight: 400;
@@ -156,8 +161,8 @@ thead, tbody, tfoot, tr, th, td, caption {
   background-image: none;
   padding: 7px 14px;
   border-radius: 5px;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 15px;
+  line-height: 21.42857px;
 }
 
 /* line 11, ../scss/lib/buttons/_buttons.scss */
@@ -319,16 +324,16 @@ thead, tbody, tfoot, tr, th, td, caption {
 .btn-lg {
   padding: 8.75px 17.5px;
   border-radius: 5px;
-  font-size: 17.5px;
-  line-height: 25px;
+  font-size: 18.75px;
+  line-height: 26.78571px;
 }
 
 /* line 38, ../scss/lib/buttons/_buttons.scss */
 .btn-sm {
   padding: 5.95px 11.9px;
   border-radius: 5px;
-  font-size: 11.9px;
-  line-height: 17px;
+  font-size: 12.75px;
+  line-height: 18.21429px;
 }
 
 /* line 6, ../scss/lib/pagination/_pagination.scss */
@@ -367,4 +372,87 @@ thead, tbody, tfoot, tr, th, td, caption {
 .breadcrumb ul li:last-child a {
   color: #535353;
   text-decoration: none;
+}
+
+/* line 5, ../scss/lib/form/_form.scss */
+form {
+  line-height: 21.42857px;
+}
+
+/* line 10, ../scss/lib/form/_form.scss */
+legend {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* line 16, ../scss/lib/form/_form.scss */
+fieldset {
+  border-top: none;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 23, ../scss/lib/form/_form.scss */
+textarea, input[type=search], input[type=url], input[type=text], input[type=password], input[type=email] {
+  outline: none;
+  padding: 5px 10px;
+  border-top: 1px solid #535353;
+  border-bottom: 1px solid #535353;
+  border-right: 1px solid #535353;
+  border-left: 1px solid #535353;
+}
+/* line 27, ../scss/lib/form/_form.scss */
+textarea:invalid, input[type=search]:invalid, input[type=url]:invalid, input[type=text]:invalid, input[type=password]:invalid, input[type=email]:invalid, textarea:required, input[type=search]:required, input[type=url]:required, input[type=text]:required, input[type=password]:required, input[type=email]:required {
+  box-shadow: none;
+}
+
+/* line 36, ../scss/lib/form/_form.scss */
+input[type=search], input[type=url], input[type=text], input[type=password], input[type=email] {
+  padding: 3px 7px;
+}
+
+/* line 1, ../scss/lib/form/_pro_theme.scss */
+form.form-pro-theme {
+  width: 90%;
+  margin: 0 auto;
+}
+/* line 6, ../scss/lib/form/_pro_theme.scss */
+form.form-pro-theme div {
+  margin-bottom: 20px;
+}
+/* line 9, ../scss/lib/form/_pro_theme.scss */
+form.form-pro-theme div:last-child {
+  margin-bottom: 0;
+}
+
+/* line 15, ../scss/lib/form/_pro_theme.scss */
+legend {
+  width: 100%;
+  border-bottom: 3px double #2a85ba;
+  border-left: 3px double #2a85ba;
+  margin: 10px 0;
+  padding: 5px;
+}
+
+/* line 23, ../scss/lib/form/_pro_theme.scss */
+div.label {
+  float: left;
+  display: inline-block;
+  min-width: 150px;
+  max-width: 300px;
+  margin-right: 50px;
+  text-align: right;
+}
+/* line 32, ../scss/lib/form/_pro_theme.scss */
+div.label:after {
+  float: unset;
+  clear: both;
+}
+
+/* line 38, ../scss/lib/form/_pro_theme.scss */
+input[type=file] {
+  margin-bottom: 20px;
 }

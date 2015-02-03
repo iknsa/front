@@ -4,13 +4,15 @@
 // Typography
 $font-family: Helvetica, Arial, sans-serif !default;
 
-$font-size-default: 14px !default;
+$font-size-default: 15px !default;
 
 $font-size-large: ceil($font-size-default * 1.25) !default;
 $font-size-small: ceil($font-size-default * 0.85) !default;
 
 $font-weight-default: 400;
 
+
+$line-height-default: $font-size-default * 1.428571428571429;
 
 // Default colors
 $light-color: #f5f5f5;

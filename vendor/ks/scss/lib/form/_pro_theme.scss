@@ -1,0 +1,41 @@
+form.form-pro-theme
+{
+    width:90%;
+    margin: 0 auto;
+
+    div {
+        margin-bottom: 20px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+legend
+{
+    width: 100%;
+    border-bottom: 3px double $primary-color;
+    border-left: 3px double $primary-color;
+    margin: 10px 0;
+    padding: 5px;
+}
+div.label
+{
+    float: left;
+    display: inline-block;
+    min-width: 150px;
+    max-width: 300px;
+    margin-right: 50px;
+    text-align: right;
+
+    &:after {
+        float: unset;
+        clear: both;
+    }
+}
+
+input[type=file]
+{
+    margin-bottom: 20px;
+}

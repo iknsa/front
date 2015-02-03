@@ -76,7 +76,21 @@
     border: 0;
 }
 
+@mixin fieldset-border($fieldset-border)
+{
+    border-top: $fieldset-border;
+    border-bottom: $fieldset-border;
+    border-left: $fieldset-border;
+    border-right: $fieldset-border;
+}
 
+@mixin input-border($input-border)
+{
+    border-top: $input-border;
+    border-bottom: $input-border;
+    border-right: $input-border;
+    border-left: $input-border;
+}
 
 @mixin tbl-border()
 {

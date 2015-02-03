@@ -1,1 +1,16 @@
 @import "../all_variables";
+
+
+// From Variables
+$fieldset-border : none;
+
+$legend-font-size: $font-size-default * 1.20;
+$form-line-height: $line-height-default;
+$legend-font-weight: $font-weight-default + 200;
+
+$input-line-height: $line-height-default * 1.20;
+$input-border: 1px solid $dark-color;
+$input-height: $input-line-height;
+$input-padding: 3px 7px;
+
+$textarea-padding: 5px 10px;
