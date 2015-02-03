@@ -156,6 +156,15 @@ module.exports = function(grunt) {
                         rename: function(dest, src) {
                             return dest + src.replace(/base/g, "form");
                         }
+                    },
+                    {
+                        expand: true,
+                        cwd: 'templates/base.html',
+                        src: ['*'],
+                        dest: 'templates/form.html',
+                        rename: function(dest, src) {
+                            return dest + src.replace(/base/g, "form");
+                        }
                     }
                 ],
           },

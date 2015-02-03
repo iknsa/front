@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="chrome=1, IE=edge"> -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>buttons</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, user-scalable = yes">
+
+    <link rel="stylesheet" href="../vendor/contrib/normalize.css/normalize.css">
+    <link rel="stylesheet" href="../vendor/ks/css/imports.css">
+
+    <script src="../vendor/contrib/modernizr/modernizr.js" type="text/javascript"></script>
+
+    <!-- <script src="js/vendor/modernizr-2.6.2.min.js"></script> -->
+    <!-- Importing jquery in case there are jq scripts in the middle of the page -->
+    <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
+    <!-- <script>window.jQuery || document.write('<script src="../js/dist/jq.min.js"><\/script>')</script> -->
+</head>
+<body>
+    <!--[if lt IE 7]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <p>-----------------------------------------</p>
+    <form action="#">
+        <legend>This is a form</legend>
+
+        <label for="search">Search</label>
+        <input type="text" value="Search" name="search" id="search">
+
+        <fieldset>
+
+            <label for="name">Name</label>
+            <input type="text" value="Name" name="name" id="name">
+
+            <label for="pass">Pass</label>
+            <input type="password" value="password" name="pass" id="pass">
+
+            <label for="tel">Téléphonne</label>
+            <input type="tel" value="tel" name="tel" id="tel">
+
+            <label for="email">Email</label>
+            <input type="email" value="khalid@gmail.com" name="email" id="email">
+
+            <label for="upload">Upload File</label>
+            <input type="file" name="upload" id="upload">
+
+        </fieldset>
+
+        <label for="radio">Radio</label>
+        <input type="radio" value="One" name="radio" id="radio">
+        <input type="radio" value="Two" name="radio" id="radio">
+        <input type="radio" value="Three" name="radio" id="radio">
+
+        <label for="checkbox">Checkboxes</label>
+        <input type="checkbox" value="Check Me" name="checkbox" id="checkbox">
+        <input type="checkbox" value="Check You" name="checkbox" id="checkbox">
+        <input type="checkbox" value="Check Her" name="checkbox" id="checkbox">
+
+        <input type="button" value="Input button">
+
+        <label for="text">Textarea</label>
+        <textarea name="text" id="text" cols="30" rows="10"></textarea>
+
+        <button>Button</button>
+
+        <select name="select" id="select">
+            <option value="One">One</option>
+            <option value="Two">Two</option>
+            <option value="Threee">Three</option>
+        </select>
+
+        <input type="submit" value="Submit">
+    </form>
+    <p>-----------------------------------------</p>
+
+    <!-- jquery -->
+    <script src="../vendor/contrib/jquery-1.11.2/index.js"></script>
+    
+    <!-- Js section -->
+    <script src="../vendor/ks/concat/dev.js"></script>
+
+    <!-- The following js is just for dev and needs to be removed when in prod. -->
+    <!-- <script src="js"></script> -->
+    <!-- <script src=""></script> -->
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+        // (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+        // function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+        // e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        // e.src='//www.google-analytics.com/analytics.js';
+        // r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+        // ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script>
+</body>
+</html>
