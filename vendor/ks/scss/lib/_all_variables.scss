@@ -1,5 +1,5 @@
-@import "compass";
 
+@import "compass";
 
 
 
@@ -13,6 +13,8 @@ $font-size-default: 14px !default;
 
 $font-size-large: ceil($font-size-default * 1.25) !default;
 $font-size-small: ceil($font-size-default * 0.85) !default;
+
+$font-weight-default: 400;
 
 
 // Default colors

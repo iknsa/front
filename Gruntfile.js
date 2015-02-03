@@ -39,7 +39,7 @@ module.exports = function(grunt) {
 
         watch: {
             dev: {
-                files: ['vendor/ks/scss/**/*.scss', 'vendor/ks/scss/**/*js'],
+                files: ['vendor/ks/scss/**/*.scss', 'vendor/ks/scss/**/*.js'],
                 tasks: ['devWatch'],
             }
         },

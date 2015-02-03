@@ -1,3 +1,11 @@
+/* line 4, ../scss/lib/components/_components.scss */
+body {
+  font-size: 14px;
+  font-family: Helvetica, Arial, sans-serif;
+  color: #535353;
+  font-weight: 400;
+}
+
 /* line 1, ../scss/lib/normalize/_normalize.scss */
 ul {
   margin: 0;

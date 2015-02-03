@@ -28,12 +28,13 @@
 
     <p>-----------------------------------------</p>
     <form action="#">
-        <legend>This is a form</legend>
 
         <label for="search">Search</label>
         <input type="text" value="Search" name="search" id="search">
 
         <fieldset>
+        
+            <legend>This is a form</legend>
 
             <label for="name">Name</label>
             <input type="text" value="Name" name="name" id="name">
@@ -51,17 +52,28 @@
             <input type="file" name="upload" id="upload">
 
         </fieldset>
+        
 
-        <label for="radio">Radio</label>
-        <input type="radio" value="One" name="radio" id="radio">
-        <input type="radio" value="Two" name="radio" id="radio">
-        <input type="radio" value="Three" name="radio" id="radio">
+        <!-- Not handeled in IE9 and safari -->
+        <input list="browsers" name="browser">
+        <datalist id="browsers">
+            <option value="Internet Explorer">
+            <option value="Firefox">
+            <option value="Chrome">
+            <option value="Opera">
+            <option value="Safari">
+        </datalist>
 
-        <label for="checkbox">Checkboxes</label>
-        <input type="checkbox" value="Check Me" name="checkbox" id="checkbox">
-        <input type="checkbox" value="Check You" name="checkbox" id="checkbox">
-        <input type="checkbox" value="Check Her" name="checkbox" id="checkbox">
+        <label>Radio</label>
+        <input type="radio" value="One" name="radio">
+        <input type="radio" value="Two" name="radio">
+        <input type="radio" value="Three" name="radio">
 
+        <label>Checkboxes</label>
+        <input type="checkbox" value="Check Me" name="checkbox">
+        <input type="checkbox" value="Check You" name="checkbox">
+        <input type="checkbox" value="Check Her" name="checkbox">
+    
         <input type="button" value="Input button">
 
         <label for="text">Textarea</label>
