@@ -38,12 +38,13 @@ module.exports = function(grunt) {
         },
 
         watch: {
-            dev_jss: {
+            dev_css: {
                 files: ['vendor/iknsa/ks/**/*.scss'],
-                tasks: ['devWatch'],
+                tasks: ['dev_css'],
             },
             dev_js: {
-                files: ['vendor/iknsa/ks/**/*.js']
+                files: ['vendor/iknsa/ks/**/*.js'],
+                tasks: ['dev_js'],
             }
         },
 

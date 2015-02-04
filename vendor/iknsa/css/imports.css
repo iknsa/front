@@ -414,6 +414,11 @@ input[type=search], input[type=url], input[type=text], input[type=password], inp
   padding: 3px 7px;
 }
 
+/* line 42, ../ks/lib/form/_form.scss */
+.error-message, form.error .form-error, .form-error {
+  display: none;
+}
+
 /* line 1, ../ks/lib/form/_pro-theme.scss */
 form.form-pro-theme {
   width: 90%;

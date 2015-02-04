@@ -39,7 +39,7 @@ input[type=search], input[type=url], input[type=text], input[type=password], inp
     padding: $input-padding;
 }
 
-.error-message
+.error-message, .form-error
 {
-    // display: none;
+    display: none;
 }
