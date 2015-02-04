@@ -38,9 +38,12 @@ module.exports = function(grunt) {
         },
 
         watch: {
-            dev: {
-                files: ['vendor/iknsa/ks/**/*.scss', 'vendor/iknsa/ks/**/*.js'],
+            dev_jss: {
+                files: ['vendor/iknsa/ks/**/*.scss'],
                 tasks: ['devWatch'],
+            },
+            dev_js: {
+                files: ['vendor/iknsa/ks/**/*.js']
             }
         },
 
@@ -120,12 +123,12 @@ module.exports = function(grunt) {
         concat: {
             options: {
                 banner: '<%= banner %>',
-                separator: '\n',
+                separator: '\n//-------------------\n',
                 stripBanners: true
             },
             dev: {
                     src: ['vendor/iknsa/ks/lib/onload_start.js', 'vendor/iknsa/**/_*.js', 'vendor/iknsa/ks/lib/onload_end.js'],
-                    dest: 'vendor/iknsa/concat/dev.js',
+                    dest: 'vendor/iknsa/js/dev.js',
             }
         },
 
@@ -176,17 +179,24 @@ module.exports = function(grunt) {
     grunt.registerTask('default', ['jshint']);
 
     // watch for scss files while in dev
-    grunt.registerTask('devWatch', [
+    grunt.registerTask('dev_css', [
         'clean:prodCss',
         'concat_css:sass_var', 'replace:remove_variables_imports', 'concat_css:sass_mixins', 'replace:remove_mixins_imports', 
-        'compass:dev', 'concat:dev',
+        'compass:dev',
         'csslint:watch'
+    ]);
+
+    // watch for js files while in dev
+    grunt.registerTask('dev_js', [
+        'concat:dev',
+        'jshint:dev'
     ]);
 
     // Dev task
     grunt.registerTask('dev', [
-        'clean:dev',
-        'concat_css:sass_var', 'compass:dev', 'concat:dev', 'concat_css:dev', 'csslint:dev', 'cssmin:dev',
-        'jshint:dev', 'uglify:devJquery', 'uglify:devJs'
+        'clean:prodCss',
+        'concat_css:sass_var', 'replace:remove_variables_imports', 'concat_css:sass_mixins', 'replace:remove_mixins_imports', 
+        'compass:dev',
+        'concat:dev', 'jshint:dev'
     ]);
 };
