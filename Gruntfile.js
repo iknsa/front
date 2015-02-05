@@ -17,10 +17,10 @@ module.exports = function(grunt) {
             prod: ['dist/*'],
             prodCss: ['dist/css*'],
             prodJs: ['dist/js*'],
-            dev: ['vendor/ks/dist/*'],
-            css: ['vendor/ks/dist/css*'],
-            concat: ['vendor/ks/concat/*'],
-            js: ['vendor/ks/dist/js/*']
+            dev: ['vendor/iknsa/dist/*'],
+            css: ['vendor/iknsa/dist/css*'],
+            concat: ['vendor/iknsa/concat/*'],
+            js: ['vendor/iknsa/dist/js/*']
         },
 
 
@@ -28,8 +28,8 @@ module.exports = function(grunt) {
         compass: {
             dev: {
                 options: {
-                  sassDir: 'vendor/ks/scss',
-                  cssDir: 'vendor/ks/css',
+                  sassDir: 'vendor/iknsa/ks',
+                  cssDir: 'vendor/iknsa/css',
                   fontsDir: 'vendor/fonts',
                   environment: 'development',
                   require: 'susy'
@@ -38,9 +38,13 @@ module.exports = function(grunt) {
         },
 
         watch: {
-            dev: {
-                files: ['vendor/ks/scss/**/*.scss', 'vendor/ks/scss/**/*js'],
-                tasks: ['devWatch'],
+            dev_css: {
+                files: ['vendor/iknsa/ks/**/*.scss'],
+                tasks: ['dev_css'],
+            },
+            dev_js: {
+                files: ['vendor/iknsa/ks/**/*.js'],
+                tasks: ['dev_js'],
             }
         },
 
@@ -50,16 +54,16 @@ module.exports = function(grunt) {
                 // baseDir: 'src/(styles|assets)'
             },
             sass_var: {
-                src: ['vendor/ks/scss/lib/components/_variables.scss', 'vendor/ks/scss/lib/**/_variables.scss'],
-                dest: 'vendor/ks/scss/lib/_all_variables.scss'
+                src: ['vendor/iknsa/ks/lib/components/_variables.scss', 'vendor/iknsa/ks/lib/**/_variables.scss'],
+                dest: 'vendor/iknsa/ks/lib/_all_variables.scss'
             },
             sass_mixins: {
-                src: ['vendor/ks/scss/lib/**/_mixins.scss'],
-                dest: 'vendor/ks/scss/lib/_all_mixins.scss'
+                src: ['vendor/iknsa/ks/lib/**/_mixins.scss'],
+                dest: 'vendor/iknsa/ks/lib/_all_mixins.scss'
             },
             dev: {
-                src: ['vendor/ks/css/*.css'],
-                dest: 'vendor/ks/concat/concat.css'
+                src: ['vendor/iknsa/css/*.css'],
+                dest: 'vendor/iknsa/concat/concat.css'
             }
         },
 
@@ -93,14 +97,14 @@ module.exports = function(grunt) {
                 options: {
                     import: 2
                 },
-                src: ['vendor/ks/css/imports.css']
+                src: ['vendor/iknsa/css/imports.css']
             }
         },
 
         cssmin: {
             dev: {
                 files: {
-                  'vendor/ks/dist/ks.min.css': ['vendor/ks/concat/**/*.css']
+                  'vendor/iknsa/dist/ks.min.css': ['vendor/iknsa/concat/**/*.css']
                 }
             }
         },
@@ -112,7 +116,7 @@ module.exports = function(grunt) {
                 src: 'Gruntfile.js'
             },
             dev: {
-                src: ['vendor/ks/js/**/*.js', '<%= concat.dev.dest %>']
+                src: ['vendor/iknsa/js/**/*.js', '<%= concat.dev.dest %>']
             }
         },
 
@@ -120,12 +124,12 @@ module.exports = function(grunt) {
         concat: {
             options: {
                 banner: '<%= banner %>',
-                separator: '\n',
+                separator: '\n//-------------------\n',
                 stripBanners: true
             },
             dev: {
-                    src: ['vendor/ks/scss/lib/onload_start.js', 'vendor/ks/**/_*.js', 'vendor/ks/scss/lib/onload_end.js'],
-                    dest: 'vendor/ks/concat/dev.js',
+                    src: ['vendor/iknsa/ks/lib/onload_start.js', 'vendor/iknsa/ks/lib/form/ks-form-validator/_validationRules.js', 'vendor/iknsa/ks/lib/form/ks-form-validator/_core.js', 'vendor/iknsa/ks/lib/form/ks-form-validator/_*.js', 'vendor/iknsa/ks/lib/**/_*.js', 'vendor/iknsa/ks/lib/onload_end.js'],
+                    dest: 'vendor/iknsa/js/dev.js',
             }
         },
 
@@ -135,11 +139,11 @@ module.exports = function(grunt) {
             },
             devJquery: {
                 src: ['vendor/contrib/jquery-1.11.2/index.js'],
-                dest: 'vendor/ks/dist/ugly/js/jquery/jqery.js'
+                dest: 'vendor/iknsa/dist/ugly/js/jquery/jqery.js'
             },
             devJs: {
-                src: ['vendor/ks/dist/js/*.js'],
-                dest: 'vendor/ks/dist/ugly/js/dev.js'
+                src: ['vendor/iknsa/dist/js/*.js'],
+                dest: 'vendor/iknsa/dist/ugly/js/dev.js'
             }
         },
 
@@ -150,9 +154,17 @@ module.exports = function(grunt) {
                     // makes all src relative to cwd
                     {
                         expand: true,
-                        cwd: 'vendor/ks/scss/lib/base/',
+                        cwd: 'vendor/iknsa/ks/lib/base/',
                         src: ['**'],
-                        dest: 'vendor/ks/scss/lib/form/',
+                        dest: 'vendor/iknsa/ks/lib/form/',
+                        rename: function(dest, src) {
+                            return dest + src.replace(/base/g, "form");
+                        }
+                    },
+                    {
+                        expand: true,
+                        src: ['templates/base.html'],
+                        dest: '',
                         rename: function(dest, src) {
                             return dest + src.replace(/base/g, "form");
                         }
@@ -168,17 +180,24 @@ module.exports = function(grunt) {
     grunt.registerTask('default', ['jshint']);
 
     // watch for scss files while in dev
-    grunt.registerTask('devWatch', [
+    grunt.registerTask('dev_css', [
         'clean:prodCss',
         'concat_css:sass_var', 'replace:remove_variables_imports', 'concat_css:sass_mixins', 'replace:remove_mixins_imports', 
-        'compass:dev', 'concat:dev',
+        'compass:dev',
         'csslint:watch'
+    ]);
+
+    // watch for js files while in dev
+    grunt.registerTask('dev_js', [
+        'concat:dev',
+        'jshint:dev'
     ]);
 
     // Dev task
     grunt.registerTask('dev', [
-        'clean:dev',
-        'concat_css:sass_var', 'compass:dev', 'concat:dev', 'concat_css:dev', 'csslint:dev', 'cssmin:dev',
-        'jshint:dev', 'uglify:devJquery', 'uglify:devJs'
+        'clean:prodCss',
+        'concat_css:sass_var', 'replace:remove_variables_imports', 'concat_css:sass_mixins', 'replace:remove_mixins_imports', 
+        'compass:dev',
+        'concat:dev', 'jshint:dev'
     ]);
 };

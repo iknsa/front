@@ -1,0 +1,45 @@
+@import 'variables';
+@import 'mixins';
+
+// Form 
+form
+{
+    line-height: $form-line-height;
+}
+
+legend
+{
+    font-size: $legend-font-size;
+    font-weight: $legend-font-weight;
+}
+
+fieldset
+{
+    @include fieldset-border($fieldset-border);
+    padding: 0;
+    margin: 0;
+}
+
+textarea
+{
+    // Remove default red border in some browser to set a personalized one.
+    outline: none;
+    &:invalid, &:required {
+        box-shadow: none;
+    }
+    
+    // sets border style
+    padding: $textarea-padding;
+    @include input-border($input-border);
+}
+
+input[type=search], input[type=url], input[type=text], input[type=password], input[type=email]
+{
+    @extend textarea;
+    padding: $input-padding;
+}
+
+.error-message, .form-error
+{
+    display: none;
+}

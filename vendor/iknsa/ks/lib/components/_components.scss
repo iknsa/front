@@ -1,0 +1,30 @@
+@import 'variables';
+@import 'mixins';
+
+// Components
+*
+{
+    box-sizing: border-box;
+}
+body
+{
+    font-size: $font-size-default;
+    font-family: $font-family;
+    color: $dark-color;
+    font-weight: $font-weight-default;
+}
+// Text align classes
+.center
+{
+    text-align: center;
+}
+
+.right
+{
+    text-align: right;
+}
+
+.left
+{
+    text-align: left;
+}

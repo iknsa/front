@@ -1,0 +1,79 @@
+
+@import "compass";
+
+
+
+
+
+
+// Typography
+$font-family: Helvetica, Arial, sans-serif !default;
+
+$font-size-default: 15px !default;
+
+$font-size-large: ceil($font-size-default * 1.25) !default;
+$font-size-small: ceil($font-size-default * 0.85) !default;
+
+$font-weight-default: 400;
+
+
+$line-height-default: $font-size-default * 1.428571428571429;
+
+// Default colors
+$light-color: #f5f5f5;
+$dark-color: #535353;
+$primary-color: #2a85ba;
+$success-color: #48967b;
+$danger-color: #bd4141;
+$warning-color: #e8ae32;
+
+$breadcrumb-default-color : $primary-color;
+$breadcrumb-seperator: " >";
+// button typographie
+$btn-font-weight      : normal !default;
+$border-darken-amt    : 5;
+$btn-font-size-default: $font-size-default;
+
+// button colors
+$btn-default-bg-color : $light-color !default;
+$btn-default-color    : $dark-color !default;
+
+$btn-primary-bg-color : $primary-color !default;
+$btn-primary-color    : $light-color !default;
+
+$btn-success-bg-color : $success-color !default;
+$btn-success-color    : $light-color !default;
+
+$btn-danger-bg-color  : $danger-color !default;
+$btn-danger-color     : $light-color !default;
+
+$btn-warning-bg-color : $warning-color !default;
+$btn-warning-color    : $light-color !default;
+
+// button size
+$padding-vertical     : 7px !default;
+$padding-horizontal   : 14px !default;
+$border-radius        : 5px !default;
+// From Variables
+$fieldset-border : none;
+
+$legend-font-size: $font-size-default * 1.20;
+$form-line-height: $line-height-default;
+$legend-font-weight: $font-weight-default + 200;
+
+$input-line-height: $line-height-default * 1.20;
+$input-border: 1px solid $dark-color;
+$input-height: $input-line-height;
+$input-padding: 3px 7px;
+
+$textarea-padding: 5px 10px;
+// Pagination
+$pagination-color: $dark-color;
+$pagination-bg-color: $light-color;
+// Tables variables
+$tbl-padding-horizontal : 10px;
+$tbl-padding-vertical : 10px;
+
+$tbl-bg-color : lighten($light-color, 3);
+$tbl-bg-zebra : $tbl-bg-color;
+$tbl-color : $dark-color;
