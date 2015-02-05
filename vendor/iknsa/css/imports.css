@@ -1,9 +1,9 @@
-/* line 4, ../ks/lib/components/_components.scss */
+/* line 5, ../ks/lib/components/_components.scss */
 * {
   box-sizing: border-box;
 }
 
-/* line 8, ../ks/lib/components/_components.scss */
+/* line 9, ../ks/lib/components/_components.scss */
 body {
   font-size: 15px;
   font-family: Helvetica, Arial, sans-serif;
@@ -11,17 +11,17 @@ body {
   font-weight: 400;
 }
 
-/* line 16, ../ks/lib/components/_components.scss */
+/* line 17, ../ks/lib/components/_components.scss */
 .center {
   text-align: center;
 }
 
-/* line 21, ../ks/lib/components/_components.scss */
+/* line 22, ../ks/lib/components/_components.scss */
 .right {
   text-align: right;
 }
 
-/* line 26, ../ks/lib/components/_components.scss */
+/* line 27, ../ks/lib/components/_components.scss */
 .left {
   text-align: left;
 }

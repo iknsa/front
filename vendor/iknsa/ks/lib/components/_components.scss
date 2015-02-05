@@ -1,6 +1,7 @@
 @import 'variables';
 @import 'mixins';
 
+// Components
 *
 {
     box-sizing: border-box;
@@ -12,7 +13,7 @@ body
     color: $dark-color;
     font-weight: $font-weight-default;
 }
-
+// Text align classes
 .center
 {
     text-align: center;
