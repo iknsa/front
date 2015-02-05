@@ -1,11 +1,8 @@
 // Core.js ------------------------------------------
-// Disable browser default validation
-$("form").attr('novalidate', "");
-
-validateField('#search', validationRules);
 
 /**
  * Init function. Calls each function in appropriate order
+ * 
  * @param  {string} field           selector => #id | .class
  * @param  {array} validationRules
  */
@@ -24,16 +21,15 @@ function validateField(field, validationRules)
 
 /**
  * Call the appropriate strategy
+ * 
  * @param  {string} value
  * @param  {string} param
  */
 function dispatchRuleToStrategy(value, param)
 {
     strategy = "ks_strategy_" + value;
-    eval(strategy + "(" + param + ")");
+    window[strategy]();
 }
-
-// function
 
 /**
  * compare values from classes and properties with validation rules
@@ -97,6 +93,7 @@ function combineValues(classesValuesToCheck, propValuesToCheck)
 
 /**
  * check if a value is in the validation rules
+ * 
  * @param  {string} value
  * @param  {array} validationRules
  * 

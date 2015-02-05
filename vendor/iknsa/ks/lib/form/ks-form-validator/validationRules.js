@@ -9,4 +9,5 @@
 // Each strategy is a plugin. Be sure to have the plugin in case
 // of undefined function.
 
-validationRules = ["max", "min", "maxlength", "required", "email", "digits", "currency", "date", "time"];
+validationRules = ["max", "min", "maxlength", "required",
+                   "email", "digits", "currency", "date", "time"];

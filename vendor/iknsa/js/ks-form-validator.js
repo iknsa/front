@@ -1,43 +1,5 @@
 /*! ks-framework - v0.0.0 - 2015-02-05
 * Copyright (c) 2015 ; Licensed  */
-/*! ks-framework - v0.0.0 - 2015-02-05
-* Copyright (c) 2015 ; Licensed  */
-jQuery( document ).ready(function( $ ) {
-//-------------------
-
-//-------------------
-// Breadcrumb
-
-// add disable class on last child of the breadcrumb
-$('.breadcrumb ul li:last-child a').addClass("btn-disable");
-//-------------------
-// Buttons
-
-// prevent default action on disabled btn elements
-if(!$('.btn-disable').attr('disabled') || 
-    typeof $('.btn-disable').attr('disabled') == typeof undefined)
-{
-    $('.btn-disable').attr('disabled', true);
-
-    $('.btn-disable').click(function(e) {
-        e.preventDefault();
-    });
-}
-//-------------------
-
-//-------------------
-// Forms
-// Disable browser default validation
-$("form").attr('novalidate', "");
-
-validateField('#search', validationRules);
-//-------------------
-
-//-------------------
-});
-//-------------------
-/*! ks-framework - v0.0.0 - 2015-02-05
-* Copyright (c) 2015 ; Licensed  */
 // validationRules.js ------------------------------------------
 
 // Required by the core.js to create rules. Each rule defined is
