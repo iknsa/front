@@ -1,21 +1,3 @@
-/*! ks-framework - v0.0.0 - 2015-02-05
-* Copyright (c) 2015 ; Licensed  */
-jQuery( document ).ready(function( $ ) {
-//-------------------
-// validationRules.js ------------------------------------------
-
-// Required by the core.js to create rules. Each rule defined is
-// checked by the core for constraints defined in the concerning
-// field. Then the core dispatches each rule to the appropriate
-// strategy. All strategies are functions whose name must follow
-// the following format "ks_strategy_" + validationRule 
-// 
-// Each strategy is a plugin. Be sure to have the plugin in case
-// of undefined function.
-
-validationRules = ["max", "min", "maxlength", "required", "email", "digits", "currency", "date", "time"];
-
-//-------------------
 // Core.js ------------------------------------------
 // Disable browser default validation
 $("form").attr('novalidate', "");
@@ -226,57 +208,3 @@ function getProperties(field)
     });
     return fieldProp;
 }
-//-------------------
-// _strategy-maxlength.js ------------------------------------------
-function ks_strategy_maxlength(param)
-{
-    console.log("maxlength: " + param);
-}
-//-------------------
-// _strategy-min.js ------------------------------------------
-function ks_strategy_min(param)
-{
-    console.log("min: " + param);
-}
-
-//-------------------
-// _strategy-required.js ------------------------------------------
-function ks_strategy_required(param)
-{
-    console.log("required: " + param);
-}
-
-//-------------------
-// _strategy_max.js ------------------------------------------
-function ks_strategy_max(param)
-{
-    console.log("max: " + param);
-}
-
-//-------------------
-
-//-------------------
-// Breadcrumb
-// add disable class on last child of the breadcrumb
-$('.breadcrumb ul li:last-child a').addClass("btn-disable");
-//-------------------
-// Buttons
-// prevent default action on disabled btn elements
-if(!$('.btn-disable').attr('disabled') || 
-    typeof $('.btn-disable').attr('disabled') == typeof undefined)
-{
-    $('.btn-disable').attr('disabled', true);
-
-    $('.btn-disable').click(function(e) {
-        e.preventDefault();
-    });
-}
-//-------------------
-
-//-------------------
-// Forms
-
-//-------------------
-
-//-------------------
-});

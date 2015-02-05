@@ -128,7 +128,7 @@ module.exports = function(grunt) {
                 stripBanners: true
             },
             dev: {
-                    src: ['vendor/iknsa/ks/lib/onload_start.js', 'vendor/iknsa/**/_*.js', 'vendor/iknsa/ks/lib/onload_end.js'],
+                    src: ['vendor/iknsa/ks/lib/onload_start.js', 'vendor/iknsa/ks/lib/form/ks-form-validator/_validationRules.js', 'vendor/iknsa/ks/lib/form/ks-form-validator/_core.js', 'vendor/iknsa/ks/lib/form/ks-form-validator/_*.js', 'vendor/iknsa/ks/lib/**/_*.js', 'vendor/iknsa/ks/lib/onload_end.js'],
                     dest: 'vendor/iknsa/js/dev.js',
             }
         },
