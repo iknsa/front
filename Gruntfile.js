@@ -160,7 +160,7 @@ module.exports = function(grunt) {
         },
 
         copy: {
-            form: {
+            dock: {
                 files: [
 
                     // makes all src relative to cwd
@@ -168,9 +168,9 @@ module.exports = function(grunt) {
                         expand: true,
                         cwd: 'vendor/iknsa/ks/lib/base/',
                         src: ['**'],
-                        dest: 'vendor/iknsa/ks/lib/form/',
+                        dest: 'vendor/iknsa/ks/lib/dock/',
                         rename: function(dest, src) {
-                            return dest + src.replace(/base/g, "form");
+                            return dest + src.replace(/base/g, "dock");
                         }
                     },
                     {
@@ -178,7 +178,7 @@ module.exports = function(grunt) {
                         src: ['templates/base.html'],
                         dest: '',
                         rename: function(dest, src) {
-                            return dest + src.replace(/base/g, "form");
+                            return dest + src.replace(/base/g, "dock");
                         }
                     }
                 ],

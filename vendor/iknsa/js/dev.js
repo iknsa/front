@@ -1,6 +1,6 @@
-/*! ks-framework - v0.0.0 - 2015-02-05
+/*! ks-framework - v0.0.0 - 2015-02-06
 * Copyright (c) 2015 ; Licensed  */
-/*! ks-framework - v0.0.0 - 2015-02-05
+/*! ks-framework - v0.0.0 - 2015-02-06
 * Copyright (c) 2015 ; Licensed  */
 jQuery( document ).ready(function( $ ) {
 //-------------------
@@ -26,17 +26,28 @@ if(!$('.btn-disable').attr('disabled') ||
 //-------------------
 
 //-------------------
+
+//-------------------
 // Forms
 // Disable browser default validation
 $("form").attr('novalidate', "");
 
-validateField('#search', validationRules);
+// validateField('#search', validationRules);
+//-------------------
+$("li").has($("ul:hidden")).hover(
+    function(){
+        $(this).children("ul").stop().slideDown(400).addClass("active");
+    }, function() {
+        $(this).children("ul").stop().slideUp(200).removeClass("active");
+    }
+);
+
 //-------------------
 
 //-------------------
 });
 //-------------------
-/*! ks-framework - v0.0.0 - 2015-02-05
+/*! ks-framework - v0.0.0 - 2015-02-06
 * Copyright (c) 2015 ; Licensed  */
 // validationRules.js ------------------------------------------
 

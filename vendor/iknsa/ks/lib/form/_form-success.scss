@@ -2,7 +2,7 @@ form.success
 {
     div.success {
         label {
-            color: initial;
+            color: $dark-color;
         }
         input[type=search], input[type=url], input[type=text], input[type=password], input[type=email], select, input[type=checkbox], input[type=radio], textarea {
             border: 2px solid $success-color;

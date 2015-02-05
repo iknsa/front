@@ -1,4 +1,4 @@
-/*! ks-framework - v0.0.0 - 2015-02-05
+/*! ks-framework - v0.0.0 - 2015-02-06
 * Copyright (c) 2015 ; Licensed  */
 // validationRules.js ------------------------------------------
 

@@ -1,0 +1,68 @@
+nav
+{
+    background:darken($dark-color, 5);
+    width: 250px;
+    position: absolute;
+    top: 30px;
+    bottom:0;
+    left: 0;
+    color: $light-color;
+
+    .user {
+        height: 200px;
+        background:darken($dark-color, 10);
+    }
+
+    li {
+        position: relative;
+        display: block;
+        font-size: $font-size-default * 1.10;
+        border-top: 1px solid #5e5e5e;
+        border-bottom: 1px solid #404040;
+
+        &:first-child {
+            border-top: 0;
+        }
+        &:last-child {
+            border-bottom: 0;
+        }
+
+        &:hover, &.hover {
+            background: lighten($dark-color, 1);
+        }
+
+        &:active, &.active {
+            background: lighten($dark-color, 3);
+        }
+
+        a {
+            color: $light-color;
+            text-decoration: none;
+            height: 100%;
+            display: block;
+            padding: 20px;
+            display: inline-block;
+        }
+
+        ul {
+            display: none;
+            background:darken($dark-color, 10);
+
+            &.active {
+                display: block
+            }
+            li {
+                &:first-child{
+                    border-top: 1px solid #5e5e5e;
+                }
+                &:last-child {
+                   border-bottom: 1px solid #404040;
+                }
+
+                a {
+                    padding-left: 40px;
+                }
+            }
+        }
+    }
+}
