@@ -11,6 +11,21 @@ body {
   font-weight: 400;
 }
 
+/* line 16, ../ks/lib/components/_components.scss */
+.center {
+  text-align: center;
+}
+
+/* line 21, ../ks/lib/components/_components.scss */
+.right {
+  text-align: right;
+}
+
+/* line 26, ../ks/lib/components/_components.scss */
+.left {
+  text-align: left;
+}
+
 /* line 1, ../ks/lib/normalize/_normalize.scss */
 ul {
   margin: 0;
