@@ -5,44 +5,35 @@ $("form").attr('novalidate', "");
 
 // Forms Errors
 
-validaionRules = ["max", "min", "required", "email", "digits", "currency", "date", "time"];
+validationRules = ["max", "min", "maxlength", "required", "email", "digits", "currency", "date", "time"];
 
-validateField('#search', validaionRules);
+validateField('#search', validationRules);
 
 
-function validateField(field, validaionRules)
+function validateField(field, validationRules)
 {
     var classes = {};
     var fieldParent = $(field).parent(".form-group");
 
     getClasses(field);
     getProperties(field);
-    classesToCheck(fieldClasses);
-    propToCheck(fieldProp);
-    valuesToCompareWithValidationRules(classesValuesToCheck, propValuesToCheck)
-    compareValuesWithRules(allValues, validaionRules);
+    classesToCheck(fieldClasses, validationRules);
+    propToCheck(fieldProp, validationRules);
+    combineValues(classesValuesToCheck, propValuesToCheck);
+    callStrategies(allValues);
     dispatchRuleToStrategy(strategies);
 }
 
 
-/*function dispatchRuleToStrategy(strategies)
-{
-    console.log(strategies);
-    $.each(strategies, function(index, value) {
-        strategy = "strategy_" + value;
-        [strategy]();
-    });
-}*/
-
 function dispatchRuleToStrategy(strategies)
 {
     // console.log(strategies);
+
     $.each(strategies, function(index, value) {
+        strategy = "strategy_" + value;
+        eval(strategy + "()");
+        // console.log(strategy);
     });
-    var lib = {
-        'strategy_min': strategy_min
-    };
-    lib['strategy_min']();
 }
 
 function strategy_min()
@@ -65,16 +56,20 @@ function strategy_required()
  *
  * @return {array} strategies
  */
-function compareValuesWithRules(allValues, validaionRules)
+function callStrategies(allValues)
 {
     strategies = [];
     $.each(allValues, function(index, value) {
         // Check that the value IS in the validationRules and IS NOT already in the validStrategy
-        if($.inArray(value, validaionRules) != -1 && $.inArray(value, strategies) == -1){
-            strategies.push(value);
+        if($.isArray(value) === false) {
+            if(!value.match(/\-/)) {
+                if($.inArray(value, strategies) == -1){
+                    strategies.push(value);
+                }
+            }
         }
     });
-
+console.log(strategies);
     return strategies;
 }
 
@@ -86,7 +81,7 @@ function compareValuesWithRules(allValues, validaionRules)
  * 
  * @return {array} allValues
  */
-function valuesToCompareWithValidationRules(classesValuesToCheck, propValuesToCheck)
+function combineValues(classesValuesToCheck, propValuesToCheck)
 {
     allValues = [];
 
@@ -99,8 +94,23 @@ function valuesToCompareWithValidationRules(classesValuesToCheck, propValuesToCh
     $.each(propValuesToCheck, function(index, value) {
         allValues.push(value);
     });
-
+// console.log(allValues);
     return allValues;
+}
+
+/**
+ * check if a value is in the validation rules
+ * @param  {string} value
+ * @param  {array} validationRules
+ * 
+ * @return {boolean}
+ */
+function checkIfValueInValidationRules(value, validationRules)
+{
+        // console.log(value);
+    if($.inArray(value, validationRules) != -1 ){
+        return true;
+    }
 }
 
 /**
@@ -110,39 +120,29 @@ function valuesToCompareWithValidationRules(classesValuesToCheck, propValuesToCh
  *
  * return {array} classesValuesToCheck
  */
-function classesToCheck(fieldClasses)
+function classesToCheck(fieldClasses, validationRules)
 {
     classesValuesToCheck = [];
     $.each(fieldClasses, function(index, value) {
+
         if(value.match(/-/)){
+
             splitVal = value.split("-");
-            classesValuesToCheck.push(splitVal[0]);
+
+            // If the class value is in the rules we also take the whole stuff as 
+            // we will need it later on to send it as param to validation strategies
+
+            if(checkIfValueInValidationRules(splitVal[0], validationRules)){
+                classesValuesToCheck.push(splitVal);
+            }
+
         } else {
-            classesValuesToCheck.push(value);
+            if(checkIfValueInValidationRules(value, validationRules)) {
+                classesValuesToCheck.push(value);
+            }
         }
     });
     return classesValuesToCheck;
-}
-
-/**
- * Prepare properties values to check if they are in the validation Rules
- *
- * @param {array} fieldProp
- *
- * return {array} propValuesToCheck
- */
-function propToCheck(fieldProp)
-{
-    propValuesToCheck = [];
-    $.each(fieldProp, function(index, value) {
-        if(value.match(/-/)){
-            splitVal = value.split("-");
-            propValuesToCheck.push(splitVal[0]);
-        } else {
-            propValuesToCheck.push(value);
-        }
-    });
-    return propValuesToCheck;
 }
 
 /**
@@ -160,6 +160,32 @@ function getClasses(field)
 }
 
 /**
+ * Prepare properties values to check if they are in the validation Rules
+ *
+ * @param {array} fieldProp
+ *
+ * return {array} propValuesToCheck
+ */
+function propToCheck(fieldProp, validationRules)
+{
+    propValuesToCheck = [];
+    propArray = [];
+
+    $.each(fieldProp, function(index, value) {
+        // console.log(value);
+        $.each(value, function(key, val){
+            // console.log(key+':'+val);
+            if(checkIfValueInValidationRules(key, validationRules))
+            {
+                propValuesToCheck.push(key + "-" + val);
+            }
+        });
+    });
+    // console.log(propValuesToCheck);
+    return propValuesToCheck;
+}
+
+/**
  * Get all the properties of a specific field
  * 
  * @param {string} field => selector #id or .class
@@ -170,15 +196,22 @@ function getProperties(field)
 {
     // var fieldAttr = $(field).attr();
     fieldProp = [];
+    prop = {};
 
-    var fieldVal = $(field).val();
-        $(field).each(function() {
+    $(field).each(function() {
         $.each(this.attributes, function() {
             if(this.specified) {
-                fieldProp.push(this.name);
+
+                // we take in all the properties except the class 
+                if(this.name != "class") {
+                    prop[this.name] = this.value;
+                }
+
+                if($.inArray(prop, fieldProp)){
+                    fieldProp.push(prop);
+                }
             }
         });
     });
-
     return fieldProp;
 }
