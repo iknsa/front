@@ -541,18 +541,17 @@ form.success .error-message, form.success form.error .form-error, form.error for
 nav {
   background: #464646;
   width: 250px;
-  position: absolute;
+  position: relative;
   top: 30px;
-  bottom: 0;
-  left: 0;
   color: #f5f5f5;
+  float: left;
 }
-/* line 11, ../ks/lib/nav/_pro-black-theme.scss */
+/* line 10, ../ks/lib/nav/_pro-black-theme.scss */
 nav .user {
   height: 200px;
   background: #393939;
 }
-/* line 16, ../ks/lib/nav/_pro-black-theme.scss */
+/* line 15, ../ks/lib/nav/_pro-black-theme.scss */
 nav li {
   position: relative;
   display: block;
@@ -560,49 +559,129 @@ nav li {
   border-top: 1px solid #5e5e5e;
   border-bottom: 1px solid #404040;
 }
-/* line 23, ../ks/lib/nav/_pro-black-theme.scss */
+/* line 22, ../ks/lib/nav/_pro-black-theme.scss */
 nav li:first-child {
   border-top: 0;
 }
-/* line 26, ../ks/lib/nav/_pro-black-theme.scss */
+/* line 25, ../ks/lib/nav/_pro-black-theme.scss */
 nav li:last-child {
   border-bottom: 0;
 }
-/* line 30, ../ks/lib/nav/_pro-black-theme.scss */
+/* line 29, ../ks/lib/nav/_pro-black-theme.scss */
 nav li:hover, nav li.hover {
   background: #565656;
 }
-/* line 34, ../ks/lib/nav/_pro-black-theme.scss */
+/* line 33, ../ks/lib/nav/_pro-black-theme.scss */
 nav li:active, nav li.active {
   background: #5b5b5b;
 }
-/* line 38, ../ks/lib/nav/_pro-black-theme.scss */
+/* line 37, ../ks/lib/nav/_pro-black-theme.scss */
 nav li a {
   color: #f5f5f5;
   text-decoration: none;
   height: 100%;
-  display: block;
   padding: 20px;
-  display: inline-block;
+  display: block;
 }
-/* line 47, ../ks/lib/nav/_pro-black-theme.scss */
+/* line 45, ../ks/lib/nav/_pro-black-theme.scss */
 nav li ul {
   display: none;
   background: #393939;
 }
-/* line 51, ../ks/lib/nav/_pro-black-theme.scss */
+/* line 49, ../ks/lib/nav/_pro-black-theme.scss */
 nav li ul.active {
   display: block;
 }
-/* line 55, ../ks/lib/nav/_pro-black-theme.scss */
+/* line 53, ../ks/lib/nav/_pro-black-theme.scss */
 nav li ul li:first-child {
   border-top: 1px solid #5e5e5e;
 }
-/* line 58, ../ks/lib/nav/_pro-black-theme.scss */
+/* line 56, ../ks/lib/nav/_pro-black-theme.scss */
 nav li ul li:last-child {
   border-bottom: 1px solid #404040;
 }
-/* line 62, ../ks/lib/nav/_pro-black-theme.scss */
+/* line 60, ../ks/lib/nav/_pro-black-theme.scss */
 nav li ul li a {
   padding-left: 40px;
+  display: block;
+}
+
+/* line 4, ../ks/lib/dock/_dock.scss */
+.dock {
+  background: #393939;
+  height: 30px;
+  line-height: 30px;
+}
+/* line 10, ../ks/lib/dock/_dock.scss */
+.dock a {
+  text-decoration: none;
+  color: #f5f5f5;
+}
+/* line 14, ../ks/lib/dock/_dock.scss */
+.dock ul {
+  display: inline-block;
+}
+/* line 17, ../ks/lib/dock/_dock.scss */
+.dock ul li {
+  position: relative;
+}
+/* line 21, ../ks/lib/dock/_dock.scss */
+.dock ul li a img {
+  margin: 0 10px;
+}
+/* line 26, ../ks/lib/dock/_dock.scss */
+.dock ul li ul {
+  display: none;
+  position: absolute;
+  margin-top: 5px;
+  border: 1px solid #535353;
+  background: white;
+  -moz-box-shadow: #535353 -2px 2px 10px;
+  -webkit-box-shadow: #535353 -2px 2px 10px;
+  box-shadow: #535353 -2px 2px 10px;
+}
+/* line 34, ../ks/lib/dock/_dock.scss */
+.dock ul li ul li {
+  display: block;
+}
+/* line 37, ../ks/lib/dock/_dock.scss */
+.dock ul li ul a {
+  color: #535353;
+  padding: 0 15px;
+  white-space: nowrap;
+}
+/* line 43, ../ks/lib/dock/_dock.scss */
+.dock ul li ul.active {
+  display: block;
+}
+
+/* line 51, ../ks/lib/dock/_dock.scss */
+.dock-right {
+  display: inline-block;
+  float: right;
+}
+
+/* line 57, ../ks/lib/dock/_dock.scss */
+.search-bar {
+  display: inline-block;
+}
+/* line 61, ../ks/lib/dock/_dock.scss */
+.search-bar input[type=text] {
+  background: rgba(91, 91, 91, 0.2);
+  color: #f5f5f5;
+  border: 0;
+  outline: none;
+}
+/* line 68, ../ks/lib/dock/_dock.scss */
+.search-bar input[type=submit] {
+  background: #2d2d2d;
+  border: none;
+  background: url("../img/dock/search-ico.png") no-repeat scroll 50% 50% #2D2D2D;
+  width: 30px;
+  height: 25px;
+}
+
+/* line 77, ../ks/lib/dock/_dock.scss */
+.lang-flag {
+  float: left;
 }
