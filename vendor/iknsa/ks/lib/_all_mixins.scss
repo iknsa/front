@@ -9,6 +9,7 @@
 
 
 
+
 @mixin btn-base
 {
     display: inline-block;
@@ -94,6 +95,7 @@
     border-right: $input-border;
     border-left: $input-border;
 }
+
 
 
 @mixin tbl-border()

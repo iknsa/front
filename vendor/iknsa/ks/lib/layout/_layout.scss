@@ -1,0 +1,26 @@
+@import 'variables';
+@import 'mixins';
+
+// Layout
+
+main
+{
+    padding: 15px;
+    background:white;
+    float:left;
+    // width: calc(100% - 250px);
+}
+
+footer
+{
+    background:darken($dark-color, 10);
+    width: calc(100% - 250px);
+    float:left;
+    padding: 50px 0;
+    color: $light-color;
+    text-align: center;
+
+    a {
+        color: $primary-color;
+    }
+}
