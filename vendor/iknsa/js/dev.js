@@ -1,6 +1,6 @@
-/*! ks-framework - v0.0.0 - 2015-02-06
+/*! ks-framework - v0.0.0 - 2015-02-08
 * Copyright (c) 2015 ; Licensed  */
-/*! ks-framework - v0.0.0 - 2015-02-06
+/*! ks-framework - v0.0.0 - 2015-02-08
 * Copyright (c) 2015 ; Licensed  */
 jQuery( document ).ready(function( $ ) {
 //-------------------
@@ -37,6 +37,8 @@ $("li").has($("ul:hidden")).has($("ul.openable")).hover(
 //-------------------
 
 //-------------------
+
+//-------------------
 // Forms
 // Disable browser default validation
 $("form").attr('novalidate', "");
@@ -51,7 +53,7 @@ $("form").attr('novalidate', "");
 //-------------------
 });
 //-------------------
-/*! ks-framework - v0.0.0 - 2015-02-06
+/*! ks-framework - v0.0.0 - 2015-02-08
 * Copyright (c) 2015 ; Licensed  */
 // validationRules.js ------------------------------------------
 

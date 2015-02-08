@@ -30,7 +30,7 @@ module.exports = function(grunt) {
                 options: {
                   sassDir: 'vendor/iknsa/ks',
                   cssDir: 'vendor/iknsa/css',
-                  fontsDir: 'vendor/fonts',
+                  fontsDir: 'ks-framework/vendor/iknsa/fonts',
                   environment: 'development',
                   require: 'susy'
                 }
@@ -160,7 +160,7 @@ module.exports = function(grunt) {
         },
 
         copy: {
-            layout: {
+            fonts: {
                 files: [
 
                     // makes all src relative to cwd
@@ -168,9 +168,9 @@ module.exports = function(grunt) {
                         expand: true,
                         cwd: 'vendor/iknsa/ks/lib/base/',
                         src: ['**'],
-                        dest: 'vendor/iknsa/ks/lib/layout/',
+                        dest: 'vendor/iknsa/ks/lib/fonts/',
                         rename: function(dest, src) {
-                            return dest + src.replace(/base/g, "layout");
+                            return dest + src.replace(/base/g, "fonts");
                         }
                     },
                     {
@@ -178,14 +178,12 @@ module.exports = function(grunt) {
                         src: ['templates/base.html'],
                         dest: '',
                         rename: function(dest, src) {
-                            return dest + src.replace(/base/g, "layout");
+                            return dest + src.replace(/base/g, "fonts");
                         }
                     }
                 ],
           },
         },
-
-
     });
 
     // Default task.
@@ -196,7 +194,7 @@ module.exports = function(grunt) {
         'clean:prodCss',
         'concat_css:sass_var', 'replace:remove_variables_imports', 'concat_css:sass_mixins', 'replace:remove_mixins_imports', 
         'compass:dev',
-        'csslint:watch'
+        // 'csslint:watch'
     ]);
 
     // watch for js files while in dev

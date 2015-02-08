@@ -7,6 +7,8 @@
     height: 30px;
     line-height: 30px;
     z-index: 100;
+    padding: 3px 0;
+    box-sizing:content-box;
     a {
         text-decoration: none;
         color: $light-color;
@@ -60,9 +62,10 @@
 .search-bar
 {
     display: inline-block;
-
+    position: relative;
+    top: -2px;
     input[type=text] {
-        background:rgba(lighten($dark-color, 3), 0.2);
+        background:lighten($dark-color, 1);
         color: $light-color;
         border: 0;
         outline: none;
