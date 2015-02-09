@@ -132,15 +132,18 @@ module.exports = function(grunt) {
                       'vendor/iknsa/ks/lib/onload_end.js'],
                 dest: 'vendor/iknsa/js/dev.js',
             },
+            core: {
+                src: ['vendor/iknsa/ks/lib/core/actionRules.js', 'vendor/iknsa/ks/lib/core/core.js'],
+                dest: 'vendor/iknsa/js/core.js'
+            },
             formValidator: {
-                src: ['vendor/iknsa/ks/lib/form/ks-form-validator/validationRules.js',
-                      'vendor/iknsa/ks/lib/form/ks-form-validator/core.js',
+                src: [
                       'vendor/iknsa/ks/lib/form/ks-form-validator/*.js'
                     ],
                 dest: 'vendor/iknsa/js/ks-form-validator.js',
             },
             dev: {
-                src: ["<%= concat.common.dest %>", "<%= concat.formValidator.dest %>"],
+                src: ["<%= concat.common.dest %>", "<%= concat.core.dest %>", "<%= concat.formValidator.dest %>"],
                 dest: "<%= concat.common.dest %>"
             }
         },
@@ -187,7 +190,7 @@ module.exports = function(grunt) {
     });
 
     // Default task.
-    grunt.registerTask('default', ['jshint']);
+    // grunt.registerTask('default', ['jshint']);
 
     // watch for scss files while in dev
     grunt.registerTask('dev_css', [

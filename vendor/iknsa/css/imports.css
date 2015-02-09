@@ -43,737 +43,747 @@ body {
   text-align: left;
 }
 
+/* line 39, ../ks/lib/components/_components.scss */
+.f-rgt {
+  float: right;
+}
+
+/* line 43, ../ks/lib/components/_components.scss */
+.f-lft {
+  float: left;
+}
+
+/* line 3, ../ks/lib/fonts/_icomoon.scss */
+.icon-mail:after {
+  content: "\e600";
+}
+
+/* line 7, ../ks/lib/fonts/_icomoon.scss */
+.icon-tablet:after {
+  content: "\e601";
+}
+
+/* line 11, ../ks/lib/fonts/_icomoon.scss */
+.icon-android:after {
+  content: "\e602";
+}
+
+/* line 15, ../ks/lib/fonts/_icomoon.scss */
+.icon-mobile:after {
+  content: "\e603";
+}
+
+/* line 19, ../ks/lib/fonts/_icomoon.scss */
+.icon-home2:after {
+  content: "\e901";
+}
+
+/* line 23, ../ks/lib/fonts/_icomoon.scss */
+.icon-pencil:after {
+  content: "\e905";
+}
+
+/* line 27, ../ks/lib/fonts/_icomoon.scss */
+.icon-pencil2:after {
+  content: "\e906";
+}
+
+/* line 31, ../ks/lib/fonts/_icomoon.scss */
+.icon-image:after {
+  content: "\e90d";
+}
+
+/* line 35, ../ks/lib/fonts/_icomoon.scss */
+.icon-images:after {
+  content: "\e90e";
+}
+
+/* line 39, ../ks/lib/fonts/_icomoon.scss */
+.icon-camera:after {
+  content: "\e90f";
+}
+
+/* line 43, ../ks/lib/fonts/_icomoon.scss */
+.icon-headphones:after {
+  content: "\e910";
+}
+
+/* line 47, ../ks/lib/fonts/_icomoon.scss */
+.icon-music:after {
+  content: "\e911";
+}
+
+/* line 51, ../ks/lib/fonts/_icomoon.scss */
+.icon-play:after {
+  content: "\e912";
+}
+
+/* line 55, ../ks/lib/fonts/_icomoon.scss */
+.icon-connection:after {
+  content: "\e91b";
+}
+
+/* line 59, ../ks/lib/fonts/_icomoon.scss */
+.icon-file-picture:after {
+  content: "\e927";
+}
+
+/* line 63, ../ks/lib/fonts/_icomoon.scss */
+.icon-file-music:after {
+  content: "\e928";
+}
+
+/* line 67, ../ks/lib/fonts/_icomoon.scss */
+.icon-file-play:after {
+  content: "\e929";
+}
+
+/* line 71, ../ks/lib/fonts/_icomoon.scss */
+.icon-stack:after {
+  content: "\e92e";
+}
+
+/* line 75, ../ks/lib/fonts/_icomoon.scss */
+.icon-folder:after {
+  content: "\e92f";
+}
+
+/* line 79, ../ks/lib/fonts/_icomoon.scss */
+.icon-folder-open:after {
+  content: "\e930";
+}
+
+/* line 83, ../ks/lib/fonts/_icomoon.scss */
+.icon-folder-plus:after {
+  content: "\e931";
+}
+
+/* line 87, ../ks/lib/fonts/_icomoon.scss */
+.icon-folder-minus:after {
+  content: "\e932";
+}
+
+/* line 91, ../ks/lib/fonts/_icomoon.scss */
+.icon-folder-download:after {
+  content: "\e933";
+}
+
+/* line 95, ../ks/lib/fonts/_icomoon.scss */
+.icon-folder-upload:after {
+  content: "\e934";
+}
+
+/* line 99, ../ks/lib/fonts/_icomoon.scss */
+.icon-phone:after {
+  content: "\e942";
+}
+
+/* line 103, ../ks/lib/fonts/_icomoon.scss */
+.icon-phone-hang-up:after {
+  content: "\e943";
+}
+
+/* line 107, ../ks/lib/fonts/_icomoon.scss */
+.icon-pushpin:after {
+  content: "\e946";
+}
+
+/* line 111, ../ks/lib/fonts/_icomoon.scss */
+.icon-location:after {
+  content: "\e947";
+}
+
+/* line 115, ../ks/lib/fonts/_icomoon.scss */
+.icon-location2:after {
+  content: "\e948";
+}
+
+/* line 119, ../ks/lib/fonts/_icomoon.scss */
+.icon-compass2:after {
+  content: "\e94a";
+}
+
+/* line 123, ../ks/lib/fonts/_icomoon.scss */
+.icon-bell:after {
+  content: "\e951";
+}
+
+/* line 127, ../ks/lib/fonts/_icomoon.scss */
+.icon-calendar:after {
+  content: "\e953";
+}
+
+/* line 131, ../ks/lib/fonts/_icomoon.scss */
+.icon-printer:after {
+  content: "\e954";
+}
+
+/* line 135, ../ks/lib/fonts/_icomoon.scss */
+.icon-keyboard:after {
+  content: "\e955";
+}
+
+/* line 139, ../ks/lib/fonts/_icomoon.scss */
+.icon-display:after {
+  content: "\e956";
+}
+
+/* line 143, ../ks/lib/fonts/_icomoon.scss */
+.icon-laptop:after {
+  content: "\e957";
+}
+
+/* line 147, ../ks/lib/fonts/_icomoon.scss */
+.icon-mobile3:after {
+  content: "\e958";
+}
+
+/* line 151, ../ks/lib/fonts/_icomoon.scss */
+.icon-mobile2:after {
+  content: "\e959";
+}
+
+/* line 155, ../ks/lib/fonts/_icomoon.scss */
+.icon-database:after {
+  content: "\e964";
+}
+
+/* line 159, ../ks/lib/fonts/_icomoon.scss */
+.icon-undo:after {
+  content: "\e965";
+}
+
+/* line 163, ../ks/lib/fonts/_icomoon.scss */
+.icon-redo:after {
+  content: "\e966";
+}
+
+/* line 167, ../ks/lib/fonts/_icomoon.scss */
+.icon-undo2:after {
+  content: "\e967";
+}
+
+/* line 171, ../ks/lib/fonts/_icomoon.scss */
+.icon-redo2:after {
+  content: "\e968";
+}
+
+/* line 175, ../ks/lib/fonts/_icomoon.scss */
+.icon-forward:after {
+  content: "\e969";
+}
+
+/* line 179, ../ks/lib/fonts/_icomoon.scss */
+.icon-reply:after {
+  content: "\e96a";
+}
+
+/* line 183, ../ks/lib/fonts/_icomoon.scss */
+.icon-user:after {
+  content: "\e971";
+}
+
+/* line 187, ../ks/lib/fonts/_icomoon.scss */
+.icon-user-plus:after {
+  content: "\e973";
+}
+
+/* line 191, ../ks/lib/fonts/_icomoon.scss */
+.icon-user-minus:after {
+  content: "\e974";
+}
+
+/* line 195, ../ks/lib/fonts/_icomoon.scss */
+.icon-spinner9:after {
+  content: "\e982";
+}
+
+/* line 199, ../ks/lib/fonts/_icomoon.scss */
+.icon-spinner11:after {
+  content: "\e984";
+}
+
+/* line 203, ../ks/lib/fonts/_icomoon.scss */
+.icon-enlarge:after {
+  content: "\e989";
+}
+
+/* line 207, ../ks/lib/fonts/_icomoon.scss */
+.icon-shrink:after {
+  content: "\e98a";
+}
+
+/* line 211, ../ks/lib/fonts/_icomoon.scss */
+.icon-key:after {
+  content: "\e98d";
+}
+
+/* line 215, ../ks/lib/fonts/_icomoon.scss */
+.icon-lock:after {
+  content: "\e98f";
+}
+
+/* line 219, ../ks/lib/fonts/_icomoon.scss */
+.icon-unlocked:after {
+  content: "\e990";
+}
+
+/* line 223, ../ks/lib/fonts/_icomoon.scss */
+.icon-wrench:after {
+  content: "\e991";
+}
+
+/* line 227, ../ks/lib/fonts/_icomoon.scss */
+.icon-stats-dots:after {
+  content: "\e99b";
+}
+
+/* line 231, ../ks/lib/fonts/_icomoon.scss */
+.icon-meter:after {
+  content: "\e9a6";
+}
+
+/* line 235, ../ks/lib/fonts/_icomoon.scss */
+.icon-magnet:after {
+  content: "\e9ab";
+}
+
+/* line 239, ../ks/lib/fonts/_icomoon.scss */
+.icon-bin:after {
+  content: "\e9ac";
+}
+
+/* line 243, ../ks/lib/fonts/_icomoon.scss */
+.icon-bin2:after {
+  content: "\e9ad";
+}
+
+/* line 247, ../ks/lib/fonts/_icomoon.scss */
+.icon-power:after {
+  content: "\e9b5";
+}
+
+/* line 251, ../ks/lib/fonts/_icomoon.scss */
+.icon-switch:after {
+  content: "\e9b6";
+}
+
+/* line 255, ../ks/lib/fonts/_icomoon.scss */
+.icon-power-cord:after {
+  content: "\e9b7";
+}
+
+/* line 259, ../ks/lib/fonts/_icomoon.scss */
+.icon-menu:after {
+  content: "\e9bd";
+}
+
+/* line 263, ../ks/lib/fonts/_icomoon.scss */
+.icon-cloud-download:after {
+  content: "\e9c2";
+}
+
+/* line 267, ../ks/lib/fonts/_icomoon.scss */
+.icon-cloud-upload:after {
+  content: "\e9c3";
+}
+
+/* line 271, ../ks/lib/fonts/_icomoon.scss */
+.icon-cloud-check:after {
+  content: "\e9c4";
+}
+
+/* line 275, ../ks/lib/fonts/_icomoon.scss */
+.icon-earth:after {
+  content: "\e9ca";
+}
+
+/* line 279, ../ks/lib/fonts/_icomoon.scss */
+.icon-link:after {
+  content: "\e9cb";
+}
+
+/* line 283, ../ks/lib/fonts/_icomoon.scss */
+.icon-flag:after {
+  content: "\e9cc";
+}
+
+/* line 287, ../ks/lib/fonts/_icomoon.scss */
+.icon-attachment:after {
+  content: "\e9cd";
+}
+
+/* line 291, ../ks/lib/fonts/_icomoon.scss */
+.icon-eye:after {
+  content: "\e9ce";
+}
+
+/* line 295, ../ks/lib/fonts/_icomoon.scss */
+.icon-eye-blocked:after {
+  content: "\e9d1";
+}
+
+/* line 299, ../ks/lib/fonts/_icomoon.scss */
+.icon-star-empty:after {
+  content: "\e9d7";
+}
+
+/* line 303, ../ks/lib/fonts/_icomoon.scss */
+.icon-star-full:after {
+  content: "\e9d9";
+}
+
+/* line 307, ../ks/lib/fonts/_icomoon.scss */
+.icon-heart:after {
+  content: "\e9da";
+}
+
+/* line 311, ../ks/lib/fonts/_icomoon.scss */
+.icon-heart-broken:after {
+  content: "\e9db";
+}
+
+/* line 315, ../ks/lib/fonts/_icomoon.scss */
+.icon-man:after {
+  content: "\e9dc";
+}
+
+/* line 319, ../ks/lib/fonts/_icomoon.scss */
+.icon-woman:after {
+  content: "\e9dd";
+}
+
+/* line 323, ../ks/lib/fonts/_icomoon.scss */
+.icon-man-woman:after {
+  content: "\e9de";
+}
+
+/* line 327, ../ks/lib/fonts/_icomoon.scss */
+.icon-smile:after {
+  content: "\e9e1";
+}
+
+/* line 331, ../ks/lib/fonts/_icomoon.scss */
+.icon-sad:after {
+  content: "\e9e5";
+}
+
+/* line 335, ../ks/lib/fonts/_icomoon.scss */
+.icon-wink:after {
+  content: "\e9e7";
+}
+
+/* line 339, ../ks/lib/fonts/_icomoon.scss */
+.icon-shocked:after {
+  content: "\e9f1";
+}
+
+/* line 343, ../ks/lib/fonts/_icomoon.scss */
+.icon-baffled:after {
+  content: "\e9f3";
+}
+
+/* line 347, ../ks/lib/fonts/_icomoon.scss */
+.icon-notification:after {
+  content: "\ea08";
+}
+
+/* line 351, ../ks/lib/fonts/_icomoon.scss */
+.icon-plus:after {
+  content: "\ea0a";
+}
+
+/* line 355, ../ks/lib/fonts/_icomoon.scss */
+.icon-minus:after {
+  content: "\ea0b";
+}
+
+/* line 359, ../ks/lib/fonts/_icomoon.scss */
+.icon-info:after {
+  content: "\ea0c";
+}
+
+/* line 363, ../ks/lib/fonts/_icomoon.scss */
+.icon-cancel-circle:after {
+  content: "\ea0d";
+}
+
+/* line 367, ../ks/lib/fonts/_icomoon.scss */
+.icon-blocked:after {
+  content: "\ea0e";
+}
+
+/* line 371, ../ks/lib/fonts/_icomoon.scss */
+.icon-cross:after {
+  content: "\ea0f";
+}
+
+/* line 375, ../ks/lib/fonts/_icomoon.scss */
+.icon-checkmark:after {
+  content: "\ea10";
+}
+
+/* line 379, ../ks/lib/fonts/_icomoon.scss */
+.icon-checkmark2:after {
+  content: "\ea11";
+}
+
+/* line 383, ../ks/lib/fonts/_icomoon.scss */
+.icon-spell-check:after {
+  content: "\ea12";
+}
+
+/* line 387, ../ks/lib/fonts/_icomoon.scss */
+.icon-enter:after {
+  content: "\ea13";
+}
+
+/* line 391, ../ks/lib/fonts/_icomoon.scss */
+.icon-circle-up:after {
+  content: "\ea41";
+}
+
+/* line 395, ../ks/lib/fonts/_icomoon.scss */
+.icon-circle-right:after {
+  content: "\ea42";
+}
+
+/* line 399, ../ks/lib/fonts/_icomoon.scss */
+.icon-circle-down:after {
+  content: "\ea43";
+}
+
+/* line 403, ../ks/lib/fonts/_icomoon.scss */
+.icon-circle-left:after {
+  content: "\ea44";
+}
+
+/* line 407, ../ks/lib/fonts/_icomoon.scss */
+.icon-embed:after {
+  content: "\ea7f";
+}
+
+/* line 411, ../ks/lib/fonts/_icomoon.scss */
+.icon-embed2:after {
+  content: "\ea80";
+}
+
+/* line 415, ../ks/lib/fonts/_icomoon.scss */
+.icon-share2:after {
+  content: "\ea82";
+}
+
+/* line 419, ../ks/lib/fonts/_icomoon.scss */
+.icon-google-plus:after {
+  content: "\ea88";
+}
+
+/* line 423, ../ks/lib/fonts/_icomoon.scss */
+.icon-google-plus2:after {
+  content: "\ea89";
+}
+
+/* line 427, ../ks/lib/fonts/_icomoon.scss */
+.icon-google-plus3:after {
+  content: "\ea8a";
+}
+
+/* line 431, ../ks/lib/fonts/_icomoon.scss */
+.icon-google-drive:after {
+  content: "\ea8b";
+}
+
+/* line 435, ../ks/lib/fonts/_icomoon.scss */
+.icon-facebook2:after {
+  content: "\ea8d";
+}
+
+/* line 439, ../ks/lib/fonts/_icomoon.scss */
+.icon-twitter:after {
+  content: "\ea91";
+}
+
+/* line 443, ../ks/lib/fonts/_icomoon.scss */
+.icon-twitter2:after {
+  content: "\ea92";
+}
+
+/* line 447, ../ks/lib/fonts/_icomoon.scss */
+.icon-twitter3:after {
+  content: "\ea93";
+}
+
+/* line 451, ../ks/lib/fonts/_icomoon.scss */
+.icon-youtube2:after {
+  content: "\ea98";
+}
+
+/* line 455, ../ks/lib/fonts/_icomoon.scss */
+.icon-youtube3:after {
+  content: "\ea99";
+}
+
+/* line 459, ../ks/lib/fonts/_icomoon.scss */
+.icon-youtube4:after {
+  content: "\ea9a";
+}
+
+/* line 463, ../ks/lib/fonts/_icomoon.scss */
+.icon-vimeo2:after {
+  content: "\ea9d";
+}
+
+/* line 467, ../ks/lib/fonts/_icomoon.scss */
+.icon-vimeo3:after {
+  content: "\ea9e";
+}
+
+/* line 471, ../ks/lib/fonts/_icomoon.scss */
+.icon-lanyrd:after {
+  content: "\ea9f";
+}
+
+/* line 475, ../ks/lib/fonts/_icomoon.scss */
+.icon-dropbox:after {
+  content: "\eaaf";
+}
+
+/* line 479, ../ks/lib/fonts/_icomoon.scss */
+.icon-github:after {
+  content: "\eab1";
+}
+
+/* line 483, ../ks/lib/fonts/_icomoon.scss */
+.icon-github4:after {
+  content: "\eab4";
+}
+
+/* line 487, ../ks/lib/fonts/_icomoon.scss */
+.icon-github5:after {
+  content: "\eab5";
+}
+
+/* line 491, ../ks/lib/fonts/_icomoon.scss */
+.icon-wordpress:after {
+  content: "\eab6";
+}
+
+/* line 495, ../ks/lib/fonts/_icomoon.scss */
+.icon-wordpress2:after {
+  content: "\eab7";
+}
+
+/* line 499, ../ks/lib/fonts/_icomoon.scss */
+.icon-yahoo:after {
+  content: "\eabd";
+}
+
+/* line 503, ../ks/lib/fonts/_icomoon.scss */
+.icon-tux:after {
+  content: "\eabe";
+}
+
+/* line 507, ../ks/lib/fonts/_icomoon.scss */
+.icon-apple:after {
+  content: "\eabf";
+}
+
+/* line 511, ../ks/lib/fonts/_icomoon.scss */
+.icon-windows:after {
+  content: "\eac2";
+}
+
+/* line 515, ../ks/lib/fonts/_icomoon.scss */
+.icon-skype:after {
+  content: "\eac6";
+}
+
+/* line 519, ../ks/lib/fonts/_icomoon.scss */
+.icon-linkedin:after {
+  content: "\eac8";
+}
+
+/* line 523, ../ks/lib/fonts/_icomoon.scss */
+.icon-linkedin2:after {
+  content: "\eac9";
+}
+
+/* line 527, ../ks/lib/fonts/_icomoon.scss */
+.icon-paypal:after {
+  content: "\ead6";
+}
+
+/* line 531, ../ks/lib/fonts/_icomoon.scss */
+.icon-paypal3:after {
+  content: "\ead8";
+}
+
+/* line 535, ../ks/lib/fonts/_icomoon.scss */
+.icon-file-pdf:after {
+  content: "\eada";
+}
+
+/* line 539, ../ks/lib/fonts/_icomoon.scss */
+.icon-file-openoffice:after {
+  content: "\eadb";
+}
+
+/* line 543, ../ks/lib/fonts/_icomoon.scss */
+.icon-file-word:after {
+  content: "\eadc";
+}
+
+/* line 547, ../ks/lib/fonts/_icomoon.scss */
+.icon-html52:after {
+  content: "\eae0";
+}
+
+/* line 551, ../ks/lib/fonts/_icomoon.scss */
+.icon-git:after {
+  content: "\eae2";
+}
+
+/* line 555, ../ks/lib/fonts/_icomoon.scss */
+.icon-chrome:after {
+  content: "\eae5";
+}
+
+/* line 559, ../ks/lib/fonts/_icomoon.scss */
+.icon-firefox:after {
+  content: "\eae6";
+}
+
+/* line 563, ../ks/lib/fonts/_icomoon.scss */
+.icon-IE:after {
+  content: "\eae7";
+}
+
+/* line 567, ../ks/lib/fonts/_icomoon.scss */
+.icon-opera:after {
+  content: "\eae8";
+}
+
+/* line 571, ../ks/lib/fonts/_icomoon.scss */
+.icon-safari:after {
+  content: "\eae9";
+}
+
 @font-face {
   font-family: "ks-fonts";
   src: url('/ks-framework/vendor/iknsa/fonts/ks-fonts.eot') format('embedded-opentype'), url('/ks-framework/vendor/iknsa/fonts/ks-fonts.svg') format('svg'), url('/ks-framework/vendor/iknsa/fonts/ks-fonts.ttf') format('truetype'), url('/ks-framework/vendor/iknsa/fonts/ks-fonts.woff') format('woff');
 }
-/* line 9, ../ks/lib/fonts/_fonts.scss */
+/* line 10, ../ks/lib/fonts/_fonts.scss */
 .ks-fonts {
   font-family: 'ks-fonts';
   font-style: normal;
   font-weight: normal;
   font-size: 15px;
-  line-height: 1;
+  line-height: inherit;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   position: relative;
   top: 1px;
   display: inline-block;
-}
-
-/* line 23, ../ks/lib/fonts/_fonts.scss */
-.icon-mail:after {
-  content: "\e600";
-}
-
-/* line 27, ../ks/lib/fonts/_fonts.scss */
-.icon-tablet:after {
-  content: "\e601";
-}
-
-/* line 31, ../ks/lib/fonts/_fonts.scss */
-.icon-android:after {
-  content: "\e602";
-}
-
-/* line 35, ../ks/lib/fonts/_fonts.scss */
-.icon-mobile:after {
-  content: "\e603";
-}
-
-/* line 39, ../ks/lib/fonts/_fonts.scss */
-.icon-home2:after {
-  content: "\e901";
-}
-
-/* line 43, ../ks/lib/fonts/_fonts.scss */
-.icon-pencil:after {
-  content: "\e905";
-}
-
-/* line 47, ../ks/lib/fonts/_fonts.scss */
-.icon-pencil2:after {
-  content: "\e906";
-}
-
-/* line 51, ../ks/lib/fonts/_fonts.scss */
-.icon-image:after {
-  content: "\e90d";
-}
-
-/* line 55, ../ks/lib/fonts/_fonts.scss */
-.icon-images:after {
-  content: "\e90e";
-}
-
-/* line 59, ../ks/lib/fonts/_fonts.scss */
-.icon-camera:after {
-  content: "\e90f";
-}
-
-/* line 63, ../ks/lib/fonts/_fonts.scss */
-.icon-headphones:after {
-  content: "\e910";
-}
-
-/* line 67, ../ks/lib/fonts/_fonts.scss */
-.icon-music:after {
-  content: "\e911";
-}
-
-/* line 71, ../ks/lib/fonts/_fonts.scss */
-.icon-play:after {
-  content: "\e912";
-}
-
-/* line 75, ../ks/lib/fonts/_fonts.scss */
-.icon-connection:after {
-  content: "\e91b";
-}
-
-/* line 79, ../ks/lib/fonts/_fonts.scss */
-.icon-file-picture:after {
-  content: "\e927";
-}
-
-/* line 83, ../ks/lib/fonts/_fonts.scss */
-.icon-file-music:after {
-  content: "\e928";
-}
-
-/* line 87, ../ks/lib/fonts/_fonts.scss */
-.icon-file-play:after {
-  content: "\e929";
-}
-
-/* line 91, ../ks/lib/fonts/_fonts.scss */
-.icon-stack:after {
-  content: "\e92e";
-}
-
-/* line 95, ../ks/lib/fonts/_fonts.scss */
-.icon-folder:after {
-  content: "\e92f";
-}
-
-/* line 99, ../ks/lib/fonts/_fonts.scss */
-.icon-folder-open:after {
-  content: "\e930";
-}
-
-/* line 103, ../ks/lib/fonts/_fonts.scss */
-.icon-folder-plus:after {
-  content: "\e931";
-}
-
-/* line 107, ../ks/lib/fonts/_fonts.scss */
-.icon-folder-minus:after {
-  content: "\e932";
-}
-
-/* line 111, ../ks/lib/fonts/_fonts.scss */
-.icon-folder-download:after {
-  content: "\e933";
-}
-
-/* line 115, ../ks/lib/fonts/_fonts.scss */
-.icon-folder-upload:after {
-  content: "\e934";
-}
-
-/* line 119, ../ks/lib/fonts/_fonts.scss */
-.icon-phone:after {
-  content: "\e942";
-}
-
-/* line 123, ../ks/lib/fonts/_fonts.scss */
-.icon-phone-hang-up:after {
-  content: "\e943";
-}
-
-/* line 127, ../ks/lib/fonts/_fonts.scss */
-.icon-pushpin:after {
-  content: "\e946";
-}
-
-/* line 131, ../ks/lib/fonts/_fonts.scss */
-.icon-location:after {
-  content: "\e947";
-}
-
-/* line 135, ../ks/lib/fonts/_fonts.scss */
-.icon-location2:after {
-  content: "\e948";
-}
-
-/* line 139, ../ks/lib/fonts/_fonts.scss */
-.icon-compass2:after {
-  content: "\e94a";
-}
-
-/* line 143, ../ks/lib/fonts/_fonts.scss */
-.icon-bell:after {
-  content: "\e951";
-}
-
-/* line 147, ../ks/lib/fonts/_fonts.scss */
-.icon-calendar:after {
-  content: "\e953";
-}
-
-/* line 151, ../ks/lib/fonts/_fonts.scss */
-.icon-printer:after {
-  content: "\e954";
-}
-
-/* line 155, ../ks/lib/fonts/_fonts.scss */
-.icon-keyboard:after {
-  content: "\e955";
-}
-
-/* line 159, ../ks/lib/fonts/_fonts.scss */
-.icon-display:after {
-  content: "\e956";
-}
-
-/* line 163, ../ks/lib/fonts/_fonts.scss */
-.icon-laptop:after {
-  content: "\e957";
-}
-
-/* line 167, ../ks/lib/fonts/_fonts.scss */
-.icon-mobile3:after {
-  content: "\e958";
-}
-
-/* line 171, ../ks/lib/fonts/_fonts.scss */
-.icon-mobile2:after {
-  content: "\e959";
-}
-
-/* line 175, ../ks/lib/fonts/_fonts.scss */
-.icon-database:after {
-  content: "\e964";
-}
-
-/* line 179, ../ks/lib/fonts/_fonts.scss */
-.icon-undo:after {
-  content: "\e965";
-}
-
-/* line 183, ../ks/lib/fonts/_fonts.scss */
-.icon-redo:after {
-  content: "\e966";
-}
-
-/* line 187, ../ks/lib/fonts/_fonts.scss */
-.icon-undo2:after {
-  content: "\e967";
-}
-
-/* line 191, ../ks/lib/fonts/_fonts.scss */
-.icon-redo2:after {
-  content: "\e968";
-}
-
-/* line 195, ../ks/lib/fonts/_fonts.scss */
-.icon-forward:after {
-  content: "\e969";
-}
-
-/* line 199, ../ks/lib/fonts/_fonts.scss */
-.icon-reply:after {
-  content: "\e96a";
-}
-
-/* line 203, ../ks/lib/fonts/_fonts.scss */
-.icon-user:after {
-  content: "\e971";
-}
-
-/* line 207, ../ks/lib/fonts/_fonts.scss */
-.icon-user-plus:after {
-  content: "\e973";
-}
-
-/* line 211, ../ks/lib/fonts/_fonts.scss */
-.icon-user-minus:after {
-  content: "\e974";
-}
-
-/* line 215, ../ks/lib/fonts/_fonts.scss */
-.icon-spinner9:after {
-  content: "\e982";
-}
-
-/* line 219, ../ks/lib/fonts/_fonts.scss */
-.icon-spinner11:after {
-  content: "\e984";
-}
-
-/* line 223, ../ks/lib/fonts/_fonts.scss */
-.icon-enlarge:after {
-  content: "\e989";
-}
-
-/* line 227, ../ks/lib/fonts/_fonts.scss */
-.icon-shrink:after {
-  content: "\e98a";
-}
-
-/* line 231, ../ks/lib/fonts/_fonts.scss */
-.icon-key:after {
-  content: "\e98d";
-}
-
-/* line 235, ../ks/lib/fonts/_fonts.scss */
-.icon-lock:after {
-  content: "\e98f";
-}
-
-/* line 239, ../ks/lib/fonts/_fonts.scss */
-.icon-unlocked:after {
-  content: "\e990";
-}
-
-/* line 243, ../ks/lib/fonts/_fonts.scss */
-.icon-wrench:after {
-  content: "\e991";
-}
-
-/* line 247, ../ks/lib/fonts/_fonts.scss */
-.icon-stats-dots:after {
-  content: "\e99b";
-}
-
-/* line 251, ../ks/lib/fonts/_fonts.scss */
-.icon-meter:after {
-  content: "\e9a6";
-}
-
-/* line 255, ../ks/lib/fonts/_fonts.scss */
-.icon-magnet:after {
-  content: "\e9ab";
-}
-
-/* line 259, ../ks/lib/fonts/_fonts.scss */
-.icon-bin:after {
-  content: "\e9ac";
-}
-
-/* line 263, ../ks/lib/fonts/_fonts.scss */
-.icon-bin2:after {
-  content: "\e9ad";
-}
-
-/* line 267, ../ks/lib/fonts/_fonts.scss */
-.icon-power:after {
-  content: "\e9b5";
-}
-
-/* line 271, ../ks/lib/fonts/_fonts.scss */
-.icon-switch:after {
-  content: "\e9b6";
-}
-
-/* line 275, ../ks/lib/fonts/_fonts.scss */
-.icon-power-cord:after {
-  content: "\e9b7";
-}
-
-/* line 279, ../ks/lib/fonts/_fonts.scss */
-.icon-menu:after {
-  content: "\e9bd";
-}
-
-/* line 283, ../ks/lib/fonts/_fonts.scss */
-.icon-cloud-download:after {
-  content: "\e9c2";
-}
-
-/* line 287, ../ks/lib/fonts/_fonts.scss */
-.icon-cloud-upload:after {
-  content: "\e9c3";
-}
-
-/* line 291, ../ks/lib/fonts/_fonts.scss */
-.icon-cloud-check:after {
-  content: "\e9c4";
-}
-
-/* line 295, ../ks/lib/fonts/_fonts.scss */
-.icon-earth:after {
-  content: "\e9ca";
-}
-
-/* line 299, ../ks/lib/fonts/_fonts.scss */
-.icon-link:after {
-  content: "\e9cb";
-}
-
-/* line 303, ../ks/lib/fonts/_fonts.scss */
-.icon-flag:after {
-  content: "\e9cc";
-}
-
-/* line 307, ../ks/lib/fonts/_fonts.scss */
-.icon-attachment:after {
-  content: "\e9cd";
-}
-
-/* line 311, ../ks/lib/fonts/_fonts.scss */
-.icon-eye:after {
-  content: "\e9ce";
-}
-
-/* line 315, ../ks/lib/fonts/_fonts.scss */
-.icon-eye-blocked:after {
-  content: "\e9d1";
-}
-
-/* line 319, ../ks/lib/fonts/_fonts.scss */
-.icon-star-empty:after {
-  content: "\e9d7";
-}
-
-/* line 323, ../ks/lib/fonts/_fonts.scss */
-.icon-star-full:after {
-  content: "\e9d9";
-}
-
-/* line 327, ../ks/lib/fonts/_fonts.scss */
-.icon-heart:after {
-  content: "\e9da";
-}
-
-/* line 331, ../ks/lib/fonts/_fonts.scss */
-.icon-heart-broken:after {
-  content: "\e9db";
-}
-
-/* line 335, ../ks/lib/fonts/_fonts.scss */
-.icon-man:after {
-  content: "\e9dc";
-}
-
-/* line 339, ../ks/lib/fonts/_fonts.scss */
-.icon-woman:after {
-  content: "\e9dd";
-}
-
-/* line 343, ../ks/lib/fonts/_fonts.scss */
-.icon-man-woman:after {
-  content: "\e9de";
-}
-
-/* line 347, ../ks/lib/fonts/_fonts.scss */
-.icon-smile:after {
-  content: "\e9e1";
-}
-
-/* line 351, ../ks/lib/fonts/_fonts.scss */
-.icon-sad:after {
-  content: "\e9e5";
-}
-
-/* line 355, ../ks/lib/fonts/_fonts.scss */
-.icon-wink:after {
-  content: "\e9e7";
-}
-
-/* line 359, ../ks/lib/fonts/_fonts.scss */
-.icon-shocked:after {
-  content: "\e9f1";
-}
-
-/* line 363, ../ks/lib/fonts/_fonts.scss */
-.icon-baffled:after {
-  content: "\e9f3";
-}
-
-/* line 367, ../ks/lib/fonts/_fonts.scss */
-.icon-notification:after {
-  content: "\ea08";
-}
-
-/* line 371, ../ks/lib/fonts/_fonts.scss */
-.icon-plus:after {
-  content: "\ea0a";
-}
-
-/* line 375, ../ks/lib/fonts/_fonts.scss */
-.icon-minus:after {
-  content: "\ea0b";
-}
-
-/* line 379, ../ks/lib/fonts/_fonts.scss */
-.icon-info:after {
-  content: "\ea0c";
-}
-
-/* line 383, ../ks/lib/fonts/_fonts.scss */
-.icon-cancel-circle:after {
-  content: "\ea0d";
-}
-
-/* line 387, ../ks/lib/fonts/_fonts.scss */
-.icon-blocked:after {
-  content: "\ea0e";
-}
-
-/* line 391, ../ks/lib/fonts/_fonts.scss */
-.icon-cross:after {
-  content: "\ea0f";
-}
-
-/* line 395, ../ks/lib/fonts/_fonts.scss */
-.icon-checkmark:after {
-  content: "\ea10";
-}
-
-/* line 399, ../ks/lib/fonts/_fonts.scss */
-.icon-checkmark2:after {
-  content: "\ea11";
-}
-
-/* line 403, ../ks/lib/fonts/_fonts.scss */
-.icon-spell-check:after {
-  content: "\ea12";
-}
-
-/* line 407, ../ks/lib/fonts/_fonts.scss */
-.icon-enter:after {
-  content: "\ea13";
-}
-
-/* line 411, ../ks/lib/fonts/_fonts.scss */
-.icon-circle-up:after {
-  content: "\ea41";
-}
-
-/* line 415, ../ks/lib/fonts/_fonts.scss */
-.icon-circle-right:after {
-  content: "\ea42";
-}
-
-/* line 419, ../ks/lib/fonts/_fonts.scss */
-.icon-circle-down:after {
-  content: "\ea43";
-}
-
-/* line 423, ../ks/lib/fonts/_fonts.scss */
-.icon-circle-left:after {
-  content: "\ea44";
-}
-
-/* line 427, ../ks/lib/fonts/_fonts.scss */
-.icon-embed:after {
-  content: "\ea7f";
-}
-
-/* line 431, ../ks/lib/fonts/_fonts.scss */
-.icon-embed2:after {
-  content: "\ea80";
-}
-
-/* line 435, ../ks/lib/fonts/_fonts.scss */
-.icon-share2:after {
-  content: "\ea82";
-}
-
-/* line 439, ../ks/lib/fonts/_fonts.scss */
-.icon-google-plus:after {
-  content: "\ea88";
-}
-
-/* line 443, ../ks/lib/fonts/_fonts.scss */
-.icon-google-plus2:after {
-  content: "\ea89";
-}
-
-/* line 447, ../ks/lib/fonts/_fonts.scss */
-.icon-google-plus3:after {
-  content: "\ea8a";
-}
-
-/* line 451, ../ks/lib/fonts/_fonts.scss */
-.icon-google-drive:after {
-  content: "\ea8b";
-}
-
-/* line 455, ../ks/lib/fonts/_fonts.scss */
-.icon-facebook2:after {
-  content: "\ea8d";
-}
-
-/* line 459, ../ks/lib/fonts/_fonts.scss */
-.icon-twitter:after {
-  content: "\ea91";
-}
-
-/* line 463, ../ks/lib/fonts/_fonts.scss */
-.icon-twitter2:after {
-  content: "\ea92";
-}
-
-/* line 467, ../ks/lib/fonts/_fonts.scss */
-.icon-twitter3:after {
-  content: "\ea93";
-}
-
-/* line 471, ../ks/lib/fonts/_fonts.scss */
-.icon-youtube2:after {
-  content: "\ea98";
-}
-
-/* line 475, ../ks/lib/fonts/_fonts.scss */
-.icon-youtube3:after {
-  content: "\ea99";
-}
-
-/* line 479, ../ks/lib/fonts/_fonts.scss */
-.icon-youtube4:after {
-  content: "\ea9a";
-}
-
-/* line 483, ../ks/lib/fonts/_fonts.scss */
-.icon-vimeo2:after {
-  content: "\ea9d";
-}
-
-/* line 487, ../ks/lib/fonts/_fonts.scss */
-.icon-vimeo3:after {
-  content: "\ea9e";
-}
-
-/* line 491, ../ks/lib/fonts/_fonts.scss */
-.icon-lanyrd:after {
-  content: "\ea9f";
-}
-
-/* line 495, ../ks/lib/fonts/_fonts.scss */
-.icon-dropbox:after {
-  content: "\eaaf";
-}
-
-/* line 499, ../ks/lib/fonts/_fonts.scss */
-.icon-github:after {
-  content: "\eab1";
-}
-
-/* line 503, ../ks/lib/fonts/_fonts.scss */
-.icon-github4:after {
-  content: "\eab4";
-}
-
-/* line 507, ../ks/lib/fonts/_fonts.scss */
-.icon-github5:after {
-  content: "\eab5";
-}
-
-/* line 511, ../ks/lib/fonts/_fonts.scss */
-.icon-wordpress:after {
-  content: "\eab6";
-}
-
-/* line 515, ../ks/lib/fonts/_fonts.scss */
-.icon-wordpress2:after {
-  content: "\eab7";
-}
-
-/* line 519, ../ks/lib/fonts/_fonts.scss */
-.icon-yahoo:after {
-  content: "\eabd";
-}
-
-/* line 523, ../ks/lib/fonts/_fonts.scss */
-.icon-tux:after {
-  content: "\eabe";
-}
-
-/* line 527, ../ks/lib/fonts/_fonts.scss */
-.icon-apple:after {
-  content: "\eabf";
-}
-
-/* line 531, ../ks/lib/fonts/_fonts.scss */
-.icon-windows:after {
-  content: "\eac2";
-}
-
-/* line 535, ../ks/lib/fonts/_fonts.scss */
-.icon-skype:after {
-  content: "\eac6";
-}
-
-/* line 539, ../ks/lib/fonts/_fonts.scss */
-.icon-linkedin:after {
-  content: "\eac8";
-}
-
-/* line 543, ../ks/lib/fonts/_fonts.scss */
-.icon-linkedin2:after {
-  content: "\eac9";
-}
-
-/* line 547, ../ks/lib/fonts/_fonts.scss */
-.icon-paypal:after {
-  content: "\ead6";
-}
-
-/* line 551, ../ks/lib/fonts/_fonts.scss */
-.icon-paypal3:after {
-  content: "\ead8";
-}
-
-/* line 555, ../ks/lib/fonts/_fonts.scss */
-.icon-file-pdf:after {
-  content: "\eada";
-}
-
-/* line 559, ../ks/lib/fonts/_fonts.scss */
-.icon-file-openoffice:after {
-  content: "\eadb";
-}
-
-/* line 563, ../ks/lib/fonts/_fonts.scss */
-.icon-file-word:after {
-  content: "\eadc";
-}
-
-/* line 567, ../ks/lib/fonts/_fonts.scss */
-.icon-html52:after {
-  content: "\eae0";
-}
-
-/* line 571, ../ks/lib/fonts/_fonts.scss */
-.icon-git:after {
-  content: "\eae2";
-}
-
-/* line 575, ../ks/lib/fonts/_fonts.scss */
-.icon-chrome:after {
-  content: "\eae5";
-}
-
-/* line 579, ../ks/lib/fonts/_fonts.scss */
-.icon-firefox:after {
-  content: "\eae6";
-}
-
-/* line 583, ../ks/lib/fonts/_fonts.scss */
-.icon-IE:after {
-  content: "\eae7";
-}
-
-/* line 587, ../ks/lib/fonts/_fonts.scss */
-.icon-opera:after {
-  content: "\eae8";
-}
-
-/* line 591, ../ks/lib/fonts/_fonts.scss */
-.icon-safari:after {
-  content: "\eae9";
 }
 
 /* line 5, ../ks/lib/tables/_tables.scss */
@@ -1197,10 +1207,18 @@ form.success .error-message, form.success form.error .form-error, form.error for
   z-index: 100;
 }
 /* line 25, ../ks/lib/dock/_dock.scss */
-.dock ul li a img {
-  margin: 0 10px;
+.dock ul li.active ul {
+  display: block;
 }
 /* line 30, ../ks/lib/dock/_dock.scss */
+.dock ul li a {
+  padding: 0 10px;
+}
+/* line 33, ../ks/lib/dock/_dock.scss */
+.dock ul li a i.ks-fonts {
+  font-size: 20px;
+}
+/* line 38, ../ks/lib/dock/_dock.scss */
 .dock ul li ul {
   display: none;
   position: absolute;
@@ -1212,52 +1230,44 @@ form.success .error-message, form.success form.error .form-error, form.error for
   -webkit-box-shadow: #535353 -2px 2px 10px;
   box-shadow: #535353 -2px 2px 10px;
 }
-/* line 39, ../ks/lib/dock/_dock.scss */
+/* line 47, ../ks/lib/dock/_dock.scss */
 .dock ul li ul li {
   display: block;
 }
-/* line 42, ../ks/lib/dock/_dock.scss */
+/* line 50, ../ks/lib/dock/_dock.scss */
 .dock ul li ul a {
   color: #535353;
   padding: 0 15px;
   white-space: nowrap;
-}
-/* line 48, ../ks/lib/dock/_dock.scss */
-.dock ul li ul.active {
   display: block;
 }
 
-/* line 56, ../ks/lib/dock/_dock.scss */
+/* line 61, ../ks/lib/dock/_dock.scss */
 .dock-right {
   display: inline-block;
   float: right;
 }
 
-/* line 62, ../ks/lib/dock/_dock.scss */
+/* line 67, ../ks/lib/dock/_dock.scss */
 .search-bar {
   display: inline-block;
   position: relative;
   top: -2px;
 }
-/* line 67, ../ks/lib/dock/_dock.scss */
+/* line 72, ../ks/lib/dock/_dock.scss */
 .search-bar input[type=text] {
   background: #565656;
   color: #f5f5f5;
   border: 0;
   outline: none;
 }
-/* line 74, ../ks/lib/dock/_dock.scss */
+/* line 79, ../ks/lib/dock/_dock.scss */
 .search-bar input[type=submit] {
   background: #2d2d2d;
   border: none;
   background: url("../img/dock/search-ico.png") no-repeat scroll 50% 50% #2D2D2D;
   width: 30px;
   height: 25px;
-}
-
-/* line 83, ../ks/lib/dock/_dock.scss */
-.lang-flag {
-  float: left;
 }
 
 /* line 1, ../ks/lib/nav/_pro-black-theme.scss */

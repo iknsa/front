@@ -21,9 +21,17 @@
             position: relative;
             z-index: 100;
 
+            &.active {
+                ul {
+                    display: block
+                }
+            }
+
             a {
-                img {
-                    margin: 0 10px;
+                padding: 0 10px;
+
+                i.ks-fonts {
+                    font-size: 20px;
                 }
             }
 
@@ -43,10 +51,7 @@
                     color: $dark-color;
                     padding: 0 15px;
                     white-space: nowrap;
-                }
-
-                &.active {
-                    display: block
+                    display: block;
                 }
             }
         }
@@ -78,9 +83,4 @@
         width: 30px;
         height: 25px;
     }
-}
-
-.lang-flag
-{
-    float: left;
 }
