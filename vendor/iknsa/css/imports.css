@@ -64,6 +64,11 @@ body {
   margin-left: 0;
 }
 
+/* line 55, ../ks/lib/components/_components.scss */
+.filter {
+  float: right;
+}
+
 /* line 3, ../ks/lib/fonts/_icomoon.scss */
 .icon-mail:after {
   content: "\e600";
@@ -810,37 +815,41 @@ table a {
   width: 100%;
   height: 100%;
 }
+/* line 17, ../ks/lib/tables/_tables.scss */
+table .ks-fonts {
+  padding: 0 10px;
+}
 
-/* line 19, ../ks/lib/tables/_tables.scss */
+/* line 22, ../ks/lib/tables/_tables.scss */
 th {
   text-align: left;
 }
 
-/* line 24, ../ks/lib/tables/_tables.scss */
+/* line 27, ../ks/lib/tables/_tables.scss */
 thead, tfoot {
   background-color: #ebebeb;
 }
 
-/* line 29, ../ks/lib/tables/_tables.scss */
+/* line 32, ../ks/lib/tables/_tables.scss */
 thead, tbody, tfoot, tr, th, td, caption {
   padding: 10px 10px;
 }
 
-/* line 38, ../ks/lib/tables/_tables.scss */
+/* line 41, ../ks/lib/tables/_tables.scss */
 .tbl-bordered thead, .tbl-bordered caption, .tbl-bordered tr, .tbl-bordered th, .tbl-bordered td {
   border: 1px solid #535353;
 }
-/* line 41, ../ks/lib/tables/_tables.scss */
+/* line 44, ../ks/lib/tables/_tables.scss */
 .tbl-bordered caption {
   border-bottom: none;
 }
 
-/* line 48, ../ks/lib/tables/_tables.scss */
+/* line 51, ../ks/lib/tables/_tables.scss */
 .tbl-zebra tbody tr:nth-child(even) {
   background-color: #f8f8f8;
 }
 
-/* line 55, ../ks/lib/tables/_tables.scss */
+/* line 58, ../ks/lib/tables/_tables.scss */
 .tbl-hover tbody tr:hover {
   background-color: whitesmoke;
 }
@@ -1420,37 +1429,41 @@ table a {
   width: 100%;
   height: 100%;
 }
+/* line 17, ../ks/lib/tables/_tables.scss */
+table .ks-fonts {
+  padding: 0 10px;
+}
 
-/* line 19, ../ks/lib/tables/_tables.scss */
+/* line 22, ../ks/lib/tables/_tables.scss */
 th {
   text-align: left;
 }
 
-/* line 24, ../ks/lib/tables/_tables.scss */
+/* line 27, ../ks/lib/tables/_tables.scss */
 thead, tfoot {
   background-color: #ebebeb;
 }
 
-/* line 29, ../ks/lib/tables/_tables.scss */
+/* line 32, ../ks/lib/tables/_tables.scss */
 thead, tbody, tfoot, tr, th, td, caption {
   padding: 10px 10px;
 }
 
-/* line 38, ../ks/lib/tables/_tables.scss */
+/* line 41, ../ks/lib/tables/_tables.scss */
 .tbl-bordered thead, .tbl-bordered caption, .tbl-bordered tr, .tbl-bordered th, .tbl-bordered td {
   border: 1px solid #535353;
 }
-/* line 41, ../ks/lib/tables/_tables.scss */
+/* line 44, ../ks/lib/tables/_tables.scss */
 .tbl-bordered caption {
   border-bottom: none;
 }
 
-/* line 48, ../ks/lib/tables/_tables.scss */
+/* line 51, ../ks/lib/tables/_tables.scss */
 .tbl-zebra tbody tr:nth-child(even) {
   background-color: #f8f8f8;
 }
 
-/* line 55, ../ks/lib/tables/_tables.scss */
+/* line 58, ../ks/lib/tables/_tables.scss */
 .tbl-hover tbody tr:hover {
   background-color: whitesmoke;
 }

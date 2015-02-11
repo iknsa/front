@@ -100,6 +100,11 @@
     margin-left: $row-margin-left;
 }
 
+@mixin ks-fonts-padding()
+{
+    padding: $ks-fonts-padding;
+}
+
 
 @mixin fieldset-border($fieldset-border)
 {

@@ -12,6 +12,9 @@ $font-size-small: ceil($font-size-default * 0.85) !default;
 $font-weight-default: 400;
 
 
+$ks-fonts-padding: 0 10px;
+
+
 $line-height-default: $font-size-default * 1.428571428571429;
 
 // Default colors
@@ -30,3 +33,4 @@ $row-margin-top: 15px;
 $row-margin-right: 0;
 $row-margin-bottom: 15px;
 $row-margin-left: 0;
+

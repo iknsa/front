@@ -19,3 +19,8 @@
     margin-bottom: $row-margin-top;
     margin-left: $row-margin-left;
 }
+
+@mixin ks-fonts-padding()
+{
+    padding: $ks-fonts-padding;
+}
