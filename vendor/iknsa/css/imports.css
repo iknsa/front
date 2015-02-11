@@ -1474,8 +1474,8 @@ thead, tbody, tfoot, tr, th, td, caption {
 }
 /* line 7, ../ks/lib/tables/_pro-theme.scss */
 .tbl-bordered.pro-theme td, .tbl-bordered.pro-theme th, .tbl-bordered.pro-theme thead {
-  border-right: 1px solid rgba(83, 83, 83, 0.1);
-  border-left: 1px solid rgba(83, 83, 83, 0.1);
+  border-right: 1px solid #ededed;
+  border-left: 1px solid #ededed;
 }
 /* line 11, ../ks/lib/tables/_pro-theme.scss */
 .tbl-bordered.pro-theme td:first-child, .tbl-bordered.pro-theme th:first-child, .tbl-bordered.pro-theme thead:first-child {
@@ -1503,5 +1503,5 @@ thead, tbody, tfoot, tr, th, td, caption {
 /* line 30, ../ks/lib/tables/_pro-theme.scss */
 .tbl-bordered.pro-theme td {
   border-top: 0;
-  border-bottom: 2px solid rgba(83, 83, 83, 0.4);
+  border-bottom: 2px solid #e6e6e6;
 }
