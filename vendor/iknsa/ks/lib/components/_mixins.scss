@@ -1,1 +1,21 @@
 @import '../all_mixins';
+
+@mixin block
+{
+    display: block;
+    width: $block-width;
+    height: $block-height;
+}
+@mixin inline
+{
+    display: inline-block;
+}
+
+@mixin row
+{
+    display: block;
+    margin-top: $row-margin-top;
+    margin-right: $row-margin-right;
+    margin-bottom: $row-margin-top;
+    margin-left: $row-margin-left;
+}

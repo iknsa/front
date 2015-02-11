@@ -6,10 +6,7 @@
 {
     box-sizing: border-box;
 }
-body, html
-{
-    min-height: 100%;
-}
+
 body
 {
     font-size: $font-size-default;
@@ -34,8 +31,7 @@ body
 }
 
 
-// Styles to display openable ul
-
+// Float 
 .f-rgt
 {
     float: right;
@@ -43,4 +39,15 @@ body
 .f-lft
 {
     float: left;
+}
+
+// display block
+.block
+{
+    @include block;
+}
+
+.row
+{
+    @include row;
 }

@@ -10,6 +10,7 @@
 
 
 
+
 // Typography
 $font-family: Helvetica, Arial, sans-serif !default;
 
@@ -31,6 +32,15 @@ $success-color: #48967b;
 $danger-color: #bd4141;
 $warning-color: #e8ae32;
 
+
+$block-width: 100%;
+$block-height: 100%;
+
+$row-margin-top: 15px;
+$row-margin-right: 0;
+$row-margin-bottom: 15px;
+$row-margin-left: 0;
+
 $breadcrumb-default-color : $primary-color;
 $breadcrumb-seperator: " >";
 // button typographie
@@ -39,7 +49,7 @@ $border-darken-amt    : 5;
 $btn-font-size-default: $font-size-default;
 
 // button colors
-$btn-default-bg-color : $light-color !default;
+$btn-default-bg-color : darken($light-color, 1) !default;
 $btn-default-color    : $dark-color !default;
 
 $btn-primary-bg-color : $primary-color !default;
@@ -73,6 +83,7 @@ $input-height: $input-line-height;
 $input-padding: 3px 7px;
 
 $textarea-padding: 5px 10px;
+
 
 
 // Pagination

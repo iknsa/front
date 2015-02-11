@@ -1,6 +1,11 @@
 @import 'variables';
 @import 'mixins';
 
+.unstyled-link
+{
+    color:inherit;
+    text-decoration: none;
+}
 .btn 
 {
     @include btn-base;

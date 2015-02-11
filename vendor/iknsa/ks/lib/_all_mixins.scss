@@ -11,6 +11,7 @@
 
 
 
+
 @mixin btn-base
 {
     display: inline-block;
@@ -79,7 +80,25 @@
     background-color: lighten($btn-bg-color, 20);
     border: 0;
 }
+@mixin block
+{
+    display: block;
+    width: $block-width;
+    height: $block-height;
+}
+@mixin inline
+{
+    display: inline-block;
+}
 
+@mixin row
+{
+    display: block;
+    margin-top: $row-margin-top;
+    margin-right: $row-margin-right;
+    margin-bottom: $row-margin-top;
+    margin-left: $row-margin-left;
+}
 
 
 @mixin fieldset-border($fieldset-border)
@@ -97,6 +116,7 @@
     border-right: $input-border;
     border-left: $input-border;
 }
+
 
 
 
