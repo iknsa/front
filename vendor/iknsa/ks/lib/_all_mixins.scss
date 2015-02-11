@@ -11,6 +11,8 @@
 
 
 
+
+
 @mixin btn-base
 {
     display: inline-block;
@@ -79,7 +81,30 @@
     background-color: lighten($btn-bg-color, 20);
     border: 0;
 }
+@mixin block
+{
+    display: block;
+    width: $block-width;
+    height: $block-height;
+}
+@mixin inline
+{
+    display: inline-block;
+}
 
+@mixin row
+{
+    display: block;
+    margin-top: $row-margin-top;
+    margin-right: $row-margin-right;
+    margin-bottom: $row-margin-top;
+    margin-left: $row-margin-left;
+}
+
+@mixin ks-fonts-padding()
+{
+    padding: $ks-fonts-padding;
+}
 
 
 @mixin fieldset-border($fieldset-border)
@@ -99,6 +124,12 @@
 }
 
 
+
+@mixin nav-border
+{
+    border-top: 1px solid $nav-border-top;
+    border-bottom: 1px solid $nav-border-bottom;
+}
 
 @mixin tbl-border()
 {

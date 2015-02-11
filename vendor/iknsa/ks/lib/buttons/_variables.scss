@@ -6,7 +6,7 @@ $border-darken-amt    : 5;
 $btn-font-size-default: $font-size-default;
 
 // button colors
-$btn-default-bg-color : $light-color !default;
+$btn-default-bg-color : darken($light-color, 1) !default;
 $btn-default-color    : $dark-color !default;
 
 $btn-primary-bg-color : $primary-color !default;

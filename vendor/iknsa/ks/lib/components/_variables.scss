@@ -12,6 +12,9 @@ $font-size-small: ceil($font-size-default * 0.85) !default;
 $font-weight-default: 400;
 
 
+$ks-fonts-padding: 0 10px;
+
+
 $line-height-default: $font-size-default * 1.428571428571429;
 
 // Default colors
@@ -21,3 +24,13 @@ $primary-color: #2a85ba;
 $success-color: #48967b;
 $danger-color: #bd4141;
 $warning-color: #e8ae32;
+
+
+$block-width: 100%;
+$block-height: 100%;
+
+$row-margin-top: 15px;
+$row-margin-right: 0;
+$row-margin-bottom: 15px;
+$row-margin-left: 0;
+

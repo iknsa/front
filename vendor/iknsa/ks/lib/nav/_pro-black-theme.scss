@@ -1,21 +1,22 @@
 nav
 {
     background:darken($dark-color, 5);
-    width: 250px;
-    position: relative;
+    width: $nav-width;
+    position: absolute;
     color: $light-color;
-    float: left;
     z-index: 0;
+    top: 0;
+
 
     &:before, &:after {
-        content: " "; // 1
-        display: table; // 2
+        content: " ";
+        display: table;
     }
     &:after {
         clear: both;
     }
     .user {
-        height: 200px;
+        height: $user-height;
         background:darken($dark-color, 10);
     }
 
@@ -23,8 +24,7 @@ nav
         position: relative;
         display: block;
         font-size: $font-size-default * 1.10;
-        border-top: 1px solid #5e5e5e;
-        border-bottom: 1px solid #404040;
+        @include nav-border;
 
         &:first-child {
             border-top: 0;
@@ -45,7 +45,7 @@ nav
             color: $light-color;
             text-decoration: none;
             height: 100%;
-            padding: 20px;
+            padding: $nav-a-padding;
             display: block;
         }
 
@@ -58,15 +58,10 @@ nav
             }
             li {
                 &:first-child{
-                    border-top: 1px solid #5e5e5e;
+                    border-top: 1px solid $nav-border-top;
                 }
                 &:last-child {
-                   border-bottom: 1px solid #404040;
-                }
-
-                a {
-                    padding-left: 40px;
-                    display: block;
+                   border-bottom: 1px solid $nav-border-bottom;
                 }
             }
         }

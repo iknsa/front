@@ -6,10 +6,7 @@
 {
     box-sizing: border-box;
 }
-body, html
-{
-    min-height: 100%;
-}
+
 body
 {
     font-size: $font-size-default;
@@ -31,4 +28,31 @@ body
 .left
 {
     text-align: left;
+}
+
+
+// Float 
+.f-rgt
+{
+    float: right;
+}
+.f-lft
+{
+    float: left;
+}
+
+// display block
+.block
+{
+    @include block;
+}
+
+.row
+{
+    @include row;
+}
+
+.filter
+{
+    float: right;
 }

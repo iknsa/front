@@ -1,6 +1,7 @@
 @import 'variables';
 @import 'mixins';
 
+// Buttons lib
 .btn 
 {
     @include btn-base;

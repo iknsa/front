@@ -132,15 +132,18 @@ module.exports = function(grunt) {
                       'vendor/iknsa/ks/lib/onload_end.js'],
                 dest: 'vendor/iknsa/js/dev.js',
             },
-            formValidator: {
-                src: ['vendor/iknsa/ks/lib/form/ks-form-validator/validationRules.js',
-                      'vendor/iknsa/ks/lib/form/ks-form-validator/core.js',
-                      'vendor/iknsa/ks/lib/form/ks-form-validator/*.js'
+            core: {
+                src: ['vendor/iknsa/ks/lib/core/actionRules.js', 'vendor/iknsa/ks/lib/core/core.js'],
+                dest: 'vendor/iknsa/js/core.js'
+            },
+            strategies: {
+                src: [
+                      'vendor/iknsa/ks/lib/**/strategy-*.js'
                     ],
-                dest: 'vendor/iknsa/js/ks-form-validator.js',
+                dest: 'vendor/iknsa/js/strategies.js',
             },
             dev: {
-                src: ["<%= concat.common.dest %>", "<%= concat.formValidator.dest %>"],
+                src: ["<%= concat.common.dest %>", "<%= concat.core.dest %>", "<%= concat.strategies.dest %>"],
                 dest: "<%= concat.common.dest %>"
             }
         },
@@ -160,7 +163,7 @@ module.exports = function(grunt) {
         },
 
         copy: {
-            fonts: {
+            main: {
                 files: [
 
                     // makes all src relative to cwd
@@ -168,9 +171,9 @@ module.exports = function(grunt) {
                         expand: true,
                         cwd: 'vendor/iknsa/ks/lib/base/',
                         src: ['**'],
-                        dest: 'vendor/iknsa/ks/lib/fonts/',
+                        dest: 'vendor/iknsa/ks/lib/main/',
                         rename: function(dest, src) {
-                            return dest + src.replace(/base/g, "fonts");
+                            return dest + src.replace(/base/g, "main");
                         }
                     },
                     {
@@ -178,7 +181,7 @@ module.exports = function(grunt) {
                         src: ['templates/base.html'],
                         dest: '',
                         rename: function(dest, src) {
-                            return dest + src.replace(/base/g, "fonts");
+                            return dest + src.replace(/base/g, "main");
                         }
                     }
                 ],
@@ -187,7 +190,7 @@ module.exports = function(grunt) {
     });
 
     // Default task.
-    grunt.registerTask('default', ['jshint']);
+    // grunt.registerTask('default', ['jshint']);
 
     // watch for scss files while in dev
     grunt.registerTask('dev_css', [

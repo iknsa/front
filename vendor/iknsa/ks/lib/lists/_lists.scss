@@ -1,0 +1,16 @@
+@import 'variables';
+@import 'mixins';
+
+.list
+{
+    &.block {
+        li, div, span, p, a {
+            @include block;
+        }
+    }
+    &.inline {
+        li, div, span, p, a {
+            @include inline;
+        }
+    }
+}

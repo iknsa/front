@@ -2,6 +2,12 @@
 @import 'mixins';
 
 // Form 
+
+.error-message, .form-error
+{
+    display: none;
+}
+
 form
 {
     line-height: $form-line-height;
@@ -37,9 +43,4 @@ input[type=search], input[type=url], input[type=text], input[type=password], inp
 {
     @extend textarea;
     padding: $input-padding;
-}
-
-.error-message, .form-error
-{
-    display: none;
 }
