@@ -118,7 +118,11 @@
 }
 
 
-
+@mixin nav-border
+{
+    border-top: 1px solid $nav-border-top;
+    border-bottom: 1px solid $nav-border-bottom;
+}
 
 @mixin tbl-border()
 {
