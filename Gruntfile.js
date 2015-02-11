@@ -136,14 +136,14 @@ module.exports = function(grunt) {
                 src: ['vendor/iknsa/ks/lib/core/actionRules.js', 'vendor/iknsa/ks/lib/core/core.js'],
                 dest: 'vendor/iknsa/js/core.js'
             },
-            formValidator: {
+            strategies: {
                 src: [
-                      'vendor/iknsa/ks/lib/form/ks-form-validator/*.js'
+                      'vendor/iknsa/ks/lib/**/strategy-*.js'
                     ],
-                dest: 'vendor/iknsa/js/ks-form-validator.js',
+                dest: 'vendor/iknsa/js/strategies.js',
             },
             dev: {
-                src: ["<%= concat.common.dest %>", "<%= concat.core.dest %>", "<%= concat.formValidator.dest %>"],
+                src: ["<%= concat.common.dest %>", "<%= concat.core.dest %>", "<%= concat.strategies.dest %>"],
                 dest: "<%= concat.common.dest %>"
             }
         },
@@ -163,7 +163,7 @@ module.exports = function(grunt) {
         },
 
         copy: {
-            lists: {
+            main: {
                 files: [
 
                     // makes all src relative to cwd
@@ -171,9 +171,9 @@ module.exports = function(grunt) {
                         expand: true,
                         cwd: 'vendor/iknsa/ks/lib/base/',
                         src: ['**'],
-                        dest: 'vendor/iknsa/ks/lib/lists/',
+                        dest: 'vendor/iknsa/ks/lib/main/',
                         rename: function(dest, src) {
-                            return dest + src.replace(/base/g, "lists");
+                            return dest + src.replace(/base/g, "main");
                         }
                     },
                     {
@@ -181,7 +181,7 @@ module.exports = function(grunt) {
                         src: ['templates/base.html'],
                         dest: '',
                         rename: function(dest, src) {
-                            return dest + src.replace(/base/g, "lists");
+                            return dest + src.replace(/base/g, "main");
                         }
                     }
                 ],

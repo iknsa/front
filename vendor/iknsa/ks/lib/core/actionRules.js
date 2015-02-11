@@ -10,5 +10,7 @@
 // of undefined function.
 
 actionRules = ["max", "min", "maxlength", "required",
-                   "email", "digits", "currency", "date", "time"];
-// init('#search', actionRules);
+                   "email", "digits", "currency", "date", "time", "firstCapital"];
+init('#search', actionRules);
+init('.breadcrumb', actionRules);
+

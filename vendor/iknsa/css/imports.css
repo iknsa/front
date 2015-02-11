@@ -1305,26 +1305,26 @@ form.success .error-message, form.success form.error .form-error, form.error for
 nav {
   background: #464646;
   width: 250px;
-  position: relative;
+  position: absolute;
   color: #f5f5f5;
-  float: left;
   z-index: 0;
+  top: 0;
 }
-/* line 10, ../ks/lib/nav/_pro-black-theme.scss */
+/* line 11, ../ks/lib/nav/_pro-black-theme.scss */
 nav:before, nav:after {
   content: " ";
   display: table;
 }
-/* line 14, ../ks/lib/nav/_pro-black-theme.scss */
+/* line 15, ../ks/lib/nav/_pro-black-theme.scss */
 nav:after {
   clear: both;
 }
-/* line 17, ../ks/lib/nav/_pro-black-theme.scss */
+/* line 18, ../ks/lib/nav/_pro-black-theme.scss */
 nav .user {
   height: 200px;
   background: #393939;
 }
-/* line 22, ../ks/lib/nav/_pro-black-theme.scss */
+/* line 23, ../ks/lib/nav/_pro-black-theme.scss */
 nav li {
   position: relative;
   display: block;
@@ -1332,23 +1332,23 @@ nav li {
   border-top: 1px solid #5e5e5e;
   border-bottom: 1px solid #404040;
 }
-/* line 28, ../ks/lib/nav/_pro-black-theme.scss */
+/* line 29, ../ks/lib/nav/_pro-black-theme.scss */
 nav li:first-child {
   border-top: 0;
 }
-/* line 31, ../ks/lib/nav/_pro-black-theme.scss */
+/* line 32, ../ks/lib/nav/_pro-black-theme.scss */
 nav li:last-child {
   border-bottom: 0;
 }
-/* line 35, ../ks/lib/nav/_pro-black-theme.scss */
+/* line 36, ../ks/lib/nav/_pro-black-theme.scss */
 nav li:hover, nav li.hover {
   background: #565656;
 }
-/* line 39, ../ks/lib/nav/_pro-black-theme.scss */
+/* line 40, ../ks/lib/nav/_pro-black-theme.scss */
 nav li:active, nav li.active {
   background: #5b5b5b;
 }
-/* line 43, ../ks/lib/nav/_pro-black-theme.scss */
+/* line 44, ../ks/lib/nav/_pro-black-theme.scss */
 nav li a {
   color: #f5f5f5;
   text-decoration: none;
@@ -1356,20 +1356,20 @@ nav li a {
   padding: 20px;
   display: block;
 }
-/* line 51, ../ks/lib/nav/_pro-black-theme.scss */
+/* line 52, ../ks/lib/nav/_pro-black-theme.scss */
 nav li ul {
   display: none;
   background: #393939;
 }
-/* line 55, ../ks/lib/nav/_pro-black-theme.scss */
+/* line 56, ../ks/lib/nav/_pro-black-theme.scss */
 nav li ul.active {
   display: block;
 }
-/* line 59, ../ks/lib/nav/_pro-black-theme.scss */
+/* line 60, ../ks/lib/nav/_pro-black-theme.scss */
 nav li ul li:first-child {
   border-top: 1px solid #5e5e5e;
 }
-/* line 62, ../ks/lib/nav/_pro-black-theme.scss */
+/* line 63, ../ks/lib/nav/_pro-black-theme.scss */
 nav li ul li:last-child {
   border-bottom: 1px solid #404040;
 }

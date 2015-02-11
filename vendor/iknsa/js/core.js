@@ -1,4 +1,4 @@
-/*! ks-framework - v0.0.0 - 2015-02-10
+/*! ks-framework - v0.0.0 - 2015-02-12
 * Copyright (c) 2015 ; Licensed  */
 // actionRules.js ------------------------------------------
 
@@ -12,8 +12,10 @@
 // of undefined function.
 
 actionRules = ["max", "min", "maxlength", "required",
-                   "email", "digits", "currency", "date", "time"];
-// init('#search', actionRules);
+                   "email", "digits", "currency", "date", "time", "firstCapital"];
+init('#search', actionRules);
+init('.breadcrumb', actionRules);
+
 
 //-------------------
 // Core.js ------------------------------------------
@@ -26,14 +28,16 @@ actionRules = ["max", "min", "maxlength", "required",
  */
 function init(selector, actionRules)
 {
-    var classes = {};
+    if($(selector).length > 0) {
+        var classes = {};
 
-    getClasses(selector);
-    getProperties(selector);
-    classesToCheck(selectorClasses, actionRules);
-    propToCheck(selectorProp, actionRules);
-    combineValues(classesValuesToCheck, propValuesToCheck);
-    callStrategies(allValues);
+        getClasses(selector);
+        getProperties(selector);
+        classesToCheck(selectorClasses, actionRules);
+        propToCheck(selectorProp, actionRules);
+        combineValues(classesValuesToCheck, propValuesToCheck);
+        callStrategies(allValues);
+    }
 }
 
 /**
@@ -45,6 +49,7 @@ function init(selector, actionRules)
 function dispatchToStrategy(value, param)
 {
     strategy = "ks_strategy_" + value;
+
     window[strategy](param);
 }
 

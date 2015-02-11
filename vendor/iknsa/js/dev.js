@@ -1,6 +1,6 @@
-/*! ks-framework - v0.0.0 - 2015-02-10
+/*! ks-framework - v0.0.0 - 2015-02-12
 * Copyright (c) 2015 ; Licensed  */
-/*! ks-framework - v0.0.0 - 2015-02-10
+/*! ks-framework - v0.0.0 - 2015-02-12
 * Copyright (c) 2015 ; Licensed  */
 jQuery( document ).ready(function( $ ) {
 //-------------------
@@ -10,6 +10,16 @@ jQuery( document ).ready(function( $ ) {
 
 // add disable class on last child of the breadcrumb
 $('.breadcrumb ul li:last-child a').addClass("btn-disable");
+
+$('.breadcrumb ul li a').each(function(){
+
+    $(this).text(firstCapital($(this).text()));
+});
+
+function firstCapital(string)
+{
+    return string && string[0].toUpperCase() + string.slice(1);
+}
 //-------------------
 // Buttons
 
@@ -99,9 +109,13 @@ $("form").attr('novalidate', "");
 //-------------------
 
 //-------------------
+
+//-------------------
+
+//-------------------
 }); //End of onload jQuery
 //-------------------
-/*! ks-framework - v0.0.0 - 2015-02-10
+/*! ks-framework - v0.0.0 - 2015-02-12
 * Copyright (c) 2015 ; Licensed  */
 // actionRules.js ------------------------------------------
 
@@ -115,8 +129,10 @@ $("form").attr('novalidate', "");
 // of undefined function.
 
 actionRules = ["max", "min", "maxlength", "required",
-                   "email", "digits", "currency", "date", "time"];
-// init('#search', actionRules);
+                   "email", "digits", "currency", "date", "time", "firstCapital"];
+init('#search', actionRules);
+init('.breadcrumb', actionRules);
+
 
 //-------------------
 // Core.js ------------------------------------------
@@ -129,14 +145,16 @@ actionRules = ["max", "min", "maxlength", "required",
  */
 function init(selector, actionRules)
 {
-    var classes = {};
+    if($(selector).length > 0) {
+        var classes = {};
 
-    getClasses(selector);
-    getProperties(selector);
-    classesToCheck(selectorClasses, actionRules);
-    propToCheck(selectorProp, actionRules);
-    combineValues(classesValuesToCheck, propValuesToCheck);
-    callStrategies(allValues);
+        getClasses(selector);
+        getProperties(selector);
+        classesToCheck(selectorClasses, actionRules);
+        propToCheck(selectorProp, actionRules);
+        combineValues(classesValuesToCheck, propValuesToCheck);
+        callStrategies(allValues);
+    }
 }
 
 /**
@@ -148,6 +166,7 @@ function init(selector, actionRules)
 function dispatchToStrategy(value, param)
 {
     strategy = "ks_strategy_" + value;
+
     window[strategy](param);
 }
 
@@ -326,8 +345,13 @@ function getProperties(selector)
     return selectorProp;
 }
 //-------------------
-/*! ks-framework - v0.0.0 - 2015-02-10
+/*! ks-framework - v0.0.0 - 2015-02-12
 * Copyright (c) 2015 ; Licensed  */
+function ks_strategy_firstCapital(param)
+{
+    
+}
+//-------------------
 // _strategy_max.js ------------------------------------------
 function ks_strategy_max(param)
 {

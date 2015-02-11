@@ -8,14 +8,16 @@
  */
 function init(selector, actionRules)
 {
-    var classes = {};
+    if($(selector).length > 0) {
+        var classes = {};
 
-    getClasses(selector);
-    getProperties(selector);
-    classesToCheck(selectorClasses, actionRules);
-    propToCheck(selectorProp, actionRules);
-    combineValues(classesValuesToCheck, propValuesToCheck);
-    callStrategies(allValues);
+        getClasses(selector);
+        getProperties(selector);
+        classesToCheck(selectorClasses, actionRules);
+        propToCheck(selectorProp, actionRules);
+        combineValues(classesValuesToCheck, propValuesToCheck);
+        callStrategies(allValues);
+    }
 }
 
 /**
@@ -27,6 +29,7 @@ function init(selector, actionRules)
 function dispatchToStrategy(value, param)
 {
     strategy = "ks_strategy_" + value;
+
     window[strategy](param);
 }
 
