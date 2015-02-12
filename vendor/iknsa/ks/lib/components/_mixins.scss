@@ -20,6 +20,11 @@
     margin-left: $row-margin-left;
 }
 
+@mixin container
+{
+    padding: 0 15px;
+}
+
 @mixin ks-fonts-padding()
 {
     padding: $ks-fonts-padding;

@@ -187,6 +187,10 @@ module.exports = function(grunt) {
                 ],
           },
         },
+
+        qunit: {
+            all: ['vendor/iknsa/qunit/**/*.js']
+        }
     });
 
     // Default task.

@@ -2,10 +2,11 @@ nav
 {
     background:darken($dark-color, 5);
     width: $nav-width;
-    position: absolute;
     color: $light-color;
     z-index: 0;
-    top: 0;
+    float: left;
+    // position: absolute;
+    // top: 30px;
 
 
     &:before, &:after {

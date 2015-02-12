@@ -1,5 +1,5 @@
 // _strategy_max.js ------------------------------------------
-function ks_strategy_max(param)
+function ks_strategy_max(param, elementObject)
 {
-    console.log("max: " + param);
+    console.log(elementObject);
 }

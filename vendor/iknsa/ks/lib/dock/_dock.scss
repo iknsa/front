@@ -3,11 +3,11 @@
 
 .dock
 {
-    background:darken($dark-color, 10);
+    background:darken($dark-color, 20);
     height: 30px;
     line-height: 30px;
     z-index: 100;
-    padding: 3px 0;
+    padding: 0px $container-padding;
     box-sizing:content-box;
     a {
         text-decoration: none;

@@ -1,0 +1,10 @@
+header, main, aside
+{
+    margin-left: 250px;
+}
+
+footer
+{
+    margin:0;
+    width: 100%;
+}
