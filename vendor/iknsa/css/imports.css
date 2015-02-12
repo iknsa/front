@@ -1299,9 +1299,9 @@ form.success .error-message, form.success form.error .form-error, form.error for
 }
 /* line 79, ../ks/lib/dock/_dock.scss */
 .search-bar input[type=submit] {
-  background: #2d2d2d;
+  background-color: #565656;
   border: none;
-  background: url("../img/dock/search-ico.png") no-repeat scroll 50% 50% #2D2D2D;
+  color: #f5f5f5;
   width: 30px;
   height: 25px;
 }

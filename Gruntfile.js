@@ -187,10 +187,6 @@ module.exports = function(grunt) {
                 ],
           },
         },
-
-        qunit: {
-            all: ['vendor/iknsa/qunit/**/*.js']
-        }
     });
 
     // Default task.
@@ -203,6 +199,8 @@ module.exports = function(grunt) {
         'compass:dev',
         // 'csslint:watch'
     ]);
+
+    // // watch for js files while in dev
 
     // watch for js files while in dev
     grunt.registerTask('dev_js', [

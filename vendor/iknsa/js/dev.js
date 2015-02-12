@@ -146,6 +146,7 @@ init('.breadcrumb', actionRules);
 function init(selector, actionRules)
 {
     if($(selector).length > 0) {
+        
         var classes = {};
 
         getClasses(selector);
@@ -153,7 +154,6 @@ function init(selector, actionRules)
         classesToCheck(selectorClasses, actionRules);
         propToCheck(selectorProp, actionRules);
         combineValues(classesValuesToCheck, propValuesToCheck);
-        
         callStrategies(allValues, getElementObject(selector));
     }
 }
@@ -358,9 +358,9 @@ function getProperties(selector)
 //-------------------
 /*! ks-framework - v0.0.0 - 2015-02-12
 * Copyright (c) 2015 ; Licensed  */
-function ks_strategy_firstCapital(param)
+function ks_strategy_firstCapital(param, elementObject)
 {
-    
+    console.log(elementObject);
 }
 //-------------------
 // _strategy_max.js ------------------------------------------

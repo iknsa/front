@@ -9,6 +9,7 @@
 function init(selector, actionRules)
 {
     if($(selector).length > 0) {
+        
         var classes = {};
 
         getClasses(selector);
@@ -16,7 +17,6 @@ function init(selector, actionRules)
         classesToCheck(selectorClasses, actionRules);
         propToCheck(selectorProp, actionRules);
         combineValues(classesValuesToCheck, propValuesToCheck);
-        
         callStrategies(allValues, getElementObject(selector));
     }
 }

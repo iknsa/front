@@ -37,6 +37,7 @@
     "moment": "~2.9.0"
   },
   "devDependencies": {
-    "normalize.css": "~3.0.2"
+    "normalize.css": "~3.0.2",
+    "qunit": "~1.17.1"
   }
 }

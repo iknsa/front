@@ -77,9 +77,9 @@
     }
 
     input[type=submit] {
-        background:darken($dark-color, 15);
+        background-color:lighten($dark-color, 1);
         border: none;
-        background:url("../img/dock/search-ico.png") no-repeat scroll 50% 50% #2D2D2D;
+        color: $light-color;
         width: 30px;
         height: 25px;
     }
