@@ -34,24 +34,20 @@ nav
             border-bottom: 0;
         }
 
-        &:hover, &.hover {
-            background: lighten($dark-color, 1);
-        }
-
-        &:active, &.active {
-            background: lighten($dark-color, 3);
-        }
-
         a {
-            color: $light-color;
+            color: darken($light-color, 20);
             text-decoration: none;
             height: 100%;
             padding: $nav-a-padding;
             display: block;
+
+            &:hover {
+                color: $light-color;
+            }
         }
 
         ul {
-            display: none;
+            // display: none;
             background:darken($dark-color, 10);
 
             &.active {

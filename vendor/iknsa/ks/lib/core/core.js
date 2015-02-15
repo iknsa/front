@@ -6,7 +6,7 @@
  * @param  {string} selector           selector => #id | .class
  * @param  {array} actionRules
  */
-function init(selector, actionRules)
+function ks_init(selector, actionRules)
 {
     if($(selector).length > 0) {
         
@@ -127,7 +127,7 @@ function checkIfValueInActionRules(value, actionRules)
  * return {array} classesValuesToCheck
  */
 function classesToCheck(selectorClasses, actionRules)
-{
+{    
     classesValuesToCheck = [];
     $.each(selectorClasses, function(index, value) {
 
@@ -137,7 +137,6 @@ function classesToCheck(selectorClasses, actionRules)
 
             // If the class value is in the rules we also take the whole stuff as 
             // we will need it later on to send it as param to action strategies
-
             if(checkIfValueInActionRules(splitVal[0], actionRules)){
                 classesValuesToCheck.push(splitVal);
             }
@@ -148,6 +147,7 @@ function classesToCheck(selectorClasses, actionRules)
             }
         }
     });
+
     return classesValuesToCheck;
 }
 

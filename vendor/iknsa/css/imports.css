@@ -791,7 +791,7 @@ body {
 
 @font-face {
   font-family: "ks-fonts";
-  src: url('/ks-framework/vendor/iknsa/fonts/ks-fonts.eot') format('embedded-opentype'), url('/ks-framework/vendor/iknsa/fonts/ks-fonts.svg') format('svg'), url('/ks-framework/vendor/iknsa/fonts/ks-fonts.ttf') format('truetype'), url('/ks-framework/vendor/iknsa/fonts/ks-fonts.woff') format('woff');
+  src: url('../fonts/ks-fonts.eot?1423431348') format('embedded-opentype'), url('../fonts/ks-fonts.svg?1423431348') format('svg'), url('../fonts/ks-fonts.ttf?1423431348') format('truetype'), url('../fonts/ks-fonts.woff?1423431348') format('woff');
 }
 /* line 10, ../ks/lib/fonts/_fonts.scss */
 .ks-fonts {
@@ -1345,35 +1345,30 @@ nav li:last-child {
   border-bottom: 0;
 }
 /* line 37, ../ks/lib/nav/_pro-black-theme.scss */
-nav li:hover, nav li.hover {
-  background: #565656;
-}
-/* line 41, ../ks/lib/nav/_pro-black-theme.scss */
-nav li:active, nav li.active {
-  background: #5b5b5b;
-}
-/* line 45, ../ks/lib/nav/_pro-black-theme.scss */
 nav li a {
-  color: #f5f5f5;
+  color: #c2c2c2;
   text-decoration: none;
   height: 100%;
   padding: 20px;
   display: block;
 }
-/* line 53, ../ks/lib/nav/_pro-black-theme.scss */
+/* line 44, ../ks/lib/nav/_pro-black-theme.scss */
+nav li a:hover {
+  color: #f5f5f5;
+}
+/* line 49, ../ks/lib/nav/_pro-black-theme.scss */
 nav li ul {
-  display: none;
   background: #393939;
 }
-/* line 57, ../ks/lib/nav/_pro-black-theme.scss */
+/* line 53, ../ks/lib/nav/_pro-black-theme.scss */
 nav li ul.active {
   display: block;
 }
-/* line 61, ../ks/lib/nav/_pro-black-theme.scss */
+/* line 57, ../ks/lib/nav/_pro-black-theme.scss */
 nav li ul li:first-child {
   border-top: 1px solid #5e5e5e;
 }
-/* line 64, ../ks/lib/nav/_pro-black-theme.scss */
+/* line 60, ../ks/lib/nav/_pro-black-theme.scss */
 nav li ul li:last-child {
   border-bottom: 1px solid #404040;
 }

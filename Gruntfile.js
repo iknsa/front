@@ -20,7 +20,8 @@ module.exports = function(grunt) {
             dev: ['vendor/iknsa/dist/*'],
             css: ['vendor/iknsa/dist/css*'],
             concat: ['vendor/iknsa/concat/*'],
-            js: ['vendor/iknsa/dist/js/*']
+            js: ['vendor/iknsa/dist/js/*'],
+            qunit_dev: ['vendor/iknsa/qunit/dev.js', 'vendor/iknsa/qunit/tests.js']
         },
 
 
@@ -30,7 +31,8 @@ module.exports = function(grunt) {
                 options: {
                   sassDir: 'vendor/iknsa/ks',
                   cssDir: 'vendor/iknsa/css',
-                  fontsDir: 'ks-framework/vendor/iknsa/fonts',
+                  http_fonts_path: "../fonts",
+                  fontsDir: 'vendor/iknsa/fonts',
                   environment: 'development',
                   require: 'susy'
                 }
@@ -128,7 +130,7 @@ module.exports = function(grunt) {
                 stripBanners: true
             },
             common: {
-                src: ['vendor/iknsa/ks/lib/onload_start.js', 'vendor/iknsa/ks/lib/**/_*.js',
+                src: ['vendor/iknsa/ks/lib/onload_start.js', 'vendor/iknsa/ks/lib/**/_*.js', '!vendor/iknsa/ks/lib/**/*_test.js',
                       'vendor/iknsa/ks/lib/onload_end.js'],
                 dest: 'vendor/iknsa/js/dev.js',
             },
@@ -145,6 +147,10 @@ module.exports = function(grunt) {
             dev: {
                 src: ["<%= concat.common.dest %>", "<%= concat.core.dest %>", "<%= concat.strategies.dest %>"],
                 dest: "<%= concat.common.dest %>"
+            },
+            qunit: {
+                src: ['vendor/iknsa/ks/lib/**/*_test.js'],
+                dest: 'vendor/iknsa/qunit/tests.js'
             }
         },
 
@@ -163,7 +169,7 @@ module.exports = function(grunt) {
         },
 
         copy: {
-            main: {
+            test: {
                 files: [
 
                     // makes all src relative to cwd
@@ -171,9 +177,9 @@ module.exports = function(grunt) {
                         expand: true,
                         cwd: 'vendor/iknsa/ks/lib/base/',
                         src: ['**'],
-                        dest: 'vendor/iknsa/ks/lib/main/',
+                        dest: 'vendor/iknsa/ks/lib/test/',
                         rename: function(dest, src) {
-                            return dest + src.replace(/base/g, "main");
+                            return dest + src.replace(/base/g, "test");
                         }
                     },
                     {
@@ -181,11 +187,20 @@ module.exports = function(grunt) {
                         src: ['templates/base.html'],
                         dest: '',
                         rename: function(dest, src) {
-                            return dest + src.replace(/base/g, "main");
+                            return dest + src.replace(/base/g, "test");
                         }
                     }
                 ],
-          },
+            },
+
+            qunit: {
+                files: [
+                    {
+                        src: '<%= concat.dev.dest %>',
+                        dest: 'vendor/iknsa/qunit/dev.js'
+                    }
+                ]
+            }
         },
     });
 
@@ -200,7 +215,12 @@ module.exports = function(grunt) {
         // 'csslint:watch'
     ]);
 
-    // // watch for js files while in dev
+    // watch for js files while in dev
+    grunt.registerTask('qunit', [
+        'clean:qunit_dev',
+        'concat:qunit',
+        'copy:qunit'
+    ]);
 
     // watch for js files while in dev
     grunt.registerTask('dev_js', [

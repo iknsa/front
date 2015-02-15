@@ -10,7 +10,7 @@
 // of undefined function.
 
 actionRules = ["max", "min", "maxlength", "required",
-                   "email", "digits", "currency", "date", "time", "firstCapital"];
-init('#search', actionRules);
-init('.breadcrumb', actionRules);
-
+                   "email", "digits", "currency", "date", "time", "firstCapital", "toggleSlide"];
+ks_init('#search', actionRules);
+ks_init('.breadcrumb', actionRules);
+ks_init('.toggleSlide', actionRules);
