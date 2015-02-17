@@ -1,4 +1,4 @@
-/*! ks-framework - v0.0.0 - 2015-02-15
+/*! ks-framework - v0.0.0 - 2015-02-17
 * Copyright (c) 2015 ; Licensed  */
 // actionRules.js ------------------------------------------
 
@@ -62,6 +62,7 @@ function dispatchToStrategy(value, param, elementObject)
  */
 function callStrategies(allValues, elementObject)
 {
+    // console.log(allValues);
     $.each(allValues, function(index, value) {
         // Check that the value IS in the actionRules and IS NOT already in the validStrategy
         if($.isArray(value) === false) {
@@ -79,6 +80,7 @@ function callStrategies(allValues, elementObject)
             if(!value[0].match(/\-/)) {
                 dispatchToStrategy(value[0], value[1], elementObject);
             } else {
+                    console.log(splitVal[1]);
                 splitVal = value.split("-");
                 if(splitVal[1] !== null && splitVal[1] !== undefined && splitVal[1] !== "") {
                     dispatchToStrategy(splitVal[0], splitVal[1], elementObject);

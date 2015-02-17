@@ -1,6 +1,6 @@
-/*! ks-framework - v0.0.0 - 2015-02-15
+/*! ks-framework - v0.0.0 - 2015-02-17
 * Copyright (c) 2015 ; Licensed  */
-/*! ks-framework - v0.0.0 - 2015-02-15
+/*! ks-framework - v0.0.0 - 2015-02-17
 * Copyright (c) 2015 ; Licensed  */
 jQuery( document ).ready(function( $ ) {
 //-------------------
@@ -8,18 +8,7 @@ jQuery( document ).ready(function( $ ) {
 //-------------------
 // Breadcrumb
 
-// add disable class on last child of the breadcrumb
-$('.breadcrumb ul li:last-child a').addClass("btn-disable");
 
-$('.breadcrumb ul li a').each(function(){
-
-    $(this).text(firstCapital($(this).text()));
-});
-
-function firstCapital(string)
-{
-    return string && string[0].toUpperCase() + string.slice(1);
-}
 //-------------------
 // Buttons
 
@@ -52,10 +41,10 @@ $("form").attr('novalidate', "");
 //-------------------
 
 //-------------------
-$('ul.toggle').css("display", "none");
-$('li.toggleSlide').on("click", function(e){
-    $('li.toggleSlide > ul').stop().toggle(200);
-});
+// $('ul.toggle').css("display", "none");
+// $('li.toggleSlide').on("click", function(e){
+//     $('li.toggleSlide > ul').stop().toggle(200);
+// });
 //-------------------
 
 //-------------------
@@ -63,7 +52,7 @@ $('li.toggleSlide').on("click", function(e){
 //-------------------
 }); //End of onload jQuery
 //-------------------
-/*! ks-framework - v0.0.0 - 2015-02-15
+/*! ks-framework - v0.0.0 - 2015-02-17
 * Copyright (c) 2015 ; Licensed  */
 // actionRules.js ------------------------------------------
 
@@ -127,6 +116,7 @@ function dispatchToStrategy(value, param, elementObject)
  */
 function callStrategies(allValues, elementObject)
 {
+    // console.log(allValues);
     $.each(allValues, function(index, value) {
         // Check that the value IS in the actionRules and IS NOT already in the validStrategy
         if($.isArray(value) === false) {
@@ -144,6 +134,7 @@ function callStrategies(allValues, elementObject)
             if(!value[0].match(/\-/)) {
                 dispatchToStrategy(value[0], value[1], elementObject);
             } else {
+                    console.log(splitVal[1]);
                 splitVal = value.split("-");
                 if(splitVal[1] !== null && splitVal[1] !== undefined && splitVal[1] !== "") {
                     dispatchToStrategy(splitVal[0], splitVal[1], elementObject);
@@ -304,37 +295,55 @@ function getProperties(selector)
     return selectorProp;
 }
 //-------------------
-/*! ks-framework - v0.0.0 - 2015-02-15
+/*! ks-framework - v0.0.0 - 2015-02-17
 * Copyright (c) 2015 ; Licensed  */
 function ks_strategy_firstCapital(param, elementObject)
 {
-    console.log(elementObject);
+    // console.log(elementObject);
+    // add disable class on last child of the breadcrumb
+    $('.breadcrumb ul li:last-child a').addClass("btn-disable").css("cursor", "initial");
+
+    $('.breadcrumb ul li a').each(function(){
+
+        $(this).text(firstCapital($(this).text()));
+    });
+
+    /**
+     * Makes the first char a capital
+     * @param  {string} string
+     * @return {string}
+     */
+    function firstCapital(string)
+    {
+        // Converts for each string the first char to UpperCase where string.slice(1) is the remainder of string
+        return string && string[0].toUpperCase() + string.slice(1);
+    }
 }
 //-------------------
 // _strategy_max.js ------------------------------------------
 function ks_strategy_max(param, elementObject)
 {
-    console.log(elementObject);
+    // console.log(elementObject);
 }
 
 //-------------------
 // _strategy-maxlength.js ------------------------------------------
 function ks_strategy_maxlength(param, elementObject)
 {
-    console.log("maxlength: " + param);
+    // console.log("maxlength: " + param);
 }
 //-------------------
 // _strategy-min.js ------------------------------------------
 function ks_strategy_min(param, elementObject)
 {
-    console.log("min: " + param);
+    // console.log("min: " + param);
 }
 
 //-------------------
 // _strategy-required.js ------------------------------------------
 function ks_strategy_required(param, elementObject)
 {
-    console.log("required: " + param);
+    // console.log("required: " + param);
 }
 
 //-------------------
@@ -342,12 +351,23 @@ function ks_strategy_required(param, elementObject)
 
 
 // selector on which the event happens
-// function ks_strategy_toggleSlide(param, elementObject) 
-// {
-//     $(elementObject).children(".toggle").css("display", "none");
-//     $(elementObject).on("click", function(e){
-//         $(this).children().toggle();
-//     });
+function ks_strategy_toggleSlide(param, elementObject) 
+{
+    //     $(elementObject).children(".toggle").css("display", "none");
+    //     $.each(elementObject, function(index, value){
+    // console.log(elementObject[index]);
 
-//     $(elementObject)
-// }
+    //         $(elementObject[index]).on("click", function(e){
+    //             e.preventDefault();
+    //             if($(elementObject[index]).children().next().is(":hidden")) {
+    //                 $(elementObject[index]).children().next().addClass("active").slideDown();
+    //             } else {
+    //                 console.log(elementObject[index]);
+    //                 $(elementObject[index]).children().next().removeClass("active").slideUp();
+    //             }
+    //         });
+
+    //     }); //End of each loop
+
+    // $(elementObject)
+}

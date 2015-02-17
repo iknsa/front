@@ -1,6 +1,6 @@
-/*! ks-framework - v0.0.0 - 2015-02-13
+/*! ks-framework - v0.0.0 - 2015-02-16
 * Copyright (c) 2015 ; Licensed  */
-/*! ks-framework - v0.0.0 - 2015-02-13
+/*! ks-framework - v0.0.0 - 2015-02-16
 * Copyright (c) 2015 ; Licensed  */
 jQuery( document ).ready(function( $ ) {
 //-------------------
@@ -34,62 +34,7 @@ if(!$('.btn-disable').attr('disabled') ||
     });
 }
 //-------------------
-// If an li has a class openable and contains a hidden ul
-// it will slide down the hidden ul
-// $("li.openable").has($("ul:hidden")).hover(
-//     function(){
-//         $(this).addClass("active").children("ul").stop().slideDown(200);
-//     }, function() {
-//         $(this).removeClass("active").children("ul").stop().slideUp(200);
-//     }
-// );
 
-
-
-// Should dev something to know at which level we are in the list
-
-// Factory for openable lists on event
-
-// $(".openable").click(function(e){
-//     e.preventDefault();
-//     if($(this).children(":hidden")) {
-
-//         // We close the siblings of the element 
-//         $(this).siblings().removeClass("active").children(".open").stop().slideUp(200);
-
-//         // We open the hidden list and rename the clases
-//         $(this).removeClass("openable").addClass("closable active").children(":hidden").addClass("open").stop()
-//             .slideDown(200);
-
-//         // Rotate/Change the arrow icon
-//         // $(".closable.active > a .icon-circle-up").css('transform', 'rotate(180deg)');
-//         $(".closable.active > a .icon-circle-up").removeClass("icon-circle-up").addClass("icon-circle-down");
-//     }
-// });
-
-// Open hidden children on click and close any siblings
-
-
-$(".openable").click(function(e){
-    e.preventDefault();
-
-    if($(this).children(":hidden")) {
-        $(this).removeClass("openable").addClass("closable active").children(":hidden").addClass("open").stop().slideDown(200);
-
-        $(this).siblings().children(".open").stop().slideUp(200);
-
-        // closable();
-    }
-    $(".closable").click(function(e){
-        e.preventDefault();
-
-        $(this).removeClass("closable active").addClass("openable").children(".open").removeClass(".open");
-
-        console.log("what");
-        // $(this).children(".open").stop().slideUp(200);
-    });
-});
-// bind event on change on child class
 //-------------------
 
 //-------------------
@@ -107,7 +52,10 @@ $("form").attr('novalidate', "");
 //-------------------
 
 //-------------------
-
+// $('ul.toggle').css("display", "none");
+// $('li.toggleSlide').on("click", function(e){
+//     $('li.toggleSlide > ul').stop().toggle(200);
+// });
 //-------------------
 
 //-------------------
@@ -115,7 +63,7 @@ $("form").attr('novalidate', "");
 //-------------------
 }); //End of onload jQuery
 //-------------------
-/*! ks-framework - v0.0.0 - 2015-02-13
+/*! ks-framework - v0.0.0 - 2015-02-16
 * Copyright (c) 2015 ; Licensed  */
 // actionRules.js ------------------------------------------
 
@@ -129,9 +77,10 @@ $("form").attr('novalidate', "");
 // of undefined function.
 
 actionRules = ["max", "min", "maxlength", "required",
-                   "email", "digits", "currency", "date", "time", "firstCapital"];
+                   "email", "digits", "currency", "date", "time", "firstCapital", "toggleSlide"];
 ks_init('#search', actionRules);
 ks_init('.breadcrumb', actionRules);
+ks_init('.toggleSlide', actionRules);
 
 //-------------------
 // Core.js ------------------------------------------
@@ -178,6 +127,7 @@ function dispatchToStrategy(value, param, elementObject)
  */
 function callStrategies(allValues, elementObject)
 {
+    console.log(allValues);
     $.each(allValues, function(index, value) {
         // Check that the value IS in the actionRules and IS NOT already in the validStrategy
         if($.isArray(value) === false) {
@@ -195,6 +145,7 @@ function callStrategies(allValues, elementObject)
             if(!value[0].match(/\-/)) {
                 dispatchToStrategy(value[0], value[1], elementObject);
             } else {
+                    console.log(splitVal[1]);
                 splitVal = value.split("-");
                 if(splitVal[1] !== null && splitVal[1] !== undefined && splitVal[1] !== "") {
                     dispatchToStrategy(splitVal[0], splitVal[1], elementObject);
@@ -263,7 +214,7 @@ function checkIfValueInActionRules(value, actionRules)
  * return {array} classesValuesToCheck
  */
 function classesToCheck(selectorClasses, actionRules)
-{
+{    
     classesValuesToCheck = [];
     $.each(selectorClasses, function(index, value) {
 
@@ -273,7 +224,6 @@ function classesToCheck(selectorClasses, actionRules)
 
             // If the class value is in the rules we also take the whole stuff as 
             // we will need it later on to send it as param to action strategies
-
             if(checkIfValueInActionRules(splitVal[0], actionRules)){
                 classesValuesToCheck.push(splitVal);
             }
@@ -284,6 +234,7 @@ function classesToCheck(selectorClasses, actionRules)
             }
         }
     });
+
     return classesValuesToCheck;
 }
 
@@ -355,7 +306,7 @@ function getProperties(selector)
     return selectorProp;
 }
 //-------------------
-/*! ks-framework - v0.0.0 - 2015-02-13
+/*! ks-framework - v0.0.0 - 2015-02-16
 * Copyright (c) 2015 ; Licensed  */
 function ks_strategy_firstCapital(param, elementObject)
 {
@@ -365,25 +316,51 @@ function ks_strategy_firstCapital(param, elementObject)
 // _strategy_max.js ------------------------------------------
 function ks_strategy_max(param, elementObject)
 {
-    console.log(elementObject);
+    // console.log(elementObject);
 }
 
 //-------------------
 // _strategy-maxlength.js ------------------------------------------
-function ks_strategy_maxlength(param)
+function ks_strategy_maxlength(param, elementObject)
 {
-    console.log("maxlength: " + param);
+    // console.log("maxlength: " + param);
 }
 //-------------------
 // _strategy-min.js ------------------------------------------
-function ks_strategy_min(param)
+function ks_strategy_min(param, elementObject)
 {
-    console.log("min: " + param);
+    // console.log("min: " + param);
 }
 
 //-------------------
 // _strategy-required.js ------------------------------------------
-function ks_strategy_required(param)
+function ks_strategy_required(param, elementObject)
 {
-    console.log("required: " + param);
+    // console.log("required: " + param);
+}
+
+//-------------------
+// Toggle slideup and down strategy for classes .openable
+
+
+// selector on which the event happens
+function ks_strategy_toggleSlide(param, elementObject) 
+{
+    //     $(elementObject).children(".toggle").css("display", "none");
+    //     $.each(elementObject, function(index, value){
+    // console.log(elementObject[index]);
+
+    //         $(elementObject[index]).on("click", function(e){
+    //             e.preventDefault();
+    //             if($(elementObject[index]).children().next().is(":hidden")) {
+    //                 $(elementObject[index]).children().next().addClass("active").slideDown();
+    //             } else {
+    //                 console.log(elementObject[index]);
+    //                 $(elementObject[index]).children().next().removeClass("active").slideUp();
+    //             }
+    //         });
+
+    //     }); //End of each loop
+
+    // $(elementObject)
 }
