@@ -1,4 +1,4 @@
-/*! ks-framework - v0.0.0 - 2015-02-17
+/*! ks-framework - v0.0.0 - 2015-02-19
 * Copyright (c) 2015 ; Licensed  */
 function ks_strategy_firstCapital(param, elementObject)
 {
@@ -10,17 +10,17 @@ function ks_strategy_firstCapital(param, elementObject)
 
         $(this).text(firstCapital($(this).text()));
     });
+}
 
-    /**
-     * Makes the first char a capital
-     * @param  {string} string
-     * @return {string}
-     */
-    function firstCapital(string)
-    {
-        // Converts for each string the first char to UpperCase where string.slice(1) is the remainder of string
-        return string && string[0].toUpperCase() + string.slice(1);
-    }
+/**
+ * Makes the first char a capital
+ * @param  {string} string
+ * @return {string}
+ */
+function firstCapital(string)
+{
+    // Converts for each string the first char to UpperCase where string.slice(1) is the remainder of string
+    return string && string[0].toUpperCase() + string.slice(1);
 }
 //-------------------
 // _strategy_max.js ------------------------------------------

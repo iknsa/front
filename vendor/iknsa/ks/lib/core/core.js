@@ -31,7 +31,11 @@ function dispatchToStrategy(value, param, elementObject)
 {
     strategy = "ks_strategy_" + value;
 
-    window[strategy](param, elementObject);
+    if(window[strategy]) {
+        window[strategy](param, elementObject);
+    } else {
+        console.log(strategy + " is not function");
+    }
 }
 
 /**

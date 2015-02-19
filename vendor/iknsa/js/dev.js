@@ -1,6 +1,6 @@
-/*! ks-framework - v0.0.0 - 2015-02-17
+/*! ks-framework - v0.0.0 - 2015-02-19
 * Copyright (c) 2015 ; Licensed  */
-/*! ks-framework - v0.0.0 - 2015-02-17
+/*! ks-framework - v0.0.0 - 2015-02-19
 * Copyright (c) 2015 ; Licensed  */
 jQuery( document ).ready(function( $ ) {
 //-------------------
@@ -33,7 +33,6 @@ if(!$('.btn-disable').attr('disabled') ||
 // Disable browser default validation
 $("form").attr('novalidate', "");
 
-// validateField('#search', validationRules);
 //-------------------
 
 //-------------------
@@ -41,10 +40,20 @@ $("form").attr('novalidate', "");
 //-------------------
 
 //-------------------
-// $('ul.toggle').css("display", "none");
-// $('li.toggleSlide').on("click", function(e){
-//     $('li.toggleSlide > ul').stop().toggle(200);
-// });
+$("nav ul li > ul").css("display", "none");
+
+$("nav ul li").each(function(){
+    $(this).on("click", function(e) {
+        console.log($(this));
+        if($(this).children().is(":hidden")) {
+            e.preventDefault();
+            $(this).children("ul:hidden").stop().slideDown(200);
+        } else {
+            // console.log($(">ul", this));
+            $(">ul", this).stop().slideUp(200);
+        }
+    });
+});
 //-------------------
 
 //-------------------
@@ -52,7 +61,7 @@ $("form").attr('novalidate', "");
 //-------------------
 }); //End of onload jQuery
 //-------------------
-/*! ks-framework - v0.0.0 - 2015-02-17
+/*! ks-framework - v0.0.0 - 2015-02-19
 * Copyright (c) 2015 ; Licensed  */
 // actionRules.js ------------------------------------------
 
@@ -105,7 +114,11 @@ function dispatchToStrategy(value, param, elementObject)
 {
     strategy = "ks_strategy_" + value;
 
-    window[strategy](param, elementObject);
+    if(window[strategy]) {
+        window[strategy](param, elementObject);
+    } else {
+        console.log(strategy + " is not function");
+    }
 }
 
 /**
@@ -295,7 +308,7 @@ function getProperties(selector)
     return selectorProp;
 }
 //-------------------
-/*! ks-framework - v0.0.0 - 2015-02-17
+/*! ks-framework - v0.0.0 - 2015-02-19
 * Copyright (c) 2015 ; Licensed  */
 function ks_strategy_firstCapital(param, elementObject)
 {
@@ -307,17 +320,17 @@ function ks_strategy_firstCapital(param, elementObject)
 
         $(this).text(firstCapital($(this).text()));
     });
+}
 
-    /**
-     * Makes the first char a capital
-     * @param  {string} string
-     * @return {string}
-     */
-    function firstCapital(string)
-    {
-        // Converts for each string the first char to UpperCase where string.slice(1) is the remainder of string
-        return string && string[0].toUpperCase() + string.slice(1);
-    }
+/**
+ * Makes the first char a capital
+ * @param  {string} string
+ * @return {string}
+ */
+function firstCapital(string)
+{
+    // Converts for each string the first char to UpperCase where string.slice(1) is the remainder of string
+    return string && string[0].toUpperCase() + string.slice(1);
 }
 //-------------------
 // _strategy_max.js ------------------------------------------

@@ -29,3 +29,16 @@
 {
     padding: $ks-fonts-padding;
 }
+
+@mixin clear-after()
+{
+    &:after {
+        clear:both;
+    }
+}
+@mixin clear-before()
+{
+    &:before {
+        clear:both;
+    }
+}

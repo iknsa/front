@@ -4,11 +4,11 @@
 .dock
 {
     background:darken($dark-color, 20);
-    height: 30px;
-    line-height: 30px;
+    height: $dock-height;
+    line-height: $dock-height;
     z-index: 100;
     padding: 0px $container-padding;
-    box-sizing:content-box;
+
     a {
         text-decoration: none;
         color: $light-color;
@@ -23,7 +23,7 @@
 
             &.active {
                 ul {
-                    display: block
+                    display: block;
                 }
             }
 
@@ -60,7 +60,6 @@
 
 .dock-right
 {
-    display: inline-block;
     float: right;
 }
 
@@ -68,7 +67,7 @@
 {
     display: inline-block;
     position: relative;
-    top: -2px;
+    top: -3px;
     input[type=text] {
         background:lighten($dark-color, 1);
         color: $light-color;

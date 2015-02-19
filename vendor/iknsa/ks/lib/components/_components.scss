@@ -20,12 +20,12 @@ body
     text-align: center;
 }
 
-.right
+.rgt
 {
     text-align: right;
 }
 
-.left
+.lft
 {
     text-align: left;
 }
@@ -60,4 +60,14 @@ body
 .container
 {
     @include container;
+}
+
+.clear-after
+{
+    @include clear-after;
+}
+
+.clear-before
+{
+    @include clear-before;
 }

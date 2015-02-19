@@ -1,4 +1,4 @@
-/*! ks-framework - v0.0.0 - 2015-02-17
+/*! ks-framework - v0.0.0 - 2015-02-19
 * Copyright (c) 2015 ; Licensed  */
 
 test("check if classes is an object", function(){

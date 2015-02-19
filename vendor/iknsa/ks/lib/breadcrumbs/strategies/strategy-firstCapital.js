@@ -8,15 +8,15 @@ function ks_strategy_firstCapital(param, elementObject)
 
         $(this).text(firstCapital($(this).text()));
     });
+}
 
-    /**
-     * Makes the first char a capital
-     * @param  {string} string
-     * @return {string}
-     */
-    function firstCapital(string)
-    {
-        // Converts for each string the first char to UpperCase where string.slice(1) is the remainder of string
-        return string && string[0].toUpperCase() + string.slice(1);
-    }
+/**
+ * Makes the first char a capital
+ * @param  {string} string
+ * @return {string}
+ */
+function firstCapital(string)
+{
+    // Converts for each string the first char to UpperCase where string.slice(1) is the remainder of string
+    return string && string[0].toUpperCase() + string.slice(1);
 }

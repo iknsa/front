@@ -1,4 +1,4 @@
-/*! ks-framework - v0.0.0 - 2015-02-17
+/*! ks-framework - v0.0.0 - 2015-02-19
 * Copyright (c) 2015 ; Licensed  */
 // actionRules.js ------------------------------------------
 
@@ -51,7 +51,11 @@ function dispatchToStrategy(value, param, elementObject)
 {
     strategy = "ks_strategy_" + value;
 
-    window[strategy](param, elementObject);
+    if(window[strategy]) {
+        window[strategy](param, elementObject);
+    } else {
+        console.log(strategy + " is not function");
+    }
 }
 
 /**
