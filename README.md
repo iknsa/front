@@ -43,4 +43,6 @@ To use it, developpers will have a package.json in which they will add all their
 
 ----------------------------------------------------------------------------------------------------------------------------------------
 
-Since I started just a few weeks ago, I am very open to any comment and any contribution.
+Since I started just a few weeks ago, I am very open to any comment or contribution. The whole structure can be reviewed. For ease at the begining i've put all the libraries in one folder but they will all be different git repositories. Everything and anything can be reviewed if you have anything better to propose.
+
+Don't hesitate to fork follow and create pull request.
