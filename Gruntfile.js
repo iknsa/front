@@ -200,6 +200,27 @@ module.exports = function(grunt) {
                         dest: 'vendor/iknsa/qunit/dev.js'
                     }
                 ]
+            },
+
+            export_core_js: {
+                files: [
+                    {
+                        expand: true,
+                        cwd: 'vendor/iknsa/ks/lib/core/',
+                        src: ['**'],
+                        dest: 'exports/core-js/'
+                    }
+                ]
+            },
+
+            export_strategies_js: {
+                files: [
+                    {
+                        expand: true,
+                        src: "vendor/iknsa/js/strategies.js",
+                        dest: 'exports/core-js/strategies.js'
+                    }
+                ]
             }
         },
     });
@@ -226,6 +247,12 @@ module.exports = function(grunt) {
     grunt.registerTask('dev_js', [
         'concat',
         'jshint:dev'
+    ]);
+
+    // watch for js files while in dev
+    grunt.registerTask('export_core_js', [
+        'copy:export_core_js',
+        'copy:export_strategies_js',
     ]);
 
     // Dev task

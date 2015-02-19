@@ -11,7 +11,6 @@
 
 
 
-
 // Typography
 $font-family: Helvetica, Arial, sans-serif !default;
 
@@ -74,7 +73,8 @@ $btn-warning-color    : $light-color !default;
 $padding-vertical     : 7px !default;
 $padding-horizontal   : 14px !default;
 $border-radius        : 5px !default;
-
+// Dock
+$dock-height: 30px;
 
 // From Variables
 $fieldset-border : none;
@@ -89,7 +89,6 @@ $input-height: $input-line-height;
 $input-padding: 3px 7px;
 
 $textarea-padding: 5px 10px;
-
 
 
 $nav-width: 250px;

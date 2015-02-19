@@ -5,17 +5,7 @@ nav
     color: $light-color;
     z-index: 0;
     float: left;
-    // position: absolute;
-    // top: 30px;
 
-
-    &:before, &:after {
-        content: " ";
-        display: table;
-    }
-    &:after {
-        clear: both;
-    }
     .user {
         height: $user-height;
         background:darken($dark-color, 10);
@@ -61,6 +51,9 @@ nav
                    border-bottom: 1px solid $nav-border-bottom;
                 }
             }
+        }
+        > ul {
+            // display: none;
         }
     }
 }

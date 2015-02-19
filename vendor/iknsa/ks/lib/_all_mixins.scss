@@ -12,7 +12,6 @@
 
 
 
-
 @mixin btn-base
 {
     display: inline-block;
@@ -53,11 +52,22 @@
     }
 }
 
-@mixin btn-size($padding-vertical, $padding-horizontal, $border-radius, $btn-font-size) {
+@mixin btn-size($padding-vertical, $padding-horizontal, $border-radius, $btn-font-size)
+{
     padding: $padding-vertical $padding-horizontal;
     border-radius: $border-radius;
     font-size: $btn-font-size;
     line-height: $btn-font-size * (20 / 14);
+}
+
+@mixin btn-lg()
+{
+    @include btn-size($padding-vertical * 1.25, $padding-horizontal * 1.25, $border-radius, $btn-font-size-default * 1.25);
+}
+
+@mixin btn-sm()
+{
+    @include btn-size($padding-vertical * 0.85, $padding-horizontal * 0.85, $border-radius, $btn-font-size-default * 0.85);
 }
 
 @mixin btn-hover($btn-bg-color)
@@ -111,6 +121,19 @@
     padding: $ks-fonts-padding;
 }
 
+@mixin clear-after()
+{
+    &:after {
+        clear:both;
+    }
+}
+@mixin clear-before()
+{
+    &:before {
+        clear:both;
+    }
+}
+
 
 @mixin fieldset-border($fieldset-border)
 {
@@ -127,7 +150,6 @@
     border-right: $input-border;
     border-left: $input-border;
 }
-
 
 
 @mixin nav-border

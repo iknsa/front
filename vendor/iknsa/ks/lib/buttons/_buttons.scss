@@ -34,9 +34,9 @@
 // Buttons Size variations
 .btn-lg
 {
-    @include btn-size($padding-vertical * 1.25, $padding-horizontal * 1.25, $border-radius, $btn-font-size-default * 1.25)
+    @include btn-lg;
 }
 .btn-sm
 {
-    @include btn-size($padding-vertical * 0.85, $padding-horizontal * 0.85, $border-radius, $btn-font-size-default * 0.85)
+    @include btn-sm;
 }
