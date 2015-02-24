@@ -3,6 +3,22 @@
 module.exports = function(grunt) {
     // autoload tasks
     require('load-grunt-tasks')(grunt);
+
+    // Project's paths
+    var pathConfig = function(appName) {
+        this.app = appName || appConfig.name;
+
+        return {
+            app: this.app,
+            templates: this.app + '/templates',
+            css: this.app + '/css',
+            scss: this.app + 'scss',
+            fonts: this.app + '/fonts',
+            img: this.app + 'img',
+            js: this.app + 'js'
+        }
+    };
+
     // Project configuration.
     grunt.initConfig({
         // Metadata.
@@ -15,22 +31,24 @@ module.exports = function(grunt) {
 
         clean: {
             prod: ['dist/*'],
-            prodCss: ['dist/css*'],
-            prodJs: ['dist/js*'],
-            dev: ['vendor/iknsa/dist/*'],
-            css: ['vendor/iknsa/dist/css*'],
-            concat: ['vendor/iknsa/concat/*'],
-            js: ['vendor/iknsa/dist/js/*'],
-            qunit_dev: ['vendor/iknsa/qunit/dev.js', 'vendor/iknsa/qunit/tests.js']
-        },
+            prodCss: ['dist/css/*'],
+            prodJs: ['dist/js/*'],
 
+            dev: ['vendor/dist/*'],
+            devCss: ['vendor/dist/css*'],
+            devJs: ['vendor/dist/js/*'],
+
+            concat: ['vendor/concat/*'],
+
+            qunit_dev: ['vendor/qunit/*.js']
+        },
 
 
         compass: {
             dev: {
                 options: {
-                  sassDir: 'vendor/iknsa/ks',
-                  cssDir: 'vendor/iknsa/css',
+                  sassDir: 'vendor/ks/lib',
+                  cssDir: 'vendor/ks/lib/css',
                   http_fonts_path: "../fonts",
                   fontsDir: 'vendor/iknsa/fonts',
                   environment: 'development',
@@ -224,6 +242,8 @@ module.exports = function(grunt) {
             }
         },
     });
+
+    grunt.registerTask("test", ["test"]);
 
     // Default task.
     // grunt.registerTask('default', ['jshint']);
