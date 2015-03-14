@@ -1,8 +1,13 @@
+# !DEPRECATED
+
+This framework has been deprecated in favour of the [iknsa-frontend-framework](https://github.com/iknsa/frontend-framework) which is build differently with more norms for ease of maintanance
+
+
 KS Front End Framework
 ======================
 
-#This Framework uses jquery 1.11.2 and the nicolas gallagger/ johnathan neal normalize css. Both of which are saved as dependencies in bower.json
-
+This Framework uses jquery 1.11.2 and the nicolas gallagger/ johnathan neal normalize css. Both of which are saved as dependencies in bower.json
+------------------------------------------------------------------------------------------------------------------------------------------------
 
 Even though some very powerful frameworks exists, one of their problem is that the comes with a lot, and here I really mean a lot of codes that we will never use in our project. If we take for example the bootstrap framework, which is a very good one, his main problem is that it comes with a lot of different which are not used. I have never built a web site which uses more than 50% of twitter bootstrap and I think that if your website uses more than these 50%, either its a very special one or you have a problem in the conception.
 
